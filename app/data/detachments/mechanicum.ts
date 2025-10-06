@@ -656,6 +656,6 @@ export const mechanicum: DETACHMENT[] = [
 			},
 		],
 		loadout_options: [],
-		datasheet_info: [{ text: "Additional Triaros at 15pts per model." }],
+		datasheet_info: [{ text: "Additional Triaros at 22pts per model." }],
 	},
 ]

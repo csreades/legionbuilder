@@ -864,7 +864,7 @@ export const solar: DETACHMENT[] = [
 				text: oneUpgrade("Auxilia Cyclops Battery"),
 				options: [
 					{ text: "Increase the Detachment size by 2", cost: 35 },
-					{ text: "Increase the Detachment size by 5", cost: 70 },
+					{ text: "Increase the Detachment size by 4", cost: 70 },
 				],
 			},
 		],
@@ -1416,8 +1416,8 @@ export const solar: DETACHMENT[] = [
 			{
 				text: oneUpgrade("Auxilia Stormblade Squadron"),
 				options: [
-					{ text: "Increase the Detachment size by 1", cost: 110 },
-					{ text: "Increase the Detachment size by 2", cost: 220 },
+					{ text: "Increase the Detachment size by 1", cost: 100 },
+					{ text: "Increase the Detachment size by 2", cost: 200 },
 				],
 			},
 			{ text: pintleStubberTxt("Stormblade") },

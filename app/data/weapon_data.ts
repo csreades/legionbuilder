@@ -457,6 +457,26 @@ export const weapons: WEAPON_DATASHEET[] = [
 		],
 	},
 	{
+		id: 10301,
+		name: "Kratos battlecannon (commander)",
+		profiles: [
+			{
+				range: '20"',
+				dice: 2,
+				to_hit: 4,
+				ap: 1,
+				traits: [],
+			},
+			{
+				range: '10"',
+				dice: 1,
+				to_hit: 4,
+				ap: 4,
+				traits: [{ name: WeaponTraits.antitank }, { name: WeaponTraits.armourbane }],
+			},
+		],
+	},
+	{
 		id: 1031,
 		name: "Co-axial autocannon",
 		profiles: [
@@ -693,7 +713,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				ap: 0,
 				traits: [
 					{ name: WeaponTraits.arc, value: "Front" },
-					{ name: WeaponTraits.light },
+					{ name: WeaponTraits.lightAT },
 					{ name: WeaponTraits.pointDefence },
 					{ name: WeaponTraits.skyfire },
 				],

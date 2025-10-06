@@ -581,7 +581,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		caf: 4,
 		morale: 2,
 		wounds: 2,
-		weapons: [1030, 1031, 1032, 1027, 1024, 1026, 1033, 1034, 1075],
+		weapons: [10301, 1031, 1032, 1027, 1024, 1026, 1033, 1034, 1075],
 		special_rules: [
 			{ name: SpecialRule.commander },
 			{ name: SpecialRule.inspire, value: '8"' },

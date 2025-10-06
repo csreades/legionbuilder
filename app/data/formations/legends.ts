@@ -146,7 +146,7 @@ export const legends: FORMATION[] = [
 	{
 		id: 7005,
 		name: "Demi-maniple Aeterna",
-		faction: FACTION.mechanicum,
+		faction: FACTION.collegiaTitanica,
 		subfaction: null,
 		allegiance: ALLEGIANCE.loyalist,
 		formation_slots: [
@@ -304,7 +304,7 @@ export const legends: FORMATION[] = [
 		subfaction: null,
 		allegiance: null,
 		formation_slots: [
-			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7060, 7061, 7062, 7061, 7062, 7063] },
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7060, 70600, 7061, 7062, 7061, 7062, 7063] },
 			{ slot_type: SLOT_TYPE.optional, slot_id: [7064, 7066, 7065, 7066, 7063] },
 		],
 		rules: [

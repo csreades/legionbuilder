@@ -539,6 +539,14 @@ export const legends: FORMATION_SLOT[] = [
 		description: "Legion Command Detachment",
 	},
 	{
+		id: 70600,
+		type: DETACHMENT_TYPE.dedicated,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [70600],
+		description: "Legion Command Drop Pod",
+	},
+	{
 		id: 7061,
 		type: DETACHMENT_TYPE.core,
 		faction: FACTION.astartes,

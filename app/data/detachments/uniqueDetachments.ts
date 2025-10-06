@@ -334,7 +334,7 @@ export const uniqueDetachments: DETACHMENT[] = [
 			{
 				name: "Additional Land Raider",
 				unit_ref: 1024,
-				options: optionsArray(19, 35, 1),
+				options: optionsArray(29, 35, 1),
 			},
 		],
 		loadout_options: [
