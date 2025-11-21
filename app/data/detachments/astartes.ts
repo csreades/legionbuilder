@@ -1029,7 +1029,7 @@ export const astartes: DETACHMENT[] = [
 		],
 		datasheet_info: [
 			{
-				text: "One in every two Landspeeders can exchange its plasma cannon and heavy bolter for a Nose Mounted heavy flamer and a Multi-melta for free",
+				text: "Any Land Speeder can exchange its plasma cannon and heavy bolter for a Nose Mounted heavy flamer and a multi-melta for free.",
 			},
 			{
 				text: "A Legion Land Speeder Squadron can purchase one of the following upgrades:",

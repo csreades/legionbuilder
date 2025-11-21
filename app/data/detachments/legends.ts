@@ -2430,4 +2430,32 @@ export const legends: DETACHMENT[] = [
 		loadout_options: [],
 		datasheet_info: [],
 	},
+	{
+		id: 7093,
+		name: "Auxilia Rapier Battery",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.bastion],
+		base_cost: 0,
+		base_size: 8,
+		max_size: 8,
+		main_unit: [2005],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Quad-launcher"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Main",
+				options: [{ name: "Quad-launcher", cost: 0 }],
+				required: 8,
+			},
+		],
+		datasheet_info: [],
+	},
 ]

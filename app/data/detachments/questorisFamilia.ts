@@ -357,7 +357,7 @@ export const questorisFamilia: DETACHMENT[] = [
 		related_unit: [],
 		dataslate_loadout: [
 			{
-				text_option: ["Twin conversion beam cannon", "Volkite culverin", "Karacnos mortar battery"],
+				text_option: ["Two conversion beam cannon", "Volkite culverin", "Karacnos mortar battery"],
 			},
 		],
 		upgrade_options: [

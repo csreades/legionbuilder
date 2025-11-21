@@ -404,7 +404,7 @@ export const legends: FORMATION[] = [
 		allegiance: ALLEGIANCE.loyalist,
 		formation_slots: [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7088, 7089, 7089, 7089, 7090] },
-			{ slot_type: SLOT_TYPE.optional, slot_id: [7091, 7090, 7092, 7092] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7091, 7093, 7092, 7092] },
 		],
 		rules: [
 			iconicFormation,

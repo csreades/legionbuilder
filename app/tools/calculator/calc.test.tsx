@@ -5,6 +5,7 @@ import calculateSaves from "./utils/calculateSaves"
 import calculateDamage from "./utils/calculateDamage"
 import { ALLEGIANCE, FACTION, UNIT_DATASHEET, UNIT_TYPE, WEAPON_PROFILES } from "@type/types"
 import { SpecialRule } from "@type/specialRules"
+import { WeaponTraits } from "@type/weaponTraits"
 
 const testWeapon: WEAPON_PROFILES = { range: "1", dice: 1, to_hit: 4, ap: 0, traits: [] }
 
@@ -32,13 +33,17 @@ test("Calculate Shots", () => {
 	expect(calculateShotMultiplier({ ...testWeapon, dice: "-" }, testTarget)).toBe(1)
 	expect(
 		calculateShotMultiplier(
-			{ ...testWeapon, traits: [{ name: "Graviton Pulse" }, { name: "Demolisher" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.gravitonPulse }, { name: WeaponTraits.demolisher }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } }
 		)
 	).toBe(3)
 	expect(
 		calculateShotMultiplier(
-			{ ...testWeapon, dice: 3, traits: [{ name: "Graviton Pulse" }, { name: "Demolisher" }] },
+			{
+				...testWeapon,
+				dice: 3,
+				traits: [{ name: WeaponTraits.gravitonPulse }, { name: WeaponTraits.demolisher }],
+			},
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } }
 		)
 	).toBe(9)
@@ -51,43 +56,46 @@ test("Calculate To Hit", () => {
 	expect(calculateToHit(testWeapon, { ...testTarget, special_rules: [{ name: SpecialRule.flyer }] })).toBe(1 / 6)
 	expect(
 		calculateToHit(
-			{ ...testWeapon, traits: [{ name: "Skyfire" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.skyfire }] },
 			{ ...testTarget, special_rules: [{ name: SpecialRule.flyer }] }
 		)
 	).toBe(1 / 2)
 	expect(
 		calculateToHit(
-			{ ...testWeapon, traits: [{ name: "Tracking" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.tracking }] },
 			{ ...testTarget, special_rules: [{ name: SpecialRule.flyer }] }
 		)
 	).toBe(11 / 36)
 	expect(
 		calculateToHit(
-			{ ...testWeapon, traits: [{ name: "Accurate" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.accurate }] },
 			{ ...testTarget, special_rules: [{ name: SpecialRule.flyer }] }
 		)
 	).toBe(11 / 36)
-	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Accurate" }] }, testTarget)).toBe(3 / 4)
-	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Rapid Fire" }] }, testTarget)).toBe(4 / 6)
-	expect(calculateToHit({ ...testWeapon, to_hit: 2, traits: [{ name: "Rapid Fire" }] }, testTarget)).toBe(1)
+	expect(calculateToHit({ ...testWeapon, traits: [{ name: WeaponTraits.accurate }] }, testTarget)).toBe(3 / 4)
+	expect(calculateToHit({ ...testWeapon, traits: [{ name: WeaponTraits.rapidFire }] }, testTarget)).toBe(4 / 6)
+	expect(calculateToHit({ ...testWeapon, to_hit: 2, traits: [{ name: WeaponTraits.rapidFire }] }, testTarget)).toBe(1)
 	expect(
-		calculateToHit({ ...testWeapon, to_hit: 2, traits: [{ name: "Rapid Fire" }, { name: "Accurate" }] }, testTarget)
+		calculateToHit(
+			{ ...testWeapon, to_hit: 2, traits: [{ name: WeaponTraits.rapidFire }, { name: WeaponTraits.accurate }] },
+			testTarget
+		)
 	).toBe(41 / 36)
 	expect(calculateToHit({ ...testWeapon, to_hit: 7 }, testTarget)).toBe(1 / 6)
 	expect(calculateToHit({ ...testWeapon, to_hit: 1 }, testTarget)).toBe(5 / 6)
 	expect(calculateToHit(testWeapon, { ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } })).toBe(
 		2 / 3
 	)
-	expect(calculateToHit({ ...testWeapon, traits: [{ name: "Graviton Pulse" }] }, testTarget)).toBe(1 / 3)
+	expect(calculateToHit({ ...testWeapon, traits: [{ name: WeaponTraits.gravitonPulse }] }, testTarget)).toBe(1 / 3)
 	expect(
 		calculateToHit(
-			{ ...testWeapon, traits: [{ name: "Graviton Pulse" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.gravitonPulse }] },
 			{ ...testTarget, special_rules: [{ name: SpecialRule.flyer }] }
 		)
 	).toBe(1 / 6)
 	expect(
 		calculateToHit(
-			{ ...testWeapon, traits: [{ name: "Graviton Pulse" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.gravitonPulse }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } }
 		)
 	).toBe(2 / 3)
@@ -97,16 +105,16 @@ test("Calculate AP", () => {
 	expect(calculateAP(testWeapon, testTarget)).toBe(0)
 	expect(calculateAP({ ...testWeapon, ap: "-" }, testTarget)).toBe(0)
 	expect(calculateAP({ ...testWeapon, ap: 1 }, testTarget)).toBe(1)
-	expect(calculateAP({ ...testWeapon, ap: 4, traits: [{ name: "Anti-tank" }] }, testTarget)).toBe(0)
+	expect(calculateAP({ ...testWeapon, ap: 4, traits: [{ name: WeaponTraits.antitank }] }, testTarget)).toBe(0)
 	expect(
 		calculateAP(
-			{ ...testWeapon, ap: 3, traits: [{ name: "Anti-tank" }] },
+			{ ...testWeapon, ap: 3, traits: [{ name: WeaponTraits.antitank }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.vehicle, value: 1 } }
 		)
 	).toBe(3)
 	expect(
 		calculateAP(
-			{ ...testWeapon, ap: 1, traits: [{ name: "Anti-tank" }] },
+			{ ...testWeapon, ap: 1, traits: [{ name: WeaponTraits.antitank }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.titan, value: 1 } }
 		)
 	).toBe(1)
@@ -125,13 +133,13 @@ test("Calculate AP", () => {
 	).toBe(0)
 	expect(
 		calculateAP(
-			{ ...testWeapon, ap: 3, traits: [{ name: "Light" }] },
+			{ ...testWeapon, ap: 3, traits: [{ name: WeaponTraits.light }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.vehicle, value: 1 } }
 		)
 	).toBe(3)
 	expect(
 		calculateAP(
-			{ ...testWeapon, ap: 3, traits: [{ name: "Light" }] },
+			{ ...testWeapon, ap: 3, traits: [{ name: WeaponTraits.light }] },
 			{ ...testTarget, special_rules: [{ name: SpecialRule.armoured }] }
 		)
 	).toBe(0)
@@ -147,7 +155,7 @@ test("Calulate Saves", () => {
 	).toBe(1 / 2)
 	expect(
 		calculateSaves(
-			{ ...testWeapon, traits: [{ name: "Psi" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.psi }] },
 			{ ...testTarget, special_rules: [{ name: SpecialRule.invulnerableSave, value: 4 }] }
 		)
 	).toBe(1 / 3)
@@ -165,13 +173,13 @@ test("Calulate Saves", () => {
 	expect(calculateSaves({ ...testWeapon, ap: 1 }, { ...testTarget, save: 3 })).toBe(1 / 2)
 	expect(
 		calculateSaves(
-			{ ...testWeapon, traits: [{ name: "Armourbane" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.armourbane }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.vehicle, value: 1 } }
 		)
 	).toBeCloseTo(1 / 9, 5)
 	expect(
 		calculateSaves(
-			{ ...testWeapon, traits: [{ name: "Armourbane" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.armourbane }] },
 			{
 				...testTarget,
 				unit_type: { type: UNIT_TYPE.vehicle, value: 1 },
@@ -181,13 +189,13 @@ test("Calulate Saves", () => {
 	).toBe(2 / 3)
 	expect(
 		calculateSaves(
-			{ ...testWeapon, ap: 3, traits: [{ name: "Armourbane" }] },
+			{ ...testWeapon, ap: 3, traits: [{ name: WeaponTraits.armourbane }] },
 			{ ...testTarget, save: 1, unit_type: { type: UNIT_TYPE.titan, value: 1 } }
 		)
 	).toBeCloseTo(1 / 4, 5)
 	expect(
 		calculateSaves(
-			{ ...testWeapon, ap: 3, traits: [{ name: "Light" }] },
+			{ ...testWeapon, ap: 3, traits: [{ name: WeaponTraits.light }] },
 			{ ...testTarget, special_rules: [{ name: SpecialRule.armoured }] }
 		)
 	).toBeCloseTo(5 / 9, 5)
@@ -206,19 +214,19 @@ test("Calulate Saves", () => {
 	).toBeCloseTo(1 / 6, 5)
 	expect(
 		calculateSaves(
-			{ ...testWeapon, traits: [{ name: "Demolisher" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.demolisher }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } }
 		)
 	).toBeCloseTo(5 / 6, 5)
 	expect(
 		calculateSaves(
-			{ ...testWeapon, traits: [{ name: "Demolisher" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.demolisher }] },
 			{ ...testTarget, save: 2, unit_type: { type: UNIT_TYPE.structure, value: 0 } }
 		)
 	).toBe(1)
 	expect(
 		calculateSaves(
-			{ ...testWeapon, traits: [{ name: "Graviton Pulse" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.gravitonPulse }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } }
 		)
 	).toBeCloseTo(1 / 6, 5)
@@ -230,26 +238,26 @@ test("Calculate Damage", () => {
 	expect(calculateDamage({ ...testWeapon, range: "T", dice: 0 }, testTarget)).toBe("0.33")
 	expect(
 		calculateDamage(
-			{ ...testWeapon, traits: [{ name: "Light" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.light }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.knight, value: 4 } }
 		)
 	).toBe("0")
-	expect(calculateDamage({ ...testWeapon, traits: [{ name: "Deflagrate" }] }, testTarget)).toBe("0.44")
+	expect(calculateDamage({ ...testWeapon, traits: [{ name: WeaponTraits.deflagrate }] }, testTarget)).toBe("0.44")
 	expect(
 		calculateDamage(
-			{ ...testWeapon, traits: [{ name: "Deflagrate" }, { name: "Light" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.deflagrate }, { name: WeaponTraits.light }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.cavalry, value: 1 } }
 		)
 	).toBe("0.44")
 	expect(
 		calculateDamage(
-			{ ...testWeapon, traits: [{ name: "Deflagrate" }, { name: "Light" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.deflagrate }, { name: WeaponTraits.light }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.knight, value: 4 } }
 		)
 	).toBe("0")
 	expect(
 		calculateDamage(
-			{ ...testWeapon, traits: [{ name: "Deflagrate" }, { name: "Light" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.deflagrate }, { name: WeaponTraits.light }] },
 			{
 				...testTarget,
 				unit_type: { type: UNIT_TYPE.walker, value: 1 },
@@ -261,7 +269,10 @@ test("Calculate Damage", () => {
 		"Immune"
 	)
 	expect(
-		calculateDamage({ ...testWeapon, range: "-", to_hit: null, traits: [{ name: "Wrecker" }] }, testTarget)
+		calculateDamage(
+			{ ...testWeapon, range: "-", to_hit: null, traits: [{ name: WeaponTraits.wrecker }] },
+			testTarget
+		)
 	).toBe("Melee")
 	expect(
 		calculateDamage(
@@ -271,25 +282,25 @@ test("Calculate Damage", () => {
 	).toBe("Immune")
 	expect(
 		calculateDamage(
-			{ ...testWeapon, ap: 6, traits: [{ name: "Bunker Buster" }] },
+			{ ...testWeapon, ap: 6, traits: [{ name: WeaponTraits.bunkerBuster }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } }
 		)
 	).toBe("0.67")
 	expect(
 		calculateDamage(
-			{ ...testWeapon, traits: [{ name: "Heavy Beam" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.heavyBeam }] },
 			{ ...testTarget, save: 2, unit_type: { type: UNIT_TYPE.structure, value: 0 } }
 		)
 	).toBe("0.00")
 	expect(
 		calculateDamage(
-			{ ...testWeapon, traits: [{ name: "Demolisher" }] },
+			{ ...testWeapon, traits: [{ name: WeaponTraits.demolisher }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } }
 		)
 	).toBe("0.11")
 	expect(
 		calculateDamage(
-			{ ...testWeapon, dice: 3, traits: [{ name: "Demolisher" }] },
+			{ ...testWeapon, dice: 3, traits: [{ name: WeaponTraits.demolisher }] },
 			{ ...testTarget, unit_type: { type: UNIT_TYPE.structure, value: 0 } }
 		)
 	).toBe("0.33")

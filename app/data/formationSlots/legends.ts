@@ -812,4 +812,12 @@ export const legends: FORMATION_SLOT[] = [
 		options: [7092],
 		description: "Auxilia Basilisk Battery",
 	},
+	{
+		id: 7093,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [7093],
+		description: "Auxilia Rapier Battery",
+	},
 ]
