@@ -1,4 +1,4 @@
-import { WEAPON_TRAIT_INFO } from "../types/types"
+import { WEAPON_TRAIT_INFO } from "@type/types"
 
 export const weaponTraitsData: WEAPON_TRAIT_INFO[] = [
 	{
@@ -83,7 +83,7 @@ export const weaponTraitsData: WEAPON_TRAIT_INFO[] = [
 	},
 	{
 		name: "Engine Killer",
-		tooltip: "Super-heavy Vehicles, Knights & Titans take additional wounds equal to the value",
+		tooltip: "Vehicles, Super-heavy Vehicles, Knights & Titans take additional wounds equal to the value",
 		description: [],
 	},
 	{
