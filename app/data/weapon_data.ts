@@ -1184,7 +1184,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 3,
 				to_hit: 4,
 				ap: 3,
-				traits: [{ name: WeaponTraits.arc }, { name: WeaponTraits.shockPulse }],
+				traits: [{ name: WeaponTraits.arc, value: "Front" }, { name: WeaponTraits.shockPulse }],
 			},
 		],
 	},

@@ -333,7 +333,7 @@ export const mechanicum: UNIT_DATASHEET[] = [
 		caf: 0,
 		morale: 3,
 		wounds: 1,
-		weapons: [3027, 3028],
+		weapons: [3027, 3028, 3022],
 		special_rules: [{ name: SpecialRule.transport, value: 4 }],
 	},
 ]
