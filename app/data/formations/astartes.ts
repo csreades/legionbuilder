@@ -189,4 +189,70 @@ export const astartes: FORMATION[] = [
 			},
 		],
 	},
+	{
+		id: 1009,
+		name: "Legion Saturnine Heavy Assault Cadre",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1016, 1017, 1017] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [1017, 1017, 1018, 1018] },
+		],
+		rules: [
+			{
+				name: "Saturnine Assault",
+				text: "HQ Detachment slots in this Formation must be filled with Legion Saturnine Command Detachments, Support Detachment slots in this Formation must be filled with Legion Saturnine Terminator Detachments and Bastion Detachment slots in this Formation must be filled with Legion Saturnine Dreadnought Detachments.",
+			},
+			{
+				name: "Saturnine Teleportation Transponder",
+				text: "Legion Saturnine Command Detachments and Legion Terminator Detachments from this Formation have the Deep Strike special rule. All Detachments in this Formation with the Deep Strike special rule must Deep Strike in the same Movement phase as the Detachment that includes the Legion Saturnine Command Detachment",
+			},
+			{
+				text: 'During that Movement phase, the Detachment that includes the Legion Saturnine Command Detachment must be the first from this Formation to Deep Strike, and all other Detachments from this Formation that Deep Strike must have their first model placed within 6" of the Legion Saturnine Command Squad model from that Detachment. If the Saturnine Command Squad model would be destroyed before all such Deep Strikes have been completed, leave the model in place until all such Deep Strikes have been completed, and then remove the model from the battlefield.',
+			},
+		],
+	},
+	{
+		id: 1010,
+		name: "Legion Super-heavy Spearhead",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1006, 1006, 1006] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [1006, 1006, 1008] },
+		],
+		rules: [
+			{
+				name: "Unstoppable Advance",
+				text: "While a Heavy Armour Detachment from this Formation has two or more models, models in that unit have the following additional weapon:",
+			},
+			{
+				name: "Crushing treads",
+				text: 'Range: "-", Dice: "-", To Hit: "-", AP: "-1", Traits: "Rend, Wrecker (1)"',
+			},
+		],
+	},
+	{
+		id: 1011,
+		name: "Legion Aegis Defence Strongpoint",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [1000, 1001, 1019, 1019] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [1002, 1007, 1019, 1019] },
+		],
+		rules: [
+			{
+				name: "Defensive Strongpoint",
+				text: "Bastion Detachment slots in this Formation must be filled with Araknae Weapons Platform Battery Detachments or Legion Tarantula Battery Detachments. Detachments in this Formation may not be deployed using the Infiltrate special rule.",
+			},
+			{
+				name: "Overlapping Fire",
+				text: "Weapons that Araknae Weapons Platform models in this Formation have gain the Point Defence trait",
+			},
+		],
+	},
 ]

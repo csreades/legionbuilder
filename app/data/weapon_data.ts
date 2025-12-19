@@ -1492,6 +1492,19 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 1097,
+		name: "Crushing treads",
+		profiles: [
+			{
+				range: '"-"',
+				dice: null,
+				to_hit: null,
+				ap: 1,
+				traits: [{ name: WeaponTraits.rend }, { name: WeaponTraits.wrecker, value: 1 }],
+			},
+		],
+	},
 	// ********************************************************************
 	// ************************ SOlAR AUXLIA WEAPONS **********************
 	// ********************************************************************

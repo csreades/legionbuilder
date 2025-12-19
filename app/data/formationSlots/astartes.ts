@@ -128,4 +128,40 @@ export const astartes: FORMATION_SLOT[] = [
 		restricted: true,
 		options: [1032, 1033, 1034],
 	},
+
+	// Legion Saturnine Heavy Assault Cadre
+	{
+		id: 1016,
+		type: DETACHMENT_TYPE.hq,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [1043],
+		description: "Saturnine Command",
+	},
+	{
+		id: 1017,
+		type: DETACHMENT_TYPE.support,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [1044],
+		description: "Saturnine Terminators",
+	},
+	{
+		id: 1018,
+		type: DETACHMENT_TYPE.bastion,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [1045],
+		description: "Saturnine Dreadnought",
+	},
+
+	// Legion Aegis Defence Strongpoint
+	{
+		id: 1019,
+		type: DETACHMENT_TYPE.bastion,
+		faction: FACTION.astartes,
+		restricted: true,
+		options: [1010, 1046],
+		description: "Araknae/Tarantulas",
+	},
 ]
