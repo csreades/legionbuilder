@@ -419,4 +419,77 @@ export const legends: FORMATION[] = [
 		],
 		legend: true,
 	},
+	{
+		id: 7018,
+		name: "Saturnine Excubitor Cadre",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.salamanders,
+		allegiance: ALLEGIANCE.loyalist,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7094, 7095, 7095, 7096] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7095, 7097, 7096] },
+		],
+		rules: [
+			iconicFormation,
+			{
+				name: "Heavy Assault Cadre",
+				text: "When a Saturnine Terminator model from this Formation Disembarks from a Mastodon model from this Formation, weapons that Saturnine Terminator model has gain the Shred trait until the end of the round.",
+			},
+			{
+				name: "Sons of Vulkan",
+				text: "This Formation must be from the Salamanders Legion and can only be included in an Army with the Loyalist Allegiance. In addition, an Army can only include one Salamanders Saturnine Heavy Assault Cadre Formation.",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7019,
+		name: "Iron Warriors Obliteration Century",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.ironWar,
+		allegiance: ALLEGIANCE.traitor,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7098, 7099, 7100] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7101, 7102, 7103] },
+		],
+		rules: [
+			iconicFormation,
+			{
+				name: "Overwhelming Destruction",
+				text: "When a Saturnine Terminator model from this Formation Disembarks from a Mastodon model from this Formation, weapons that Saturnine Terminator model has gain the Shred trait until the end of the round.",
+			},
+			{
+				name: "Breakers of Legions",
+				text: "This Formation must be from the Iron Warriors Legion and can only be included in an Army with the Traitor Allegiance.",
+			},
+		],
+		legend: true,
+	},
+	{
+		id: 7020,
+		name: "The Sacramentii Foehammers",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		formation_slots: [
+			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7104, 7105, 7106] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7107, 7108, 7109] },
+		],
+		rules: [
+			iconicFormation,
+			{
+				name: "Defenders of the Legion",
+				text: "This Formation can only be included in an Army with the Loyalist Allegiance.",
+			},
+			{
+				name: "Armoured Charge",
+				text: "If a Detachment in this Formation has a Charge Order, until the end of that round it has the following additional weapon:",
+			},
+			{
+				name: "Crushing bulk",
+				text: 'Range: "-", Dice: "-", To Hit: "-", AP: "-", Trait: "Rend',
+			},
+		],
+		legend: true,
+	},
 ]

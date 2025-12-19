@@ -2572,6 +2572,19 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 2075,
+		name: "Crushing bulk",
+		profiles: [
+			{
+				range: '"-"',
+				dice: null,
+				to_hit: null,
+				ap: 0,
+				traits: [{ name: WeaponTraits.rend }],
+			},
+		],
+	},
 
 	// ********************************************************************
 	// ********************** MECHANICUM WEAPONS **************************

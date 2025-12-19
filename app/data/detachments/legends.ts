@@ -1,5 +1,5 @@
 import { ALLEGIANCE, DETACHMENT, DETACHMENT_TYPE, FACTION, SUBFACTION_TYPE } from "@type/types"
-import { pintleStubberLd } from "@data/utils"
+import { optionsArray, pintleStubberLd, pintleStubberTxt } from "@data/utils"
 
 export const legends: DETACHMENT[] = [
 	// Iron Hands Seeker-Killer Clave Ultor
@@ -2454,6 +2454,509 @@ export const legends: DETACHMENT[] = [
 				location: "Main",
 				options: [{ name: "Quad-launcher", cost: 0 }],
 				required: 8,
+			},
+		],
+		datasheet_info: [],
+	},
+
+	// Saturnine Excubitor Cadre
+	{
+		id: 7094,
+		name: "Legion Saturnine Command",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.salamanders,
+		allegiance: ALLEGIANCE.loyalist,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.hq],
+		base_cost: 570,
+		base_size: 1,
+		max_size: 1,
+		main_unit: [1043],
+		related_unit: [],
+		dataslate_loadout: [{ text_option: ["Saturnine power weapons", "Particle shredders"] }],
+		upgrade_options: [],
+		loadout_options: [],
+		datasheet_info: [],
+	},
+	{
+		id: 7095,
+		name: "Legion Saturnine Terminator Detachment",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.salamanders,
+		allegiance: ALLEGIANCE.loyalist,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.support],
+		base_cost: 0,
+		base_size: 6,
+		max_size: 6,
+		main_unit: [1044],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Three models are equipped with plasma bombards and disruption fists",
+					"Three models are equipped with paired plasma bombards",
+				],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Weapons",
+				options: [
+					{ name: "Plasma bombards and disruption fists", cost: 0 },
+					{ name: "Paired plasma bombards", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7096,
+		name: "Legion Mastodon Squadron",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.salamanders,
+		allegiance: ALLEGIANCE.loyalist,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 0,
+		base_size: 2,
+		max_size: 2,
+		main_unit: [1038],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Siege melta array",
+					"Skyreaper battery",
+					"Sponson Mounted heavy flamers",
+					"Sponson Mounted lascannon",
+				],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [{ name: "Lascannons", cost: 0 }],
+				required: 2,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7097,
+		name: "Legion Saturnine Dreadnought Detachment",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.salamanders,
+		allegiance: ALLEGIANCE.loyalist,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.bastion],
+		base_cost: 495,
+		base_size: 4,
+		max_size: 4,
+		main_unit: [1045],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Heavy plasma bombard and disintegrator cannon"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Weapons",
+				options: [{ name: "Heavy plasma bombard and disintegrator cannon", cost: 0 }],
+				required: 4,
+			},
+		],
+		datasheet_info: [],
+	},
+
+	// Iron Warriors Obliteration Century
+	{
+		id: 7098,
+		name: "Legion Kratos Commander",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.ironWar,
+		allegiance: ALLEGIANCE.traitor,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.hq, DETACHMENT_TYPE.heavy],
+		base_cost: 620,
+		base_size: 1,
+		max_size: 1,
+		main_unit: [1033],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Melta blastgun with Co-axial autocannon",
+					"Kratos lascannon",
+					"Sponson Mounted lascannon",
+				],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Turret",
+				options: [{ name: "Melta blastgun", cost: 0 }],
+				required: 1,
+			},
+			{
+				location: "Sponson",
+				options: [{ name: "Lascannons", cost: 0 }],
+				required: 1,
+			},
+			{
+				location: "Hull",
+				options: [{ name: "Lascannons", cost: 0 }],
+				required: 1,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7099,
+		name: "Legion Kratos Squadron",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.ironWar,
+		allegiance: ALLEGIANCE.traitor,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 0,
+		base_size: 3,
+		max_size: 3,
+		main_unit: [1014],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Melta blastgun with Co-axial autocannon",
+					"Kratos lascannon",
+					"Sponson Mounted lascannon",
+				],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Turret",
+				options: [{ name: "Melta blastgun", cost: 0 }],
+				required: 3,
+			},
+			{
+				location: "Sponson",
+				options: [{ name: "Lascannons", cost: 0 }],
+				required: 3,
+			},
+			{
+				location: "Hull",
+				options: [{ name: "Lascannons", cost: 0 }],
+				required: 3,
+			},
+			{
+				location: "Pintle",
+				options: [{ name: "Heavy bolter", cost: 5 }],
+				required: 3,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7100,
+		name: "Legion Fellblade Squadron",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.ironWar,
+		allegiance: ALLEGIANCE.traitor,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 0,
+		base_size: 3,
+		max_size: 3,
+		main_unit: [1050],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Volkite carronade", "Hull Mounted heavy bolters", "Sponson Mounted quad lascannon"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [{ name: "Quad lascannons", cost: 0 }],
+				required: 3,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7101,
+		name: "Legion Falchion Squadron",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.ironWar,
+		allegiance: ALLEGIANCE.traitor,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 790,
+		base_size: 3,
+		max_size: 3,
+		main_unit: [1047],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Neutron wave cannon", "Sponson Mounted quad lascannon"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [{ name: "Quad lascannons", cost: 0 }],
+				required: 3,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7102,
+		name: "Legion Glaive Squadron",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.ironWar,
+		allegiance: ALLEGIANCE.traitor,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 0,
+		base_size: 3,
+		max_size: 3,
+		main_unit: [1049],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Volkite carronade", "Hull Mounted heavy bolters", "Sponson Mounted quad lascannon"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [{ name: "Quad lascannons", cost: 0 }],
+				required: 3,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7103,
+		name: "Legion Typhon Squadron",
+		faction: FACTION.astartes,
+		subfaction: SUBFACTION_TYPE.ironWar,
+		allegiance: ALLEGIANCE.traitor,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 0,
+		base_size: 3,
+		max_size: 3,
+		main_unit: [1039],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Hull Mounted dreadhammer siege cannon", "Sponson Mounted lascannon"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [{ name: "Lascannons", cost: 0 }],
+				required: 3,
+			},
+		],
+		datasheet_info: [],
+	},
+
+	// The Sacramentii Foehammers
+	{
+		id: 7104,
+		name: "Leman Russ Executioner Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.battle],
+		base_cost: 675,
+		base_size: 4,
+		max_size: 4,
+		main_unit: [2027],
+		related_unit: [],
+		dataslate_loadout: [
+			{ text: "One mode is upgraded to a Tank Commander" },
+			{
+				text_option: ["Executioner plasma cannon", "Hull Mounted heavy bolter"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Hull",
+				options: [{ name: "Heavy bolters", cost: 0 }],
+				required: 4,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7105,
+		name: "Leman Russ Strike Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.battle],
+		base_cost: 0,
+		base_size: 8,
+		max_size: 8,
+		main_unit: [2008],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Leman Russ battlecannon", "Hull Mounted heavy bolter"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Hull",
+				options: [{ name: "Heavy bolters", cost: 0 }],
+				required: 8,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7106,
+		name: "Malcador Tank Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.battle],
+		base_cost: 0,
+		base_size: 4,
+		max_size: 4,
+		main_unit: [2009],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Malcador battlecannon", "Hull Mounted autocannon", "Malcador autocannon sponsons"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Hull",
+				options: [{ name: "Autocannon", cost: 0 }],
+				required: 4,
+			},
+			{
+				location: "Sponsons",
+				options: [{ name: "Autocannons", cost: 0 }],
+				required: 4,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7107,
+		name: "Auxilia Malcador Infernus Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.battle],
+		base_cost: 490,
+		base_size: 2,
+		max_size: 2,
+		main_unit: [2021],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Malcador inferno gun", "Malcador autocannon sponsons"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [{ name: "Autocannons", cost: 0 }],
+				required: 2,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7108,
+		name: "Malcador Annihilator Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.battle],
+		base_cost: 0,
+		base_size: 2,
+		max_size: 2,
+		main_unit: [2035],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: ["Malcador lascannon turret", "Hull Mounted lascannon", "Malcador lascannon sponsons"],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Hull",
+				options: [{ name: "Autocannon", cost: 0 }],
+				required: 2,
+			},
+			{
+				location: "Sponsons",
+				options: [{ name: "Lascannons", cost: 0 }],
+				required: 2,
+			},
+		],
+		datasheet_info: [],
+	},
+	{
+		id: 7109,
+		name: "Auxilia Stormhammer Squadron",
+		faction: FACTION.solar,
+		subfaction: null,
+		allegiance: ALLEGIANCE.loyalist,
+		unique: true,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 0,
+		base_size: 3,
+		max_size: 3,
+		main_unit: [2023],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Stormhammer cannon with Co-axial multi-laser",
+					"Dual battlecannon",
+					"Hull Mounted lascannon",
+					"Stormhammer multi-laser sponsons",
+				],
+			},
+		],
+		upgrade_options: [],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [{ name: "Multi-lasers", cost: 0 }],
+				required: 3,
 			},
 		],
 		datasheet_info: [],
