@@ -55,5 +55,6 @@ export enum SpecialRule {
 	traitor = "Traitor",
 	transport = "Transport",
 	unique = "Unique",
+	veryBulky = "Very Bulky",
 	voidShields = "Void Shields",
 }

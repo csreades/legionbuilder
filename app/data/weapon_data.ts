@@ -1201,6 +1201,297 @@ export const weapons: WEAPON_DATASHEET[] = [
 			},
 		],
 	},
+	{
+		id: 1078,
+		name: "Particle shredders",
+		profiles: [
+			{
+				range: '4"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: WeaponTraits.ignoresCover }, { name: WeaponTraits.lightAT }],
+			},
+		],
+	},
+	{
+		id: 1079,
+		name: "Saturnine power weapons",
+		profiles: [
+			{
+				range: "-",
+				dice: null,
+				to_hit: null,
+				ap: "-",
+				traits: [{ name: WeaponTraits.rend }],
+			},
+		],
+	},
+	{
+		id: 1080,
+		name: "Twin heavy disintegrators",
+		profiles: [
+			{
+				range: '8"',
+				dice: 1,
+				to_hit: 4,
+				ap: 2,
+				traits: [{ name: WeaponTraits.powerCapacitor }],
+			},
+		],
+	},
+	{
+		id: 1081,
+		name: "Paired twin heavy disintegrators",
+		profiles: [
+			{
+				range: '8"',
+				dice: 1,
+				to_hit: 4,
+				ap: 2,
+				traits: [{ name: WeaponTraits.accurate }, { name: WeaponTraits.powerCapacitor }],
+			},
+		],
+	},
+	{
+		id: 1082,
+		name: "Plasma bombards",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: WeaponTraits.barrage }, { name: WeaponTraits.lightAT }],
+			},
+		],
+	},
+	{
+		id: 1083,
+		name: "Paired plasma bombards",
+		profiles: [
+			{
+				range: '12"',
+				dice: 2,
+				to_hit: 4,
+				ap: 1,
+				traits: [
+					{ name: WeaponTraits.accurate },
+					{ name: WeaponTraits.barrage },
+					{ name: WeaponTraits.lightAT },
+				],
+			},
+		],
+	},
+	{
+		id: 1084,
+		name: "Disruption firsts",
+		profiles: [
+			{
+				range: "-",
+				dice: null,
+				to_hit: null,
+				ap: "-",
+				traits: [{ name: WeaponTraits.disruptive }],
+			},
+		],
+	},
+	{
+		id: 1085,
+		name: "Disintegrator cannon",
+		profiles: [
+			{
+				range: '10"',
+				dice: 1,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: WeaponTraits.powerCapacitor }],
+			},
+		],
+	},
+	{
+		id: 1086,
+		name: "Graviton pulveriser",
+		profiles: [
+			{
+				range: '8"',
+				dice: 1,
+				to_hit: null,
+				ap: 2,
+				traits: [{ name: WeaponTraits.gravitonPulse }],
+			},
+		],
+	},
+	{
+		id: 1087,
+		name: "Heavy plasma bombard",
+		profiles: [
+			{
+				range: '16"',
+				dice: 2,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: WeaponTraits.barrage }, { name: WeaponTraits.lightAT }],
+			},
+		],
+	},
+	{
+		id: 1088,
+		name: "Inversion beamer",
+		profiles: [
+			{
+				range: '8"',
+				dice: 1,
+				to_hit: 3,
+				ap: 2,
+				traits: [],
+			},
+			{
+				range: '16"',
+				dice: 1,
+				to_hit: 4,
+				ap: 1,
+				traits: [],
+			},
+		],
+	},
+	{
+		id: 1089,
+		name: "Quad accelerator autocannon",
+		profiles: [
+			{
+				range: '18"',
+				dice: 5,
+				to_hit: 5,
+				ap: 1,
+				traits: [{ name: WeaponTraits.tracking }],
+			},
+		],
+	},
+	{
+		id: 1090,
+		name: "Twin punisher cannon",
+		profiles: [
+			{
+				range: '12"',
+				dice: 4,
+				to_hit: 4,
+				ap: 1,
+				traits: [
+					{ name: WeaponTraits.accurate },
+					{ name: WeaponTraits.lightAT },
+					{ name: WeaponTraits.rapidFire },
+					{ name: WeaponTraits.skyfire },
+				],
+			},
+		],
+	},
+	{
+		id: 1091,
+		name: "Orias heavy frag missiles",
+		profiles: [
+			{
+				range: '24"',
+				dice: 2,
+				to_hit: 4,
+				ap: 0,
+				traits: [
+					{ name: WeaponTraits.barrage },
+					{ name: WeaponTraits.blast, value: 3 },
+					{ name: WeaponTraits.light },
+					{ name: WeaponTraits.limited, value: 2 },
+				],
+			},
+		],
+	},
+	{
+		id: 1092,
+		name: "Neutron wave cannon",
+		profiles: [
+			{
+				range: '30"',
+				dice: 2,
+				to_hit: 4,
+				ap: 3,
+				traits: [
+					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.accurate },
+					{ name: WeaponTraits.shockPulse },
+				],
+			},
+		],
+	},
+	{
+		id: 1093,
+		name: "Sponson mounted quad heavy bolter",
+		profiles: [
+			{
+				range: '12"',
+				dice: 4,
+				to_hit: 5,
+				ap: 0,
+				traits: [
+					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.light },
+					{ name: WeaponTraits.pointDefence },
+				],
+			},
+		],
+	},
+	{
+		id: 1094,
+		name: "Ascalon inferno gun",
+		profiles: [
+			{
+				range: "T",
+				dice: null,
+				to_hit: 4,
+				ap: 2,
+				traits: [
+					{ name: WeaponTraits.arc, value: "Front" },
+					{ name: WeaponTraits.firestorm },
+					{ name: WeaponTraits.lightAT },
+				],
+			},
+		],
+	},
+	{
+		id: 1095,
+		name: "Volkite carronade",
+		profiles: [
+			{
+				range: '18"',
+				dice: 3,
+				to_hit: 4,
+				ap: 2,
+				traits: [
+					{ name: WeaponTraits.beam },
+					{ name: WeaponTraits.lightAT },
+					{ name: WeaponTraits.deflagrate },
+				],
+			},
+		],
+	},
+	{
+		id: 1096,
+		name: "Fellblade accelerator cannon",
+		profiles: [
+			{
+				range: '30"',
+				dice: 3,
+				to_hit: 4,
+				ap: 1,
+				traits: [{ name: WeaponTraits.lightAT }],
+			},
+			{
+				range: '25"',
+				dice: 2,
+				to_hit: 4,
+				ap: 3,
+				traits: [{ name: WeaponTraits.antitank }, { name: WeaponTraits.armourbane }],
+			},
+		],
+	},
 	// ********************************************************************
 	// ************************ SOlAR AUXLIA WEAPONS **********************
 	// ********************************************************************

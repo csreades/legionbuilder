@@ -5,7 +5,7 @@
 // ********************************************************************
 
 import { DETACHMENT, DETACHMENT_TYPE, FACTION } from "@type/types"
-import { optionsArray } from "@data/utils"
+import { oneUpgrade, optionsArray } from "@data/utils"
 
 export const astartes: DETACHMENT[] = [
 	{
@@ -2049,6 +2049,444 @@ export const astartes: DETACHMENT[] = [
 				],
 			},
 			{ text: "Any Sicaran Omega may be equipped with one Pintle Mounted heavy bolter for +5 points per model." },
+		],
+	},
+	{
+		id: 1043,
+		name: "Legion Saturnine Command",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.hq],
+		base_cost: 50,
+		base_size: 1,
+		max_size: 1,
+		main_unit: [1043],
+		related_unit: [],
+		dataslate_loadout: [{ text_option: ["Saturnine power weapons", "Particle shredders"] }],
+		upgrade_options: [],
+		loadout_options: [],
+		datasheet_info: [],
+	},
+	{
+		id: 1044,
+		name: "Legion Saturnine Terminator Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.support],
+		base_cost: 50,
+		base_size: 3,
+		max_size: 9,
+		main_unit: [1044],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text: "Each mode has one of the following",
+				text_option: [
+					"Plasma bombards and disruption fists",
+					"Paired plasma bombards",
+					"Twin heavy disintegrators and disruption firsts",
+					"Paired twin heavy disintegrators",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Saturnine Terminator",
+				unit_ref: 1044,
+				options: [
+					{ number: 3, cost: 80, size: 3 },
+					{ number: 6, cost: 150, size: 6 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Weapons",
+				options: [
+					{ name: "Plasma bombards and disruption fists", cost: 0 },
+					{ name: "Paired plasma bombards", cost: 0 },
+					{ name: "Twin heavy disintegrators and disruption firsts", cost: 0 },
+					{ name: "Paired twin heavy disintegrators", cost: 0 },
+					{ name: "Twin heavy disintegrators and plasma bombards", cost: 10 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "Any Saturnine Terminator model can exhange its selected weapons for plasma bombards and twin heavy disintegrators for +10 points.",
+			},
+			{
+				text: oneUpgrade("Legion Saturnine Terminator Detachment"),
+				options: [
+					{ text: "Increase the Detachment size by 3", cost: 80 },
+					{ text: "Increase the Detachment size by 6", cost: 150 },
+				],
+			},
+		],
+	},
+	{
+		id: 1045,
+		name: "Legion Saturnine Dreadnought Detachment",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.bastion],
+		base_cost: 70,
+		base_size: 2,
+		max_size: 6,
+		main_unit: [1045],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text: "Each model has one of the following",
+				text_option: [
+					"Heavy plasma bombard and disintegrator cannon",
+					"Graviton pulveriser and inversion beamer",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Dreadnought",
+				unit_ref: 1045,
+				options: [
+					{ number: 2, cost: 65, size: 2 },
+					{ number: 4, cost: 120, size: 4 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Weapons",
+				options: [
+					{ name: "Heavy plasma bombard and disintegrator cannon", cost: 0 },
+					{ name: "Graviton pulveriser and inversion beamer", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: oneUpgrade("Legion Saturnine Dreadnought Detachment"),
+				options: [
+					{ text: "Increase the Detachment size by 2", cost: 65 },
+					{ text: "Increase the Detachment size by 4", cost: 120 },
+				],
+			},
+		],
+	},
+	{
+		id: 1046,
+		name: "Araknae Weapons Platform Battery",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.bastion],
+		base_cost: 30,
+		base_size: 1,
+		max_size: 4,
+		main_unit: [1046],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text: "All models in a Detachment have one of the following weapons. All models in a Detahment must select the same option",
+				text_option: ["Quad accelerator autocannon or twin punisher cannon or Orias heavy frag missiles"],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Araknae",
+				unit_ref: 1046,
+				options: [
+					{ number: 1, cost: 30, size: 1 },
+					{ number: 2, cost: 55, size: 2 },
+					{ number: 3, cost: 80, size: 3 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Weapons",
+				options: [
+					{ name: "Accelerator autocannon", cost: 0 },
+					{ name: "Punisher cannon", cost: 0 },
+					{ name: "Orias heavy frag", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: oneUpgrade("Araknae Weapons Platform Battery"),
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 30 },
+					{ text: "Increase the Detachment size by 2", cost: 55 },
+					{ text: "Increase the Detachment size by 3", cost: 80 },
+				],
+			},
+		],
+	},
+	{
+		id: 1047,
+		name: "Legion Falchion Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 130,
+		base_size: 1,
+		max_size: 4,
+		main_unit: [1047],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Neutron wave cannon",
+					"Sponson Mounted quad lascannon, Sponson Mounted laser destroyers or Sponson Mounted quad heavy bolters",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Falchion",
+				unit_ref: 1047,
+				options: [
+					{ number: 1, cost: 120, size: 1 },
+					{ number: 2, cost: 240, size: 2 },
+					{ number: 3, cost: 350, size: 3 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Quad lascannons", cost: 0 },
+					{ name: "Laser destroyers", cost: 0 },
+					{ name: "Quad heavy bolters", cost: 0 },
+				],
+			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
+					{ name: "Multi-melta", cost: 5 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "Any Falchion may be equipped with one of the following:",
+				options: [
+					{ text: "Pintle Mounted heavy bolter", cost: 5 },
+					{ text: "Pintle Mounted multi-melta", cost: 5 },
+				],
+			},
+			{
+				text: "A Legion Falchion Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 120 },
+					{ text: "Increase the Detachment size by 2", cost: 240 },
+					{ text: "Increase the Detachment size by 3", cost: 350 },
+				],
+			},
+		],
+	},
+	{
+		id: 1048,
+		name: "Legion Ascalon Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 110,
+		base_size: 1,
+		max_size: 4,
+		main_unit: [1048],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Ascalon inferno gun",
+					"Sponson Mounted quad lascannon, Sponson Mounted laser destroyers or Sponson Mounted quad heavy bolters",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Ascalon",
+				unit_ref: 1048,
+				options: [
+					{ number: 1, cost: 100, size: 1 },
+					{ number: 2, cost: 200, size: 2 },
+					{ number: 3, cost: 290, size: 3 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Quad lascannons", cost: 0 },
+					{ name: "Laser destroyers", cost: 0 },
+					{ name: "Quad heavy bolters", cost: 0 },
+				],
+			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
+					{ name: "Multi-melta", cost: 5 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "Any Ascalon may be equipped with one of the following:",
+				options: [
+					{ text: "Pintle Mounted heavy bolter", cost: 5 },
+					{ text: "Pintle Mounted multi-melta", cost: 5 },
+				],
+			},
+			{
+				text: "A Legion Ascalon Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 100 },
+					{ text: "Increase the Detachment size by 2", cost: 200 },
+					{ text: "Increase the Detachment size by 3", cost: 290 },
+				],
+			},
+		],
+	},
+	{
+		id: 1049,
+		name: "Legion Glaive Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 110,
+		base_size: 1,
+		max_size: 4,
+		main_unit: [1049],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Volkite carronade",
+					"Hull Mounted heavy bolters",
+					"Sponson Mounted quad lascannon, Sponson Mounted laser destroyers or Sponson Mounted quad heavy bolters",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Glaive",
+				unit_ref: 1049,
+				options: [
+					{ number: 1, cost: 100, size: 1 },
+					{ number: 2, cost: 200, size: 2 },
+					{ number: 3, cost: 290, size: 3 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Quad lascannons", cost: 0 },
+					{ name: "Laser destroyers", cost: 0 },
+					{ name: "Quad heavy bolters", cost: 0 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "A Legion Glaive Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 100 },
+					{ text: "Increase the Detachment size by 2", cost: 200 },
+					{ text: "Increase the Detachment size by 3", cost: 290 },
+				],
+			},
+		],
+	},
+	{
+		id: 1050,
+		name: "Legion Fellblade Squadron",
+		faction: FACTION.astartes,
+		subfaction: null,
+		allegiance: null,
+		unique: false,
+		detachment_type: [DETACHMENT_TYPE.heavy],
+		base_cost: 120,
+		base_size: 1,
+		max_size: 4,
+		main_unit: [1050],
+		related_unit: [],
+		dataslate_loadout: [
+			{
+				text_option: [
+					"Volkite carronade",
+					"Hull Mounted heavy bolters",
+					"Sponson Mounted quad lascannon, Sponson Mounted laser destroyers or Sponson Mounted quad heavy bolters",
+				],
+			},
+		],
+		upgrade_options: [
+			{
+				name: "Additional Fellblade",
+				unit_ref: 1050,
+				options: [
+					{ number: 1, cost: 110, size: 1 },
+					{ number: 2, cost: 220, size: 2 },
+					{ number: 3, cost: 320, size: 3 },
+				],
+			},
+		],
+		loadout_options: [
+			{
+				location: "Sponsons",
+				options: [
+					{ name: "Quad lascannons", cost: 0 },
+					{ name: "Laser destroyers", cost: 0 },
+					{ name: "Quad heavy bolters", cost: 0 },
+				],
+			},
+			{
+				location: "Pintle",
+				options: [
+					{ name: "None", cost: 0 },
+					{ name: "Heavy bolter", cost: 5 },
+					{ name: "Multi-melta", cost: 5 },
+				],
+			},
+		],
+		datasheet_info: [
+			{
+				text: "Any Fellblade may be equipped with one of the following:",
+				options: [
+					{ text: "Pintle Mounted heavy bolter", cost: 5 },
+					{ text: "Pintle Mounted multi-melta", cost: 5 },
+				],
+			},
+			{
+				text: "A Legion Fellblade Squadron can purchase one of the following upgrades:",
+				options: [
+					{ text: "Increase the Detachment size by 1", cost: 110 },
+					{ text: "Increase the Detachment size by 2", cost: 220 },
+					{ text: "Increase the Detachment size by 3", cost: 320 },
+				],
+			},
 		],
 	},
 ]
