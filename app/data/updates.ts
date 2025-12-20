@@ -5,6 +5,10 @@ interface update {
 
 export const updateData: update[] = [
 	{
+		date: "20/12/25",
+		updates: ["Added new units and formations from 'The Ruin of the Salamanders'"],
+	},
+	{
 		date: "06/09/25",
 		updates: ["Added new units and formations for the Liber Strategia"],
 	},
