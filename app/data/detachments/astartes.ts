@@ -2077,7 +2077,7 @@ export const astartes: DETACHMENT[] = [
 		allegiance: null,
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.support],
-		base_cost: 50,
+		base_cost: 85,
 		base_size: 3,
 		max_size: 9,
 		main_unit: [1044],
