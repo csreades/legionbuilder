@@ -837,7 +837,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		caf: 4,
 		morale: 3,
 		wounds: 3,
-		weapons: [1092, 1093, 1047, 1058, 1075, 1002],
+		weapons: [1092, 1093, 1057, 1058, 1075, 1002],
 		special_rules: [],
 	},
 	{
@@ -853,7 +853,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		caf: 4,
 		morale: 3,
 		wounds: 3,
-		weapons: [1094, 1093, 1047, 1058, 1075, 1002],
+		weapons: [1094, 1093, 1057, 1058, 1075, 1002],
 		special_rules: [],
 	},
 	{
@@ -869,7 +869,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		caf: 4,
 		morale: 3,
 		wounds: 3,
-		weapons: [1095, 2064, 1093, 1047, 1058, 1075, 1002],
+		weapons: [1095, 2064, 1093, 1057, 1058, 1075, 1002],
 		special_rules: [],
 	},
 	{
@@ -885,7 +885,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		caf: 4,
 		morale: 3,
 		wounds: 3,
-		weapons: [1096, 2020, 2064, 1093, 1047, 1058, 1075, 1002],
+		weapons: [1096, 2020, 2064, 1093, 1057, 1058, 1075, 1002],
 		special_rules: [],
 	},
 ]
