@@ -50,6 +50,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 410, optional: 260 },
 	},
 	{
 		id: 7001,
@@ -73,6 +74,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 340, optional: 410 },
 	},
 	{
 		id: 7002,
@@ -96,6 +98,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 495, optional: 300 },
 	},
 	{
 		id: 7003,
@@ -119,6 +122,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 465, optional: 110 },
 	},
 	{
 		id: 7004,
@@ -142,6 +146,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 480, optional: 370 },
 	},
 	{
 		id: 7005,
@@ -165,6 +170,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 780, optional: 960 },
 	},
 	{
 		id: 7006,
@@ -188,6 +194,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 610, optional: 890 },
 	},
 	{
 		id: 7007,
@@ -211,6 +218,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 900, optional: 700 },
 	},
 	{
 		id: 7008,
@@ -234,6 +242,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 285, optional: 350 },
 	},
 	{
 		id: 7009,
@@ -254,6 +263,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 305, optional: 265 },
 	},
 	{
 		id: 7010,
@@ -277,6 +287,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 230, optional: 140 },
 	},
 	{
 		id: 7011,
@@ -296,6 +307,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 370, optional: 520 },
 	},
 	{
 		id: 7012,
@@ -315,6 +327,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 230, optional: 205 },
 	},
 	{
 		id: 7013,
@@ -334,6 +347,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 335, optional: 385 },
 	},
 	{
 		id: 7014,
@@ -353,6 +367,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 300, optional: 300 },
 	},
 	{
 		id: 7015,
@@ -372,6 +387,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 410, optional: 410 },
 	},
 	{
 		id: 7016,
@@ -395,6 +411,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 270, optional: 330 },
 	},
 	{
 		id: 7017,
@@ -418,6 +435,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 385, optional: 360 },
 	},
 	{
 		id: 7018,
@@ -441,6 +459,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 570, optional: 495 },
 	},
 	{
 		id: 7019,
@@ -456,7 +475,7 @@ export const legends: FORMATION[] = [
 			iconicFormation,
 			{
 				name: "Overwhelming Destruction",
-				text: "When a Saturnine Terminator model from this Formation Disembarks from a Mastodon model from this Formation, weapons that Saturnine Terminator model has gain the Shred trait until the end of the round.",
+				text: "If a Morale check would be made for an enemy Detachment as a result of being fired at by a Detachment from this Formation, the controlling player subtracts 1 from the result of that Morale check.",
 			},
 			{
 				name: "Breakers of Legions",
@@ -464,6 +483,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 620, optional: 790 },
 	},
 	{
 		id: 7020,
@@ -491,5 +511,6 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
+		points: { compulsory: 675, optional: 490 },
 	},
 ]

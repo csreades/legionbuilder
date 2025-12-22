@@ -1,4 +1,5 @@
 import { WEAPON_TRAIT_INFO } from "@type/types"
+import description from "@lists/builder/components/detachment/Description"
 
 export const weaponTraitsData: WEAPON_TRAIT_INFO[] = [
 	{
@@ -80,6 +81,13 @@ export const weaponTraitsData: WEAPON_TRAIT_INFO[] = [
 		name: "Demolisher",
 		tooltip: "Can damage structures",
 		description: [],
+	},
+	{
+		name: "Disruptive",
+		tooltip: "Winning Fight by 4 or more doubles wounds dealt.",
+		description: [
+			"If a model using a weapon with the Disruptive trait wins a Fight, if the difference between the two results is 4 or more, the losing model suffers two Wounds instead of one.",
+		],
 	},
 	{
 		name: "Engine Killer",
@@ -225,5 +233,12 @@ export const weaponTraitsData: WEAPON_TRAIT_INFO[] = [
 		name: "Wrecker",
 		tooltip: "Main Rulebook p.85",
 		description: [],
+	},
+	{
+		name: "Very Bulky",
+		tooltip: "Only embark on 'Large' transports and count as 2 models",
+		description: [
+			"Models with the Very Bulky special rule can only Embark on a model with either the Large Transport (X) or the Large Assault Transport (X) special rules. In addition, models with the Very Bulky special rule count as two models for the purposes of determining how many models a Transport can carry.",
+		],
 	},
 ]

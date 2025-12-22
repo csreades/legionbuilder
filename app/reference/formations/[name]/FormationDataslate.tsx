@@ -6,6 +6,19 @@ interface properties {
 	formation: FORMATION
 }
 const FormationDataslate = ({ formation }: properties) => {
+	const iconicPoints = formation.points && (
+		<div className={"b-2 px-2 my-2 space-y-2 border border-primary-900"}>
+			<div className={"text-primary-900 flex flex-wrap justify-between md:justify-center md:space-x-10 px-4"}>
+				<div className={"font-bold font-graduate"}> Compulsory: {formation.points.compulsory}pts</div>
+				<div className={"font-bold font-graduate"}> Optional: {formation.points.optional}pts</div>
+				<div className={"font-bold font-graduate"}>
+					{" "}
+					Total: {formation.points.optional + formation.points.compulsory}pts
+				</div>
+			</div>
+		</div>
+	)
+
 	const formationRules = formation.rules.length ? (
 		<div className="pb-2 px-2 space-y-2">
 			{formation.rules.map((rule, index) => {
@@ -26,7 +39,7 @@ const FormationDataslate = ({ formation }: properties) => {
 					{formation.name}
 				</h2>
 			</div>
-
+			{iconicPoints}
 			{formationRules}
 			{formationSlots}
 		</article>

@@ -2084,7 +2084,7 @@ export const astartes: DETACHMENT[] = [
 		related_unit: [],
 		dataslate_loadout: [
 			{
-				text: "Each mode has one of the following",
+				text: "Each model has one of the following",
 				text_option: [
 					"Plasma bombards and disruption fists",
 					"Paired plasma bombards",

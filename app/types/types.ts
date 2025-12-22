@@ -148,6 +148,12 @@ export interface FORMATION {
 	formation_slots: FORMATION_SLOTS[]
 	rules: FORMATION_RULES[]
 	legend?: boolean
+	points?: ICONIC_FORMATION_POINTS
+}
+
+export interface ICONIC_FORMATION_POINTS {
+	compulsory: number
+	optional: number
 }
 
 export interface FORMATION_RULES {
