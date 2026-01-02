@@ -2655,11 +2655,6 @@ export const legends: DETACHMENT[] = [
 				options: [{ name: "Lascannons", cost: 0 }],
 				required: 3,
 			},
-			{
-				location: "Pintle",
-				options: [{ name: "Heavy bolter", cost: 5 }],
-				required: 3,
-			},
 		],
 		datasheet_info: [],
 	},

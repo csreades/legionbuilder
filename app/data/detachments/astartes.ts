@@ -1104,7 +1104,7 @@ export const astartes: DETACHMENT[] = [
 			{
 				text_option: [
 					"Sponson Mounted quad lascannon or Sponson Mounted laser destroyers",
-					"Hull Mounted heavy bolters",
+					"Hull Mounted heavy bolters or Hull Mounted lascannon",
 				],
 			},
 		],
@@ -2436,7 +2436,8 @@ export const astartes: DETACHMENT[] = [
 		dataslate_loadout: [
 			{
 				text_option: [
-					"Volkite carronade",
+					"Fellblade accelerator cannon",
+					"Hull Mounted demolisher cannon",
 					"Hull Mounted heavy bolters",
 					"Sponson Mounted quad lascannon, Sponson Mounted laser destroyers or Sponson Mounted quad heavy bolters",
 				],
