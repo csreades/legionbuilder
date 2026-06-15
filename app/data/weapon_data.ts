@@ -30,7 +30,6 @@ export const weapons: WEAPON_DATASHEET[] = [
 				to_hit: 5,
 				ap: 0,
 				traits: [
-					{ name: WeaponTraits.arc, value: "Front" },
 					{ name: WeaponTraits.assault },
 					{ name: WeaponTraits.light },
 					{ name: WeaponTraits.pointDefence },
@@ -60,11 +59,7 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 1,
 				to_hit: 4,
 				ap: 0,
-				traits: [
-					{ name: WeaponTraits.arc, value: "Front" },
-					{ name: WeaponTraits.lightAT },
-					{ name: WeaponTraits.pointDefence },
-				],
+				traits: [{ name: WeaponTraits.lightAT }, { name: WeaponTraits.pointDefence }],
 			},
 		],
 	},
@@ -2819,7 +2814,11 @@ export const weapons: WEAPON_DATASHEET[] = [
 				dice: 1,
 				to_hit: 3,
 				ap: 3,
-				traits: [{ name: WeaponTraits.demolisher }, { name: WeaponTraits.ignoresCover }],
+				traits: [
+					{ name: WeaponTraits.barrage },
+					{ name: WeaponTraits.demolisher },
+					{ name: WeaponTraits.ignoresCover },
+				],
 			},
 		],
 	},

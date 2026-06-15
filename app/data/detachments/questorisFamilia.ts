@@ -313,6 +313,7 @@ export const questorisFamilia: DETACHMENT[] = [
 		unique: false,
 		detachment_type: [DETACHMENT_TYPE.knight],
 		base_cost: 180,
+		td_ek: 10,
 		base_size: 1,
 		max_size: 3,
 		break_strength: 3,
@@ -326,8 +327,11 @@ export const questorisFamilia: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Knight",
-				unit_ref: 4014,
-				options: optionsArray(2, 170, 1, 3),
+				unit_ref: 4015,
+				options: [
+					{ number: 1, cost: 170, size: 1, break_strength: 3, td_ek: 10 },
+					{ number: 2, cost: 340, size: 2, break_strength: 6, td_ek: 20 },
+				],
 			},
 		],
 		loadout_options: [],
@@ -363,7 +367,7 @@ export const questorisFamilia: DETACHMENT[] = [
 		upgrade_options: [
 			{
 				name: "Additional Knight",
-				unit_ref: 4005,
+				unit_ref: 4016,
 				options: [{ number: 1, cost: 230, size: 1, break_strength: 4 }],
 			},
 		],

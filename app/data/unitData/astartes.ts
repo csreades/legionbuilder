@@ -693,7 +693,7 @@ export const astartes: UNIT_DATASHEET[] = [
 		movement: '8"',
 		save: 2,
 		caf: 3,
-		morale: 2,
+		morale: 3,
 		wounds: 2,
 		weapons: [1074, 1024, 1026, 1075, 1002],
 		special_rules: [],

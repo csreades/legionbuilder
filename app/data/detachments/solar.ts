@@ -78,12 +78,12 @@ export const solar: DETACHMENT[] = [
 			},
 			{
 				name: "Additional Veletarii",
-				unit_ref: 9000,
+				unit_ref: 2003,
 				options: optionsArray(6, 12, 2),
 			},
 			{
 				name: "Additional Charonite Ogryns",
-				unit_ref: 9001,
+				unit_ref: 2004,
 				options: optionsArray(6, 30, 2),
 			},
 		],

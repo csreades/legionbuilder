@@ -74,7 +74,7 @@ export const legends: FORMATION[] = [
 			},
 		],
 		legend: true,
-		points: { compulsory: 340, optional: 410 },
+		points: { compulsory: 340, optional: 355 },
 	},
 	{
 		id: 7002,
@@ -357,7 +357,7 @@ export const legends: FORMATION[] = [
 		allegiance: null,
 		formation_slots: [
 			{ slot_type: SLOT_TYPE.compulsory, slot_id: [7072, 7073, 7074, 7074, 7074] },
-			{ slot_type: SLOT_TYPE.optional, slot_id: [7073, 7075, 7075, 7075] },
+			{ slot_type: SLOT_TYPE.optional, slot_id: [7073, 7075, 70751, 70752] },
 		],
 		rules: [
 			iconicFormation,

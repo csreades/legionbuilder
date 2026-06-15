@@ -13,6 +13,8 @@ import { sortedByNameKey } from "@app/utils/sorting"
 import addresses from "@app/reference/addresses"
 
 const page = () => {
+	"use cache"
+
 	const sortByDetachmentType = (array: DETACHMENT[]): DETACHMENT[] => {
 		let sortedArray = []
 		for (let i = 0; i < detachmentTypeArray.length; i++) {

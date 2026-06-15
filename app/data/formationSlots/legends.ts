@@ -668,7 +668,23 @@ export const legends: FORMATION_SLOT[] = [
 		faction: FACTION.solar,
 		restricted: true,
 		options: [7075],
-		description: "Auxilia Rapier Battery",
+		description: "Laser destroyer Rapiers",
+	},
+	{
+		id: 70751,
+		type: DETACHMENT_TYPE.bastion,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [70751],
+		description: "Quad-launcher Rapiers",
+	},
+	{
+		id: 70752,
+		type: DETACHMENT_TYPE.bastion,
+		faction: FACTION.solar,
+		restricted: true,
+		options: [70752],
+		description: "Mole mortar Rapiers",
 	},
 
 	//  Mechanised Pattern Sub-Cohort

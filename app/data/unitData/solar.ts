@@ -559,7 +559,7 @@ export const solar: UNIT_DATASHEET[] = [
 		caf: 2,
 		morale: 4,
 		wounds: 3,
-		weapons: [4041, 2064, 2065, 2069, 2070],
+		weapons: [4041, 2064, 2065, 2023, 2070],
 		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
@@ -575,7 +575,7 @@ export const solar: UNIT_DATASHEET[] = [
 		caf: 2,
 		morale: 4,
 		wounds: 3,
-		weapons: [2067, 2064, 2066, 2069, 2070],
+		weapons: [2067, 2064, 2066, 2023, 2070],
 		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{
@@ -591,7 +591,7 @@ export const solar: UNIT_DATASHEET[] = [
 		caf: 2,
 		morale: 4,
 		wounds: 3,
-		weapons: [4030, 2064, 2068, 2069, 2070],
+		weapons: [4030, 2064, 2068, 2023, 2070],
 		special_rules: [{ name: SpecialRule.chainOfCommand }, { name: SpecialRule.exploratorAdaptation }],
 	},
 	{

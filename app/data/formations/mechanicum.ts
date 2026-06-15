@@ -77,7 +77,7 @@ export const mechanicum: FORMATION[] = [
 		rules: [
 			{
 				name: "Dedicated Transports",
-				text: "Detachments within the Formation that contain only Infantry or Walker models may be upgraded with Triaros Armoured Conveyors as Dedicated Transports",
+				text: "Detachments within this Formation that contain only Infantry models may be upgraded with Triaros Armoured Conveyors as Dedicated Transports",
 			},
 			{
 				name: "Servants of the Lacrymaerta",
