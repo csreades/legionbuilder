@@ -7,7 +7,15 @@ import Formation from "@lists/view/components/Formation"
 import { detachmentData } from "@data/detachment_data"
 import { unitData } from "@data/unit_data"
 import { totalListPoints } from "@lists/builder/utils"
+import dynamic from "next/dynamic"
+import { FaFileDownload } from "@react-icons/all-files/fa/FaFileDownload"
+import PdfCardList from "./pdf/PdfCardList"
 import { visibleWeaponIds, variantNotes, cardSignature, takenRelatedUnitIds } from "./resolveWeapons"
+
+const PDFDownloadLink = dynamic(() => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink), {
+	ssr: false,
+	loading: () => <span>Loading…</span>,
+})
 
 const page = () => {
 	const { list } = listState()
@@ -70,6 +78,15 @@ const page = () => {
 				<h3 className="font-graduate">
 					{list.allegiance} {list.faction}
 				</h3>
+				<button className="flex items-center mt-2 text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate">
+					<PDFDownloadLink
+						document={<PdfCardList list={list} />}
+						fileName={`${list.name}-cards`}
+						className="flex items-center">
+						<FaFileDownload className="mr-1 text-xl" />
+						Cards pdf
+					</PDFDownloadLink>
+				</button>
 			</div>
 
 			{/* Flagged list tree (selected loadouts per detachment, with [A]/[B] labels) */}
