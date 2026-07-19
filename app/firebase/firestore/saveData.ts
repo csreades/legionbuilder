@@ -2,8 +2,10 @@ import { List } from "@type//listTypes"
 import { db } from "@/app/firebase/config"
 import { setDoc, doc, serverTimestamp } from "firebase/firestore"
 import checkUploadPermission from "@/app/firebase/firestore/checkUploadPermission"
+import { LOCAL_MODE, localSaveList } from "@/app/localMode"
 
 export const saveData = async (listData: List) => {
+	if (LOCAL_MODE) return localSaveList(listData)
 	try {
 		const permission = await checkUploadPermission(listData)
 		if (!permission) {

@@ -4,6 +4,7 @@ import { createLoadout, currentDetachmentSize, incrementLoadout, loadoutCount } 
 import { FormEvent } from "react"
 import LoadoutEntries from "./LoadoutEntries"
 import LoadoutCountWarning from "../warnings/LoadoutCountWarning"
+import LoadoutRequiredWarning from "../warnings/LoadoutRequiredWarning"
 import SideMenuTitle from "../SideMenuTitle"
 import { toast } from "react-toastify"
 
@@ -102,6 +103,7 @@ const Loadouts = ({ slot_id }: properties) => {
 				)}
 			</form>
 			<LoadoutCountWarning slot_id={loadoutSlot.slot_id} />
+			<LoadoutRequiredWarning slot_id={loadoutSlot.slot_id} />
 			<LoadoutEntries loadoutSlot={loadoutSlot} />
 		</>
 	)

@@ -320,3 +320,47 @@ export const currentDetachmentSize = (list: List, slot_id: string): number => {
 			.reduce((acc, sum) => acc + sum.size, 0) + upgradeSizeCount(list, slot_id)
 	)
 }
+
+// --- Mandatory loadout selection ---
+// A loadout location is a *mandatory choice* when picking any of its options is
+// free (no option adds points) and it isn't already auto-applied via `required`.
+// Rationale: a free either/or (e.g. a Leman Russ Vanquisher's Hull: heavy bolters
+// vs lascannons) only exists because the player must equip one. If an option
+// costs points it's an optional upgrade that can be skipped.
+export const isMandatoryLoadout = (loadout: DETACHMENT_LOADOUT): boolean => {
+	return (
+		!loadout.required &&
+		loadout.options.length >= 2 &&
+		loadout.options.every((option) => !option.cost && !option.td_ek)
+	)
+}
+
+// How many models in a detachment have a weapon chosen for the given location.
+export const loadoutLocationCoverage = (list: List, slot_id: string, location: string): number => {
+	return list.loadouts
+		.filter((slot) => slot.slot_id === slot_id)
+		.flatMap((slot) => slot.loadouts)
+		.filter((loadout) => loadout.weapons.some((weapon) => weapon.location === location))
+		.reduce((acc, loadout) => acc + loadout.number, 0)
+}
+
+// Mandatory locations for the detachment in a slot that aren't yet chosen for
+// every model (coverage below the current detachment size).
+export const unselectedLoadoutLocations = (list: List, slot_id: string): string[] => {
+	const detachment = list.detachments.find((entry) => entry.slot_id === slot_id)
+	if (!detachment || !detachment.id) return []
+
+	const detachmentInfo = detachmentData.find((entry) => entry.id === detachment.id)
+	if (!detachmentInfo) return []
+
+	const size = currentDetachmentSize(list, slot_id)
+	return detachmentInfo.loadout_options
+		.filter(isMandatoryLoadout)
+		.filter((loadout) => loadoutLocationCoverage(list, slot_id, loadout.location) < size)
+		.map((loadout) => loadout.location)
+}
+
+// List-level rollup: does any detachment still have an unselected mandatory loadout?
+export const listHasUnselectedLoadouts = (list: List): boolean => {
+	return list.detachments.some((detachment) => unselectedLoadoutLocations(list, detachment.slot_id).length > 0)
+}

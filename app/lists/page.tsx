@@ -9,6 +9,7 @@ import CreateListBtn from "@lists/components/CreateListBtn"
 import ListButtonInfo from "@lists/components/ListBtnInfo"
 import ListSortButton from "@lists/components/ListSortButton"
 import UserListsTable from "@lists/components/UserListsTable"
+import ImportList from "@lists/components/ImportList"
 import SideMenuTitle from "./builder/components/SideMenuTitle"
 import { BreadCrumbs, Crumb } from "@components/BreadCrumbs"
 
@@ -38,6 +39,7 @@ const page = () => {
 			</BreadCrumbs>
 			<div>
 				<CreateListBtn />
+				<ImportList />
 				{userLists.length ? (
 					<>
 						<ListButtonInfo />

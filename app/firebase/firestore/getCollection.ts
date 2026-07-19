@@ -1,8 +1,10 @@
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "@/app/firebase/config"
 import { CollectionList } from "@app/tools/collection/state"
+import { LOCAL_MODE, localGetCollection } from "@/app/localMode"
 
 export const getCollection = async (user: string) => {
+	if (LOCAL_MODE) return localGetCollection() as CollectionList[]
 	const q = query(collection(db, process.env.NEXT_PUBLIC_FIREBASE_COLLECTION_DB!), where("owner", "==", user))
 
 	const querySnapshot = await getDocs(q)

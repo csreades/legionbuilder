@@ -1,0 +1,1927 @@
+[
+  {
+    "gamemode": "standard",
+    "points": 2000,
+    "name": "Actual List",
+    "id": "PqlTdgaESs_OCL5PR9_Gy",
+    "user": "HJ9Sl1YKhabufBDrFOzk1Si5Em43",
+    "faction": "Solar Auxillia",
+    "allegiance": "Loyalist",
+    "formations": [
+      {
+        "id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "name": "Solar Auxilia Armoured Company",
+        "nickname": "",
+        "data_id": 2001,
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "detachment_groups": [
+          {
+            "id": "Dd8fk_ZHcUcPsTJYLDeSUindex0",
+            "type": "compulsory",
+            "detachment_slots": [
+              {
+                "id": "Dd8fk_ZHcUcPsTJYLDeSUindex0HQ0",
+                "type": "HQ",
+                "faction": "Solar Auxillia",
+                "restricted": true,
+                "options": [
+                  9003
+                ],
+                "description": "Tank Commander",
+                "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU"
+              },
+              {
+                "id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Battle Tank1",
+                "type": "Battle Tank",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU"
+              },
+              {
+                "id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Battle Tank2",
+                "type": "Battle Tank",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU"
+              },
+              {
+                "id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Heavy Armour3",
+                "type": "Heavy Armour",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU"
+              }
+            ],
+            "text": ""
+          },
+          {
+            "id": "Dd8fk_ZHcUcPsTJYLDeSUindex1",
+            "type": "optional",
+            "detachment_slots": [
+              {
+                "id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Battle Tank0",
+                "type": "Battle Tank",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU"
+              },
+              {
+                "id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Battle Tank1",
+                "type": "Battle Tank",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU"
+              },
+              {
+                "id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Heavy Armour2",
+                "type": "Heavy Armour",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU"
+              }
+            ],
+            "text": ""
+          },
+          {
+            "id": "Dd8fk_ZHcUcPsTJYLDeSUindex2",
+            "type": "choice",
+            "detachment_slots": [
+              {
+                "id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Battle Tank0",
+                "type": "Battle Tank",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU"
+              },
+              {
+                "id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Artillery1",
+                "type": "Artillery",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU"
+              },
+              {
+                "id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Air Support2",
+                "type": "Air Support",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU"
+              }
+            ],
+            "text": "Up to one of the following"
+          }
+        ]
+      },
+      {
+        "id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "name": "Solar Auxilia Artillery Company",
+        "nickname": "",
+        "data_id": 2003,
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "detachment_groups": [
+          {
+            "id": "hiWZ5WMWJOZoLuOi5fzsZindex0",
+            "type": "compulsory",
+            "detachment_slots": [
+              {
+                "id": "hiWZ5WMWJOZoLuOi5fzsZindex0HQ0",
+                "type": "HQ",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ"
+              },
+              {
+                "id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery1",
+                "type": "Artillery",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ"
+              },
+              {
+                "id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery2",
+                "type": "Artillery",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ"
+              },
+              {
+                "id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery3",
+                "type": "Artillery",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ"
+              }
+            ],
+            "text": ""
+          },
+          {
+            "id": "hiWZ5WMWJOZoLuOi5fzsZindex1",
+            "type": "optional",
+            "detachment_slots": [
+              {
+                "id": "hiWZ5WMWJOZoLuOi5fzsZindex1Support0",
+                "type": "Support",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ"
+              },
+              {
+                "id": "hiWZ5WMWJOZoLuOi5fzsZindex1Support1",
+                "type": "Support",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ"
+              },
+              {
+                "id": "hiWZ5WMWJOZoLuOi5fzsZindex1Bastion2",
+                "type": "Bastion",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ"
+              },
+              {
+                "id": "hiWZ5WMWJOZoLuOi5fzsZindex1Bastion3",
+                "type": "Bastion",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ"
+              }
+            ],
+            "text": ""
+          }
+        ]
+      },
+      {
+        "id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "Solar Auxilia Sub-Cohort",
+        "nickname": "",
+        "data_id": 2000,
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "detachment_groups": [
+          {
+            "id": "G-bmwm3DQjA0bSc3u8DXlindex0",
+            "type": "compulsory",
+            "detachment_slots": [
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex0HQ0",
+                "type": "HQ",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex0Core1",
+                "type": "Core",
+                "faction": "Solar Auxillia",
+                "restricted": true,
+                "options": [
+                  2002
+                ],
+                "description": "Lasrifle detachment",
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex0Core2",
+                "type": "Core",
+                "faction": "Solar Auxillia",
+                "restricted": true,
+                "options": [
+                  2002
+                ],
+                "description": "Lasrifle detachment",
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex0Support3",
+                "type": "Support",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              }
+            ],
+            "text": ""
+          },
+          {
+            "id": "G-bmwm3DQjA0bSc3u8DXlindex1",
+            "type": "optional",
+            "detachment_slots": [
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport0",
+                "type": "Transport",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport1",
+                "type": "Transport",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport2",
+                "type": "Transport",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex1Support3",
+                "type": "Support",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex1Support4",
+                "type": "Support",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex1Battle Tank5",
+                "type": "Battle Tank",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex1Core6",
+                "type": "Core",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              }
+            ],
+            "text": ""
+          },
+          {
+            "id": "G-bmwm3DQjA0bSc3u8DXlindex2",
+            "type": "choice",
+            "detachment_slots": [
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex2Light Armour0",
+                "type": "Light Armour",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex2Vanguard1",
+                "type": "Vanguard",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              }
+            ],
+            "text": "Up to one of the following"
+          },
+          {
+            "id": "G-bmwm3DQjA0bSc3u8DXlindex3",
+            "type": "choice",
+            "detachment_slots": [
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex3Artillery0",
+                "type": "Artillery",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex3Battle Tank1",
+                "type": "Battle Tank",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              },
+              {
+                "id": "G-bmwm3DQjA0bSc3u8DXlindex3Air Support2",
+                "type": "Air Support",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "G-bmwm3DQjA0bSc3u8DXl"
+              }
+            ],
+            "text": "Up to one of the following"
+          }
+        ]
+      },
+      {
+        "id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "Solar Auxilia Sub-Cohort",
+        "nickname": "",
+        "data_id": 2000,
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "detachment_groups": [
+          {
+            "id": "jTflecOGb6kgeLk1aNO3iindex0",
+            "type": "compulsory",
+            "detachment_slots": [
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex0HQ0",
+                "type": "HQ",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex0Core1",
+                "type": "Core",
+                "faction": "Solar Auxillia",
+                "restricted": true,
+                "options": [
+                  2002
+                ],
+                "description": "Lasrifle detachment",
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex0Core2",
+                "type": "Core",
+                "faction": "Solar Auxillia",
+                "restricted": true,
+                "options": [
+                  2002
+                ],
+                "description": "Lasrifle detachment",
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex0Support3",
+                "type": "Support",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              }
+            ],
+            "text": ""
+          },
+          {
+            "id": "jTflecOGb6kgeLk1aNO3iindex1",
+            "type": "optional",
+            "detachment_slots": [
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex1Transport0",
+                "type": "Transport",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex1Transport1",
+                "type": "Transport",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex1Transport2",
+                "type": "Transport",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex1Support3",
+                "type": "Support",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex1Support4",
+                "type": "Support",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex1Battle Tank5",
+                "type": "Battle Tank",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex1Core6",
+                "type": "Core",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              }
+            ],
+            "text": ""
+          },
+          {
+            "id": "jTflecOGb6kgeLk1aNO3iindex2",
+            "type": "choice",
+            "detachment_slots": [
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex2Light Armour0",
+                "type": "Light Armour",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex2Vanguard1",
+                "type": "Vanguard",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              }
+            ],
+            "text": "Up to one of the following"
+          },
+          {
+            "id": "jTflecOGb6kgeLk1aNO3iindex3",
+            "type": "choice",
+            "detachment_slots": [
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex3Artillery0",
+                "type": "Artillery",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex3Battle Tank1",
+                "type": "Battle Tank",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              },
+              {
+                "id": "jTflecOGb6kgeLk1aNO3iindex3Air Support2",
+                "type": "Air Support",
+                "faction": "Solar Auxillia",
+                "restricted": false,
+                "options": [],
+                "formation_id": "jTflecOGb6kgeLk1aNO3i"
+              }
+            ],
+            "text": "Up to one of the following"
+          }
+        ]
+      }
+    ],
+    "detachments": [
+      {
+        "id": 9003,
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0HQ0",
+        "slot_type": "HQ",
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "name": "Tank Commander",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 10,
+        "size": 1,
+        "max_size": 1,
+        "break_strength": 0
+      },
+      {
+        "id": 2030,
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Battle Tank1",
+        "slot_type": "Battle Tank",
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "name": "Leman Russ Vanquisher Squadron",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 175,
+        "size": 4,
+        "max_size": 10
+      },
+      {
+        "id": 2009,
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Battle Tank2",
+        "slot_type": "Battle Tank",
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "name": "Malcador Tank Squadron",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 150,
+        "size": 2,
+        "max_size": 6
+      },
+      {
+        "id": 2010,
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Heavy Armour3",
+        "slot_type": "Heavy Armour",
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "name": "Auxilia Baneblade Squadron",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 100,
+        "size": 1,
+        "max_size": 3
+      },
+      {
+        "id": 0,
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Battle Tank0",
+        "slot_type": "Battle Tank",
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Battle Tank1",
+        "slot_type": "Battle Tank",
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Heavy Armour2",
+        "slot_type": "Heavy Armour",
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Battle Tank0",
+        "slot_type": "Battle Tank",
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Artillery1",
+        "slot_type": "Artillery",
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Air Support2",
+        "slot_type": "Air Support",
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 2000,
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0HQ0",
+        "slot_type": "HQ",
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "name": "Legate Commander Detachment",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 16,
+        "size": 1,
+        "max_size": 1
+      },
+      {
+        "id": 2022,
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery1",
+        "slot_type": "Artillery",
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "name": "Auxilia Basilisk Battery",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 130,
+        "size": 4,
+        "max_size": 12
+      },
+      {
+        "id": 2022,
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery2",
+        "slot_type": "Artillery",
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "name": "Auxilia Basilisk Battery",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 130,
+        "size": 4,
+        "max_size": 12
+      },
+      {
+        "id": 2022,
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery3",
+        "slot_type": "Artillery",
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "name": "Auxilia Basilisk Battery",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 130,
+        "size": 4,
+        "max_size": 12
+      },
+      {
+        "id": 0,
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Support0",
+        "slot_type": "Support",
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Support1",
+        "slot_type": "Support",
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 2006,
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Bastion2",
+        "slot_type": "Bastion",
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "name": "Auxilia Tarantula Battery",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 30,
+        "size": 3,
+        "max_size": 9,
+        "break_strength": 0
+      },
+      {
+        "id": 2006,
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Bastion3",
+        "slot_type": "Bastion",
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "name": "Auxilia Tarantula Battery",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 30,
+        "size": 3,
+        "max_size": 9,
+        "break_strength": 0
+      },
+      {
+        "id": 2000,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0HQ0",
+        "slot_type": "HQ",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "Legate Commander Detachment",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 16,
+        "size": 1,
+        "max_size": 1
+      },
+      {
+        "id": 2002,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0Core1",
+        "slot_type": "Core",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "Auxilia Lasrifle Tercio",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 30,
+        "size": 4,
+        "max_size": 16
+      },
+      {
+        "id": 2002,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0Core2",
+        "slot_type": "Core",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "Auxilia Lasrifle Tercio",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 30,
+        "size": 4,
+        "max_size": 16
+      },
+      {
+        "id": 2003,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0Support3",
+        "slot_type": "Support",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "Auxilia Ogryn Charonite Section",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 70,
+        "size": 4,
+        "max_size": 8
+      },
+      {
+        "id": 2015,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport0",
+        "slot_type": "Transport",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "Auxilia Arvus Lighter",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 12,
+        "size": 1,
+        "max_size": 20
+      },
+      {
+        "id": 2015,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport1",
+        "slot_type": "Transport",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "Auxilia Arvus Lighter",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 12,
+        "size": 1,
+        "max_size": 20
+      },
+      {
+        "id": 2015,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport2",
+        "slot_type": "Transport",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "Auxilia Arvus Lighter",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 12,
+        "size": 1,
+        "max_size": 20
+      },
+      {
+        "id": 0,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Support3",
+        "slot_type": "Support",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Support4",
+        "slot_type": "Support",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Battle Tank5",
+        "slot_type": "Battle Tank",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Core6",
+        "slot_type": "Core",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex2Light Armour0",
+        "slot_type": "Light Armour",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 2007,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex2Vanguard1",
+        "slot_type": "Vanguard",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "Auxilia Aethon Heavy Sentinel Patrol",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 35,
+        "size": 2,
+        "max_size": 8
+      },
+      {
+        "id": 0,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex3Artillery0",
+        "slot_type": "Artillery",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex3Battle Tank1",
+        "slot_type": null,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex3Air Support2",
+        "slot_type": "Air Support",
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 2000,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0HQ0",
+        "slot_type": "HQ",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "Legate Commander Detachment",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 16,
+        "size": 1,
+        "max_size": 1
+      },
+      {
+        "id": 2002,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0Core1",
+        "slot_type": "Core",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "Auxilia Lasrifle Tercio",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 30,
+        "size": 4,
+        "max_size": 16
+      },
+      {
+        "id": 2002,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0Core2",
+        "slot_type": "Core",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "Auxilia Lasrifle Tercio",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 30,
+        "size": 4,
+        "max_size": 16
+      },
+      {
+        "id": 2003,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0Support3",
+        "slot_type": "Support",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "Auxilia Ogryn Charonite Section",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 70,
+        "size": 4,
+        "max_size": 8
+      },
+      {
+        "id": 2015,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Transport0",
+        "slot_type": "Transport",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "Auxilia Arvus Lighter",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 12,
+        "size": 1,
+        "max_size": 20
+      },
+      {
+        "id": 2015,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Transport1",
+        "slot_type": "Transport",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "Auxilia Arvus Lighter",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 12,
+        "size": 1,
+        "max_size": 20
+      },
+      {
+        "id": 2015,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Transport2",
+        "slot_type": "Transport",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "Auxilia Arvus Lighter",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 12,
+        "size": 1,
+        "max_size": 20
+      },
+      {
+        "id": 0,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Support3",
+        "slot_type": "Support",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Support4",
+        "slot_type": "Support",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Battle Tank5",
+        "slot_type": "Battle Tank",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Core6",
+        "slot_type": "Core",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex2Light Armour0",
+        "slot_type": "Light Armour",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 2007,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex2Vanguard1",
+        "slot_type": "Vanguard",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "Auxilia Aethon Heavy Sentinel Patrol",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 35,
+        "size": 2,
+        "max_size": 8
+      },
+      {
+        "id": 0,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex3Artillery0",
+        "slot_type": "Artillery",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 2030,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex3Battle Tank1",
+        "slot_type": "Battle Tank",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "Leman Russ Vanquisher Squadron",
+        "faction": "Solar Auxillia",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 175,
+        "size": 4,
+        "max_size": 10
+      },
+      {
+        "id": 0,
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex3Air Support2",
+        "slot_type": "Air Support",
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      }
+    ],
+    "upgrades": [
+      {
+        "id": 9003,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0HQ0",
+        "upgrades": []
+      },
+      {
+        "id": 2010,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Heavy Armour3",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Battle Tank0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Battle Tank1",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Heavy Armour2",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Battle Tank0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Artillery1",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Air Support2",
+        "upgrades": []
+      },
+      {
+        "id": 2030,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Battle Tank1",
+        "upgrades": [
+          {
+            "name": "Additional Leman Russ",
+            "unit_ref": 2033,
+            "number": 2,
+            "cost": 85,
+            "size": 2
+          }
+        ]
+      },
+      {
+        "id": 2009,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Battle Tank2",
+        "upgrades": [
+          {
+            "name": "Additional Malcador",
+            "unit_ref": 2009,
+            "number": 1,
+            "cost": 70,
+            "size": 1
+          }
+        ]
+      },
+      {
+        "id": 2000,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0HQ0",
+        "upgrades": []
+      },
+      {
+        "id": 2022,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery1",
+        "upgrades": []
+      },
+      {
+        "id": 2022,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery2",
+        "upgrades": []
+      },
+      {
+        "id": 2022,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery3",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Support0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Support1",
+        "upgrades": []
+      },
+      {
+        "id": 2006,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Bastion2",
+        "upgrades": []
+      },
+      {
+        "id": 2006,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Bastion3",
+        "upgrades": []
+      },
+      {
+        "id": 2000,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0HQ0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Support3",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Support4",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Battle Tank5",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Core6",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex2Light Armour0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex3Artillery0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex3Battle Tank1",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex3Air Support2",
+        "upgrades": []
+      },
+      {
+        "id": 2002,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0Core1",
+        "upgrades": [
+          {
+            "name": "Additional Auxiliaries",
+            "unit_ref": 2002,
+            "number": 6,
+            "cost": 36,
+            "size": 6,
+            "break_strength": 1
+          }
+        ]
+      },
+      {
+        "id": 2002,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0Core2",
+        "upgrades": [
+          {
+            "name": "Additional Auxiliaries",
+            "unit_ref": 2002,
+            "number": 6,
+            "cost": 36,
+            "size": 6,
+            "break_strength": 1
+          }
+        ]
+      },
+      {
+        "id": 2015,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport0",
+        "upgrades": [
+          {
+            "name": "Additional Arvus Lighter",
+            "unit_ref": 2018,
+            "number": 4,
+            "cost": 48,
+            "size": 4,
+            "break_strength": 1
+          }
+        ]
+      },
+      {
+        "id": 2015,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport1",
+        "upgrades": [
+          {
+            "name": "Additional Arvus Lighter",
+            "unit_ref": 2018,
+            "number": 4,
+            "cost": 48,
+            "size": 4,
+            "break_strength": 1
+          }
+        ]
+      },
+      {
+        "id": 2003,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0Support3",
+        "upgrades": [
+          {
+            "name": "Additional Charonite Ogryn",
+            "unit_ref": 2004,
+            "number": 2,
+            "cost": 30,
+            "size": 2,
+            "break_strength": 1
+          }
+        ]
+      },
+      {
+        "id": 2015,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport2",
+        "upgrades": [
+          {
+            "name": "Additional Arvus Lighter",
+            "unit_ref": 2018,
+            "number": 5,
+            "cost": 60,
+            "size": 5,
+            "break_strength": 1
+          }
+        ]
+      },
+      {
+        "id": 2000,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0HQ0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Support3",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Support4",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Battle Tank5",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Core6",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex2Light Armour0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex3Artillery0",
+        "upgrades": []
+      },
+      {
+        "id": 2030,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex3Battle Tank1",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex3Air Support2",
+        "upgrades": []
+      },
+      {
+        "id": 2002,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0Core1",
+        "upgrades": [
+          {
+            "name": "Additional Auxiliaries",
+            "unit_ref": 2002,
+            "number": 2,
+            "cost": 12,
+            "size": 2,
+            "break_strength": 1
+          }
+        ]
+      },
+      {
+        "id": 2002,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0Core2",
+        "upgrades": [
+          {
+            "name": "Additional Auxiliaries",
+            "unit_ref": 2002,
+            "number": 2,
+            "cost": 12,
+            "size": 2,
+            "break_strength": 1
+          }
+        ]
+      },
+      {
+        "id": 2003,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0Support3",
+        "upgrades": [
+          {
+            "name": "Additional Charonite Ogryn",
+            "unit_ref": 2004,
+            "number": 2,
+            "cost": 30,
+            "size": 2,
+            "break_strength": 1
+          }
+        ]
+      },
+      {
+        "id": 2007,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex2Vanguard1",
+        "upgrades": [
+          {
+            "name": "Additional Sentinel",
+            "unit_ref": 2007,
+            "number": 2,
+            "cost": 25,
+            "size": 2
+          }
+        ]
+      },
+      {
+        "id": 2015,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Transport0",
+        "upgrades": []
+      },
+      {
+        "id": 2015,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Transport1",
+        "upgrades": []
+      },
+      {
+        "id": 2015,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Transport2",
+        "upgrades": []
+      },
+      {
+        "id": 2007,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex2Vanguard1",
+        "upgrades": []
+      }
+    ],
+    "loadouts": [
+      {
+        "id": 9003,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0HQ0",
+        "loadouts": []
+      },
+      {
+        "id": 2030,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Battle Tank1",
+        "loadouts": []
+      },
+      {
+        "id": 2009,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Battle Tank2",
+        "loadouts": []
+      },
+      {
+        "id": 2010,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex0Heavy Armour3",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Battle Tank0",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Battle Tank1",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex1Heavy Armour2",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Battle Tank0",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Artillery1",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "Dd8fk_ZHcUcPsTJYLDeSU",
+        "slot_id": "Dd8fk_ZHcUcPsTJYLDeSUindex2Air Support2",
+        "loadouts": []
+      },
+      {
+        "id": 2000,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0HQ0",
+        "loadouts": []
+      },
+      {
+        "id": 2022,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery1",
+        "loadouts": []
+      },
+      {
+        "id": 2022,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery2",
+        "loadouts": []
+      },
+      {
+        "id": 2022,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex0Artillery3",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Support0",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Support1",
+        "loadouts": []
+      },
+      {
+        "id": 2006,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Bastion2",
+        "loadouts": []
+      },
+      {
+        "id": 2006,
+        "formation_id": "hiWZ5WMWJOZoLuOi5fzsZ",
+        "slot_id": "hiWZ5WMWJOZoLuOi5fzsZindex1Bastion3",
+        "loadouts": []
+      },
+      {
+        "id": 2000,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0HQ0",
+        "loadouts": []
+      },
+      {
+        "id": 2002,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0Core1",
+        "loadouts": []
+      },
+      {
+        "id": 2002,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0Core2",
+        "loadouts": []
+      },
+      {
+        "id": 2003,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex0Support3",
+        "loadouts": []
+      },
+      {
+        "id": 2015,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport0",
+        "loadouts": []
+      },
+      {
+        "id": 2015,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport1",
+        "loadouts": []
+      },
+      {
+        "id": 2015,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Transport2",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Support3",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Support4",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Battle Tank5",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex1Core6",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex2Light Armour0",
+        "loadouts": []
+      },
+      {
+        "id": 2007,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex2Vanguard1",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex3Artillery0",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex3Battle Tank1",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "G-bmwm3DQjA0bSc3u8DXl",
+        "slot_id": "G-bmwm3DQjA0bSc3u8DXlindex3Air Support2",
+        "loadouts": []
+      },
+      {
+        "id": 2000,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0HQ0",
+        "loadouts": []
+      },
+      {
+        "id": 2002,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0Core1",
+        "loadouts": []
+      },
+      {
+        "id": 2002,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0Core2",
+        "loadouts": []
+      },
+      {
+        "id": 2003,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex0Support3",
+        "loadouts": []
+      },
+      {
+        "id": 2015,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Transport0",
+        "loadouts": []
+      },
+      {
+        "id": 2015,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Transport1",
+        "loadouts": []
+      },
+      {
+        "id": 2015,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Transport2",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Support3",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Support4",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Battle Tank5",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex1Core6",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex2Light Armour0",
+        "loadouts": []
+      },
+      {
+        "id": 2007,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex2Vanguard1",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex3Artillery0",
+        "loadouts": []
+      },
+      {
+        "id": 2030,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex3Battle Tank1",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "jTflecOGb6kgeLk1aNO3i",
+        "slot_id": "jTflecOGb6kgeLk1aNO3iindex3Air Support2",
+        "loadouts": []
+      }
+    ]
+  }
+]

@@ -3,9 +3,11 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import { onAuthStateChanged, getAuth, User } from "firebase/auth"
 import useAuthState from "@/app/Auth"
+import { LOCAL_MODE, LOCAL_UID, seedLocalLists } from "@/app/localMode"
 import firebase_app from "../config"
 
-const auth = getAuth(firebase_app)
+// In local mode we never touch Firebase Auth.
+const auth = LOCAL_MODE ? null : getAuth(firebase_app)
 
 export const AuthContext = createContext<{ user: User | null }>({ user: null })
 
@@ -16,7 +18,13 @@ const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
 	const saveSession = useAuthState((state) => state.saveSession)
 
 	useEffect(() => {
-		const unsubscribe = onAuthStateChanged(auth, (user) => {
+		if (LOCAL_MODE) {
+			// Single local user, auto logged in — no Firebase involved.
+			seedLocalLists()
+			saveSession(LOCAL_UID)
+			return
+		}
+		const unsubscribe = onAuthStateChanged(auth!, (user) => {
 			if (user) {
 				setUser(user)
 				saveSession(user.uid)

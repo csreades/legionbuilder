@@ -1,8 +1,10 @@
 import { CollectionList } from "@app/tools/collection/state"
 import { db } from "@app/firebase/config"
 import { doc, serverTimestamp, setDoc } from "firebase/firestore"
+import { LOCAL_MODE, localSaveCollection } from "@/app/localMode"
 
 export const saveCollection = async (collection: CollectionList) => {
+	if (LOCAL_MODE) return localSaveCollection(collection)
 	try {
 		const collectionRef = doc(db, process.env.NEXT_PUBLIC_FIREBASE_COLLECTION_DB!, collection.owner)
 		await setDoc(collectionRef, { ...collection, created: serverTimestamp() }, { merge: true })

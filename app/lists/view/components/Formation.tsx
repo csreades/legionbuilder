@@ -6,9 +6,10 @@ import FormationBreakPoints from "@lists/builder/components/formation/FormationB
 interface properties {
 	list: List
 	formation: ListFormation
+	labels?: Record<string, string> // slot_id -> disambiguation label (card list only)
 }
 
-const Formation = ({ list, formation }: properties) => {
+const Formation = ({ list, formation, labels }: properties) => {
 	return (
 		<div className="pt-2 flex flex-col gap-1">
 			<h4 className="font-bold font-graduate border-b border-white text-lg">
@@ -19,7 +20,7 @@ const Formation = ({ list, formation }: properties) => {
 			<FormationBreakPoints formation={formation} className="flex gap-2" />
 
 			{formation.detachment_groups.map((group, index) => (
-				<FormationGroup key={formation.id + "group" + index} list={list} formationGroup={group} />
+				<FormationGroup key={formation.id + "group" + index} list={list} formationGroup={group} labels={labels} />
 			))}
 		</div>
 	)

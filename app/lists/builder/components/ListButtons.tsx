@@ -8,6 +8,7 @@ import { toast } from "react-toastify"
 import Link from "next/link"
 import { FaSave } from "@react-icons/all-files/fa/FaSave"
 import { FaEye } from "@react-icons/all-files/fa/FaEye"
+import { FaIdCard } from "@react-icons/all-files/fa/FaIdCard"
 import { ImBin } from "@react-icons/all-files/im/ImBin"
 import { FaListAlt } from "@react-icons/all-files/fa/FaListAlt"
 import { useSearchParams } from "next/navigation"
@@ -36,6 +37,9 @@ const ListButtons = () => {
 			)}
 			<Link href={`/lists/view${listParams ? `?listId=${listParams}` : ""}`} className={buttonStyles}>
 				<FaEye />
+			</Link>
+			<Link href={`/lists/cards${listParams ? `?listId=${listParams}` : ""}`} className={buttonStyles}>
+				<FaIdCard />
 			</Link>
 			<button onClick={() => setClearCheck(true)} className={buttonStyles}>
 				<ImBin />

@@ -1,0 +1,2220 @@
+{
+  "weaponMap": {
+    "1001": {
+      "Pintle": {
+        "None": null,
+        "Havoc launcher": [
+          1003
+        ],
+        "Multi-melta": [
+          1002
+        ]
+      },
+      "Hull": {
+        "None": null,
+        "Hunter-killer": [
+          1077
+        ]
+      }
+    },
+    "1002": {
+      "specialist": {}
+    },
+    "1007": {
+      "Main": {
+        "Laser destroyer array": [
+          1008
+        ],
+        "Quad-launcher": [
+          1009
+        ]
+      }
+    },
+    "1008": {
+      "Arm": {
+        "Leviathan storm cannon": [
+          1010
+        ],
+        "Cyclone melta lance": [
+          1011
+        ]
+      }
+    },
+    "1009": {
+      "Arm": {
+        "Kheres assault cannon": [
+          1014
+        ],
+        "Twin-linked lascannons": [
+          1015
+        ]
+      }
+    },
+    "1010": {
+      "Main": {
+        "Tarantula lascannon battery": [
+          1017
+        ],
+        "Hyperios air-defence missile launcher": [
+          1018
+        ]
+      }
+    },
+    "1011": {
+      "Main": {
+        "Hellfire plasma cannonade": [
+          1021
+        ],
+        "Anvilus autocannon battery": [
+          1022
+        ]
+      }
+    },
+    "1012": {
+      "Turret": {
+        "Predator cannon": [
+          1023
+        ],
+        "Predator lascannon": [
+          1025
+        ]
+      },
+      "Sponsons": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ]
+      }
+    },
+    "1013": {
+      "Sponsons": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ]
+      }
+    },
+    "1014": {
+      "Turret": {
+        "Kratos battlecannon": [
+          1030
+        ],
+        "Melta blastgun": [
+          1032
+        ]
+      },
+      "Sponson": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ],
+        "Lascannons": [
+          1034
+        ],
+        "Autocannons": [
+          1031
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ]
+      }
+    },
+    "1017": {
+      "Turrets": {
+        "Heavy bolters": [
+          1042
+        ],
+        "Lascannons": [
+          1044
+        ],
+        "Autocannons": [
+          1043
+        ]
+      }
+    },
+    "1021": {
+      "Weapon pair": {
+        "Plasma/bolter": [
+          1053,
+          1054
+        ],
+        "Melta/flamer": [
+          1052,
+          1055
+        ]
+      }
+    },
+    "1022": {
+      "Sponsons": {
+        "Lascannons": [
+          1026
+        ],
+        "Missile launcher": [
+          1056
+        ]
+      }
+    },
+    "1023": {
+      "Sponsons": {
+        "Quad lascannons": [
+          1057
+        ],
+        "Laser destroyers": [
+          1058
+        ]
+      },
+      "Hull": {
+        "Heavy bolter": [
+          1027
+        ],
+        "Lascannon": [
+          2012
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Multi-melta": [
+          1002
+        ],
+        "Heavy bolter": [
+          1075
+        ]
+      }
+    },
+    "1024": {
+      "Pintle": {
+        "None": null,
+        "Multi-melta": [
+          1002
+        ],
+        "Heavy bolter": [
+          1075
+        ]
+      }
+    },
+    "1028": {
+      "Sponsons": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ]
+      }
+    },
+    "1029": {
+      "Sponsons": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      }
+    },
+    "1030": {
+      "Main": {
+        "Neutron blaster": [
+          1065
+        ],
+        "Anvilus autocannon": [
+          1064
+        ]
+      },
+      "hull": {
+        "Heavy bolters": [
+          1027
+        ],
+        "Multi-melta": [
+          1067
+        ]
+      }
+    },
+    "1032": {
+      "Turret": {
+        "Kratos battlecannon": [
+          10301
+        ],
+        "Melta blastgun": [
+          1032
+        ]
+      },
+      "Sponson": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ],
+        "Lascannons": [
+          1034
+        ],
+        "Autocannons": [
+          1031
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ]
+      }
+    },
+    "1033": {
+      "Turret": {
+        "Twin-linked accelerator autocannon": [
+          1028
+        ],
+        "Omega plasma array": [
+          1029
+        ],
+        "Punisher rotary cannon": [
+          1062
+        ]
+      },
+      "Sponsons": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ]
+      }
+    },
+    "1034": {
+      "Turret": {
+        "Predator cannon": [
+          1023
+        ],
+        "Predator lascannon": [
+          1025
+        ]
+      },
+      "Sponsons": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ]
+      }
+    },
+    "1037": {
+      "Sponsons": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      }
+    },
+    "1038": {
+      "Sponsons": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ],
+        "Multi-melta": [
+          1002
+        ]
+      }
+    },
+    "1039": {
+      "Sponsons": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ],
+        "Multi-melta": [
+          1002
+        ]
+      }
+    },
+    "1042": {
+      "Sponsons": {
+        "Heavy bolters": [
+          1024
+        ],
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ]
+      }
+    },
+    "1044": {
+      "Weapons": {
+        "Plasma bombards and disruption fists": [
+          1082,
+          1084
+        ],
+        "Paired plasma bombards": [
+          1083
+        ],
+        "Twin heavy disintegrators and disruption firsts": [
+          1080,
+          1084
+        ],
+        "Paired twin heavy disintegrators": [
+          1081
+        ],
+        "Twin heavy disintegrators and plasma bombards": [
+          1080,
+          1082
+        ]
+      }
+    },
+    "1045": {
+      "Weapons": {
+        "Heavy plasma bombard and disintegrator cannon": [
+          1087,
+          1085
+        ],
+        "Graviton pulveriser and inversion beamer": [
+          1086,
+          1088
+        ]
+      }
+    },
+    "1046": {
+      "Weapons": {
+        "Accelerator autocannon": [
+          1089
+        ],
+        "Punisher cannon": [
+          1090
+        ],
+        "Orias heavy frag": [
+          1091
+        ]
+      }
+    },
+    "1047": {
+      "Sponsons": {
+        "Quad lascannons": [
+          1057
+        ],
+        "Laser destroyers": [
+          1058
+        ],
+        "Quad heavy bolters": [
+          1093
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ],
+        "Multi-melta": [
+          1002
+        ]
+      }
+    },
+    "1048": {
+      "Sponsons": {
+        "Quad lascannons": [
+          1057
+        ],
+        "Laser destroyers": [
+          1058
+        ],
+        "Quad heavy bolters": [
+          1093
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ],
+        "Multi-melta": [
+          1002
+        ]
+      }
+    },
+    "1049": {
+      "Sponsons": {
+        "Quad lascannons": [
+          1057
+        ],
+        "Laser destroyers": [
+          1058
+        ],
+        "Quad heavy bolters": [
+          1093
+        ]
+      }
+    },
+    "1050": {
+      "Sponsons": {
+        "Quad lascannons": [
+          1057
+        ],
+        "Laser destroyers": [
+          1058
+        ],
+        "Quad heavy bolters": [
+          1093
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy bolter": [
+          1075
+        ],
+        "Multi-melta": [
+          1002
+        ]
+      }
+    },
+    "2005": {
+      "Main": {
+        "Laser destroyer array": [
+          1008
+        ],
+        "Quad-launcher": [
+          1009
+        ],
+        "Mole mortar": [
+          2007
+        ]
+      }
+    },
+    "2006": {
+      "Main": {
+        "Tarantula lascannon battery": [
+          1017
+        ],
+        "Hyperios air-defence missile launcher": [
+          1018
+        ]
+      }
+    },
+    "2008": {
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ],
+        "Lascannons": [
+          2012
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2009": {
+      "Hull": {
+        "Heavy bolter": [
+          1027
+        ],
+        "Lascannon": [
+          2012
+        ],
+        "Autocannon": [
+          2019
+        ],
+        "Demolisher cannon": [
+          2020
+        ]
+      },
+      "Sponsons": {
+        "Heavy bolters": [
+          2016
+        ],
+        "Lascannons": [
+          2017
+        ],
+        "Autocannons": [
+          2018
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2010": {
+      "Sponsons": {
+        "Heavy bolters": [
+          2071
+        ],
+        "Heavy flamers": [
+          2073
+        ],
+        "Autocannons": [
+          2072
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2011": {
+      "Nose": {
+        "Quad autocannon": [
+          2027
+        ],
+        "Avenger bolt cannon upgrade": [
+          1041
+        ]
+      },
+      "Wing": {
+        "Hellstrike missiles": [
+          1048
+        ],
+        "Skystrike missiles": [
+          2031
+        ],
+        "Wing bombs": [
+          2032
+        ]
+      }
+    },
+    "2012": {
+      "Nose": {
+        "Avenger lascannon": [
+          2034
+        ],
+        "Avenger autocannon": [
+          2033
+        ]
+      },
+      "Wing": {
+        "Hellstrike missiles": [
+          1048
+        ],
+        "Skystrike missiles": [
+          2031
+        ],
+        "Wing bombs": [
+          2032
+        ]
+      }
+    },
+    "2013": {
+      "Hull": {
+        "Lightning twin lascannons": [
+          2036
+        ],
+        "Lightning twin multi-laser": [
+          2037
+        ]
+      },
+      "Wing 1": {
+        "Hellstrike missiles": [
+          1048
+        ],
+        "Skyfire missiles": [],
+        "Phosphex bomb clusters": [
+          2038
+        ]
+      },
+      "Wing 2": {
+        "Hellstrike missiles": [
+          1048
+        ],
+        "Skyfire missiles": [],
+        "Phosphex bomb clusters": [
+          2038
+        ]
+      }
+    },
+    "2014": {
+      "Chassis": {},
+      "Wing 1": {
+        "Hellstrike missiles": [
+          1048
+        ],
+        "Skystrike missiles": [
+          2031
+        ],
+        "Wing bombs": [
+          2032
+        ]
+      },
+      "Wing 2": {
+        "Hellstrike missiles": [
+          1048
+        ],
+        "Skystrike missiles": [
+          2031
+        ],
+        "Wing bombs": [
+          2032
+        ]
+      }
+    },
+    "2016": {
+      "Hull": {
+        "Twin lascannons": [
+          2048
+        ],
+        "Demolisher Cannon": [
+          2020
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Multi-laser": [
+          2074
+        ]
+      }
+    },
+    "2017": {
+      "Charge": {
+        "Demolition charge": [
+          2049
+        ],
+        "Incineration charge": [
+          2050
+        ]
+      }
+    },
+    "2018": {
+      "Sponsons": {
+        "Lascannons": [
+          2017
+        ],
+        "Autocannons": [
+          2018
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2019": {
+      "Sponsons": {
+        "Lascannons": [
+          2017
+        ],
+        "Autocannons": [
+          2018
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2020": {
+      "Sponsons": {
+        "Multi-lasers": [
+          2056
+        ],
+        "Lascannons": [
+          2057
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Multi-laser": [
+          2074
+        ]
+      }
+    },
+    "2023": {
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ],
+        "Lascannons": [
+          2012
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2024": {
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ],
+        "Lascannons": [
+          2012
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2025": {
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ],
+        "Lascannons": [
+          2012
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2026": {
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ],
+        "Lascannons": [
+          2012
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2027": {
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2028": {
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2029": {
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2030": {
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ],
+        "Lascannons": [
+          2012
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2031": {
+      "Hull": {
+        "Heavy bolter": [
+          1027
+        ],
+        "Lascannon": [
+          2012
+        ],
+        "Autocannon": [
+          2019
+        ],
+        "Demolisher cannon": [
+          2020
+        ]
+      },
+      "Sponsons": {
+        "Heavy bolters": [
+          2016
+        ],
+        "Lascannons": [
+          2017
+        ],
+        "Autocannons": [
+          2018
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2032": {
+      "Hull": {
+        "Heavy bolter": [
+          1027
+        ],
+        "Lascannon": [
+          2012
+        ],
+        "Autocannon": [
+          2019
+        ],
+        "Demolisher cannon": [
+          2020
+        ]
+      },
+      "Sponsons": {
+        "Heavy bolters": [
+          2016
+        ],
+        "Lascannons": [
+          2017
+        ],
+        "Autocannons": [
+          2018
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "2033": {
+      "Sponsons": {
+        "Heavy bolters": [
+          2071
+        ],
+        "Heavy flamers": [
+          2073
+        ],
+        "Autocannons": [
+          2072
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "3013": {
+      "Weapons": {
+        "Plasma mortar": [
+          3017
+        ],
+        "Heavy las & ram": [
+          3018,
+          3019
+        ]
+      }
+    },
+    "3015": {
+      "Hull": {
+        "Lightning cannon": [
+          3023
+        ],
+        "Irad-scourer": [
+          3024
+        ]
+      }
+    },
+    "4002": {
+      "Arm 1": {
+        "Inferno gun": [
+          4031
+        ],
+        "Vulcan mega-bolter": [
+          4028
+        ],
+        "Turbo-laser destructor": [
+          1045
+        ],
+        "Plasma blastgun": [
+          4030
+        ],
+        "Graviton eradicator": [
+          4038
+        ],
+        "Conversion beam dissolutor": [
+          4039
+        ],
+        "Ursus claw": [
+          4036
+        ],
+        "Natrix shock lance": [
+          4037
+        ],
+        "Incisor pattern melta lance": [
+          4032
+        ],
+        "Volkite eradicator": [
+          4033
+        ],
+        "Warhound shudder missiles": [
+          4034
+        ],
+        "Warhound swarmer missiles": [
+          4035
+        ]
+      },
+      "Arm 2": {
+        "Inferno gun": [
+          4031
+        ],
+        "Vulcan mega-bolter": [
+          4028
+        ],
+        "Turbo-laser destructor": [
+          1045
+        ],
+        "Plasma blastgun": [
+          4030
+        ],
+        "Graviton eradicator": [
+          4038
+        ],
+        "Conversion beam dissolutor": [
+          4039
+        ],
+        "Ursus claw": [
+          4036
+        ],
+        "Natrix shock lance": [
+          4037
+        ],
+        "Incisor pattern melta lance": [
+          4032
+        ],
+        "Volkite eradicator": [
+          4033
+        ],
+        "Warhound shudder missiles": [
+          4034
+        ],
+        "Warhound swarmer missiles": [
+          4035
+        ]
+      }
+    },
+    "4003": {
+      "Back": {
+        "Neutron laser": [
+          4040
+        ],
+        "Volcano cannon": [
+          4041
+        ],
+        "Conversion beam dissipator": [
+          4043
+        ]
+      }
+    },
+    "4004": {
+      "Arm 1": {
+        "Reaver laser blaster": [
+          4044
+        ],
+        "Reaver gatling blaster": [
+          4045
+        ],
+        "Reaver volcano cannon": [
+          4046
+        ],
+        "Reaver melta cannon": [
+          4047
+        ],
+        "Reaver power fist": [
+          4048
+        ],
+        "Reaver chainfist": [
+          4049
+        ]
+      },
+      "Arm 2": {
+        "Reaver laser blaster": [
+          4044
+        ],
+        "Reaver gatling blaster": [
+          4045
+        ],
+        "Reaver volcano cannon": [
+          4046
+        ],
+        "Reaver melta cannon": [
+          4047
+        ],
+        "Reaver power fist": [
+          4048
+        ],
+        "Reaver chainfist": [
+          4049
+        ]
+      },
+      "Carapace": {
+        "Reaver apocalypse missile launcher": [
+          4051
+        ],
+        "Reaver vulcan mega-bolter": [
+          4052
+        ],
+        "Reaver titan warp missile": [
+          4054
+        ],
+        "Reaver turbo-laser destructor": [
+          4053
+        ],
+        "Reaver volkite eradicator": [
+          4050
+        ],
+        "Reaver graviton eradicator": [
+          4055
+        ],
+        "Reaver conversion beam dissolutor": [
+          4056
+        ]
+      }
+    },
+    "4005": {
+      "Arm 1": {
+        "Reaver laser blaster": [
+          4044
+        ],
+        "Reaver gatling blaster": [
+          4045
+        ],
+        "Reaver volcano cannon": [
+          4046
+        ],
+        "Reaver melta cannon": [
+          4047
+        ]
+      },
+      "Arm 2": {
+        "Reaver laser blaster": [
+          4044
+        ],
+        "Reaver gatling blaster": [
+          4045
+        ],
+        "Reaver volcano cannon": [
+          4046
+        ],
+        "Reaver melta cannon": [
+          4047
+        ]
+      },
+      "Carapace": {
+        "Mori quake cannon": [
+          4057
+        ],
+        "Belicosa volcano cannon": [
+          4058
+        ]
+      }
+    },
+    "4006": {
+      "Arm 1": {
+        "Belicosa Volcano Cannon": [
+          4058
+        ],
+        "Sunfury plasma annihilator": [
+          4061
+        ],
+        "Macro-gatling blaster": [
+          4062
+        ],
+        "Mori quake cannon": [
+          4057
+        ],
+        "Arioch power claw": [
+          4063
+        ],
+        "Volkite destructor": [
+          4072
+        ],
+        "Warlord graviton ruinator": [
+          4070
+        ],
+        "Conversion beam extripator": [
+          4071
+        ]
+      },
+      "Arm 2": {
+        "Belicosa Volcano Cannon": [
+          4058
+        ],
+        "Sunfury plasma annihilator": [
+          4061
+        ],
+        "Macro-gatling blaster": [
+          4062
+        ],
+        "Mori quake cannon": [
+          4057
+        ],
+        "Arioch power claw": [
+          4063
+        ],
+        "Volkite destructor": [
+          4072
+        ],
+        "Warlord graviton ruinator": [
+          4070
+        ],
+        "Conversion beam extripator": [
+          4071
+        ]
+      },
+      "Carapace": {
+        "Apocalypse missile launchers": [
+          4064
+        ],
+        "Paired gatling blasters": [
+          4065
+        ],
+        "Paired turbo-laser destructors": [
+          4066
+        ],
+        "Vulcan mega-bolter array": [
+          4067
+        ],
+        "Paired laser blasters": [
+          4068
+        ]
+      }
+    },
+    "4007": {
+      "Arm weapon": {
+        "Arioch power claw": [
+          4063
+        ],
+        "Belicosa Volcano Cannon": [
+          4058
+        ],
+        "Sunfury plasma annihilator": [
+          4061
+        ],
+        "Macro-gatling blaster": [
+          4062
+        ],
+        "Mori quake cannon": [
+          4057
+        ],
+        "Volkite destructor": [
+          4072
+        ],
+        "Warlord graviton ruinator": [
+          4070
+        ],
+        "Conversion beam extripator": [
+          4071
+        ]
+      },
+      "Carapace": {
+        "Apocalypse missile launchers": [
+          4064
+        ],
+        "Paired gatling blasters": [
+          4065
+        ],
+        "Paired turbo-laser destructors": [
+          4066
+        ],
+        "Vulcan mega-bolter array": [
+          4067
+        ],
+        "Paired laser blasters": [
+          4068
+        ]
+      }
+    },
+    "4008": {
+      "Shoulder 1": {
+        "Apocalypse missile array": [
+          4078
+        ],
+        "Melta cannon": [
+          4079
+        ],
+        "Inferno gun": [
+          4031
+        ],
+        "Vulcan mega-bolter": [
+          4028
+        ],
+        "Turbo-laser destructor": [
+          1045
+        ],
+        "Plasma blastun": [
+          4030
+        ]
+      },
+      "Shoulder 2": {
+        "Apocalypse missile array": [
+          4078
+        ],
+        "Melta cannon": [
+          4079
+        ],
+        "Inferno gun": [
+          4031
+        ],
+        "Vulcan mega-bolter": [
+          4028
+        ],
+        "Turbo-laser destructor": [
+          1045
+        ],
+        "Plasma blastun": [
+          4030
+        ]
+      },
+      "Turrets": {
+        "Anvilus pattern defence batteries": [
+          4060
+        ],
+        "Ardex-defensor bomard turrets": [
+          4080
+        ]
+      }
+    },
+    "4009": {
+      "Arm": {
+        "Kirus siege drill": [
+          4083
+        ],
+        "Kirus grav imploder": [
+          4085
+        ]
+      },
+      "Shoulder 1": {
+        "Apocalypse missile array": [
+          4078
+        ],
+        "Melta cannon": [
+          4079
+        ],
+        "Inferno gun": [
+          4031
+        ],
+        "Vulcan mega-bolter": [
+          4028
+        ],
+        "Turbo-laser destructor": [
+          1045
+        ],
+        "Plasma blastun": [
+          4030
+        ]
+      },
+      "Shoulder 2": {
+        "Apocalypse missile array": [
+          4078
+        ],
+        "Melta cannon": [
+          4079
+        ],
+        "Inferno gun": [
+          4031
+        ],
+        "Vulcan mega-bolter": [
+          4028
+        ],
+        "Turbo-laser destructor": [
+          1045
+        ],
+        "Plasma blastun": [
+          4030
+        ]
+      },
+      "Turrets": {
+        "Anvilus pattern defence batteries": [
+          4060
+        ],
+        "Ardex-defensor bomard turrets": [
+          4080
+        ]
+      }
+    },
+    "5009": {
+      "Hull": {
+        "Lightning cannon": [
+          3023
+        ],
+        "Irad-scourer": [
+          3024
+        ]
+      }
+    },
+    "5011": {
+      "hull": {
+        "Scintillax lascutter": [
+          5000
+        ],
+        "Exo-planar cannon": [
+          5001
+        ],
+        "Storm laser": [
+          5002
+        ]
+      }
+    },
+    "5012": {
+      "hull": {
+        "Errax meltagun": [
+          5003
+        ],
+        "Stalker maxima bolters": [
+          5004
+        ],
+        "Errax lascutters": [
+          5005
+        ]
+      }
+    },
+    "5013": {
+      "Weapon": {
+        "Exo-planar repeaters": [
+          5006
+        ],
+        "Harpax Lascutter": [
+          5007
+        ]
+      }
+    },
+    "5014": {
+      "hull": {
+        "Exo-planar cannon": [
+          5001
+        ],
+        "Stalker maxma bolters": [
+          5004
+        ],
+        "Volkite culverins": [
+          4025
+        ]
+      }
+    },
+    "5015": {
+      "Hull": {
+        "Exo-planar bombard": [
+          5009
+        ],
+        "Storm laser array": [
+          5010
+        ]
+      },
+      "Belly": {
+        "Serperos lascutters": [
+          5011
+        ],
+        "Irradiation engine": [
+          5012
+        ]
+      }
+    },
+    "5900": {
+      "Weapon": {
+        "Exo-planar repeaters": [
+          5006
+        ],
+        "Harpax Lascutter": [
+          5007
+        ]
+      }
+    },
+    "7000": {
+      "Sponsons": {
+        "Lascannons": [
+          1026
+        ]
+      }
+    },
+    "7001": {
+      "Sponsons": {
+        "Lascannons": [
+          1026
+        ]
+      }
+    },
+    "7002": {
+      "Main": {
+        "Neutron blaster": [
+          1065
+        ]
+      },
+      "Hull": {
+        "Multi-melta": [
+          1067
+        ]
+      }
+    },
+    "7004": {
+      "Sponsons": {
+        "Quad lascannons": [
+          1057
+        ]
+      },
+      "Hull": {
+        "Lascannon": [
+          2012
+        ]
+      }
+    },
+    "7005": {
+      "Turret": {
+        "Kratos battlecannon": [
+          1030
+        ]
+      },
+      "Sponson": {
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Hull": {
+        "Lascannons": [
+          1034
+        ]
+      }
+    },
+    "7006": {
+      "Sponsons": {
+        "Heavy bolters": [
+          1024
+        ]
+      }
+    },
+    "7008": {
+      "Pintle": {
+        "Multi-melta": [
+          1002
+        ]
+      }
+    },
+    "7009": {
+      "Main": {
+        "Anvilus autocannon": [
+          1064
+        ]
+      },
+      "hull": {
+        "Heavy bolters": [
+          1027
+        ]
+      }
+    },
+    "7010": {
+      "Hull": {
+        "Lascannons": [
+          2012
+        ]
+      }
+    },
+    "7011": {
+      "Hull": {
+        "Lascannons": [
+          2012
+        ]
+      }
+    },
+    "7012": {
+      "Hull": {
+        "Lascannons": [
+          2012
+        ]
+      }
+    },
+    "7017": {
+      "Arm 1": {
+        "Reaver volcano cannon": [
+          4046
+        ]
+      },
+      "Arm 2": {
+        "Reaver gatling blaster": [
+          4045
+        ]
+      },
+      "Carapace": {
+        "Reaver vulcan mega-bolter": [
+          4052
+        ]
+      }
+    },
+    "7018": {
+      "Chassis": {},
+      "Back": {
+        "Rocket Pods": [
+          4007
+        ]
+      }
+    },
+    "7020": {
+      "Arm 1": {
+        "Plasma blastgun": [
+          4030
+        ],
+        "Volkite eradicator": [
+          4033
+        ]
+      },
+      "Arm 2": {
+        "Vulcan mega-bolter": [
+          4028
+        ]
+      }
+    },
+    "7021": {
+      "Chassis": {}
+    },
+    "7028": {
+      "Weapons": {
+        "Plasma mortar and mauler bolt cannons": [
+          3017,
+          3010
+        ]
+      }
+    },
+    "7029": {
+      "hull": {
+        "Storm laser": [
+          5002
+        ]
+      }
+    },
+    "7031": {
+      "Hull": {
+        "Exo-planar bombard": [
+          5009
+        ]
+      },
+      "Belly": {
+        "Irradiation engine": [
+          5012
+        ]
+      }
+    },
+    "7038": {
+      "Sponsons": {
+        "Laser destroyers": [
+          1058
+        ]
+      },
+      "Hull": {
+        "Lascannon": [
+          2012
+        ]
+      }
+    },
+    "7039": {
+      "Main": {
+        "Quad-launcher": [
+          1009
+        ]
+      }
+    },
+    "7041": {
+      "Weapon pair": {
+        "Melta/flamer": [
+          1052,
+          1055
+        ]
+      }
+    },
+    "7042": {
+      "Sponsons": {
+        "Lascannons": [
+          1026
+        ]
+      }
+    },
+    "7044": {
+      "specialist": {}
+    },
+    "7046": {
+      "Main": {
+        "Anvilus autocannon": [
+          1064
+        ]
+      },
+      "hull": {
+        "Heavy bolters": [
+          1027
+        ]
+      }
+    },
+    "7048": {
+      "Pintle": {
+        "Multi-melta": [
+          1002
+        ]
+      }
+    },
+    "7052": {
+      "Pintle": {
+        "Havoc launcher": [
+          1003
+        ]
+      }
+    },
+    "7061": {
+      "specialist": {}
+    },
+    "7064": {
+      "Arm": {
+        "Cyclone melta lance": [
+          1011
+        ]
+      }
+    },
+    "7065": {
+      "Arm": {
+        "Twin-linked lascannons": [
+          1015
+        ]
+      }
+    },
+    "7068": {
+      "Hull": {
+        "Demolisher Cannon": [
+          2020
+        ]
+      }
+    },
+    "7070": {
+      "Pintle": {
+        "Multi-laser": [
+          2074
+        ]
+      }
+    },
+    "7075": {
+      "Main": {
+        "Laser destroyer array": [
+          1008
+        ]
+      }
+    },
+    "7077": {
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ]
+      },
+      "Pintle": {
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "7078": {
+      "Hull": {
+        "Lascannons": [
+          2012
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "7079": {
+      "Hull": {
+        "Lascannons": [
+          2012
+        ]
+      }
+    },
+    "7080": {
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ]
+      },
+      "Pintle": {
+        "Heavy Stubber": [
+          2070
+        ]
+      }
+    },
+    "7081": {
+      "Sponsons": {
+        "Lascannons": [
+          2017
+        ]
+      }
+    },
+    "7085": {
+      "Hull": {
+        "Twin lascannon": [
+          2048
+        ]
+      },
+      "Pintle": {
+        "Multi-laser": [
+          2074
+        ]
+      }
+    },
+    "7087": {
+      "Sponsons": {
+        "Autocannons": [
+          2018
+        ]
+      }
+    },
+    "7090": {
+      "Main": {
+        "Laser destroyer array": [
+          1008
+        ]
+      }
+    },
+    "7093": {
+      "Main": {
+        "Quad-launcher": [
+          1009
+        ]
+      }
+    },
+    "7095": {
+      "Weapons": {
+        "Plasma bombards and disruption fists": [
+          1082,
+          1084
+        ],
+        "Paired plasma bombards": [
+          1083
+        ]
+      }
+    },
+    "7096": {
+      "Sponsons": {
+        "Lascannons": [
+          1026
+        ]
+      }
+    },
+    "7097": {
+      "Weapons": {
+        "Heavy plasma bombard and disintegrator cannon": [
+          1087,
+          1085
+        ]
+      }
+    },
+    "7098": {
+      "Turret": {
+        "Melta blastgun": [
+          1032
+        ]
+      },
+      "Sponson": {
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Hull": {
+        "Lascannons": [
+          1034
+        ]
+      }
+    },
+    "7099": {
+      "Turret": {
+        "Melta blastgun": [
+          1032
+        ]
+      },
+      "Sponson": {
+        "Lascannons": [
+          1026
+        ]
+      },
+      "Hull": {
+        "Lascannons": [
+          1034
+        ]
+      }
+    },
+    "7100": {
+      "Sponsons": {
+        "Quad lascannons": [
+          1057
+        ]
+      }
+    },
+    "7101": {
+      "Sponsons": {
+        "Quad lascannons": [
+          1057
+        ]
+      }
+    },
+    "7102": {
+      "Sponsons": {
+        "Quad lascannons": [
+          1057
+        ]
+      }
+    },
+    "7103": {
+      "Sponsons": {
+        "Lascannons": [
+          1026
+        ]
+      }
+    },
+    "7104": {
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ]
+      }
+    },
+    "7105": {
+      "Hull": {
+        "Heavy bolters": [
+          1027
+        ]
+      }
+    },
+    "7106": {
+      "Hull": {
+        "Autocannon": [
+          2019
+        ]
+      },
+      "Sponsons": {
+        "Autocannons": [
+          2018
+        ]
+      }
+    },
+    "7107": {
+      "Sponsons": {
+        "Autocannons": [
+          2018
+        ]
+      }
+    },
+    "7108": {
+      "Hull": {
+        "Autocannon": [
+          2019
+        ]
+      },
+      "Sponsons": {
+        "Lascannons": [
+          2017
+        ]
+      }
+    },
+    "7109": {
+      "Sponsons": {
+        "Multi-lasers": [
+          2056
+        ]
+      }
+    },
+    "8100": {
+      "Weapons": {
+        "Thermal spear and Reaper chain-cleaver": [
+          4014,
+          4015
+        ],
+        "Armiger autocannon": [
+          4016
+        ]
+      }
+    },
+    "8101": {
+      "weapons": {
+        "Armiger lightning locks": [
+          4017
+        ],
+        "Volkite veuglaire and Siege claw": [
+          4018,
+          4019
+        ]
+      }
+    },
+    "8102": {
+      "Chassis": {},
+      "Back": {
+        "None": null,
+        "Rocket Pods": [
+          4007
+        ]
+      },
+      "Arm": {
+        "None": null,
+        "Thunderstrike Gauntlet": [
+          4006
+        ],
+        "Gatling cannon": [
+          4002
+        ],
+        "Battlecannon": [
+          4001
+        ]
+      }
+    },
+    "8103": {
+      "Chassis": {}
+    },
+    "8104": {
+      "Back": {
+        "Ironstorm missile pod": [
+          4021
+        ],
+        "Helios defence missiles": [
+          4022
+        ]
+      }
+    },
+    "8105": {
+      "Chassis": {}
+    },
+    "9000": {
+      "Pintle": {
+        "None": null,
+        "Havoc launcher": [
+          1003
+        ],
+        "Multi-melta": [
+          1002
+        ]
+      },
+      "Hull": {
+        "None": null,
+        "Hunter-killer": [
+          1077
+        ]
+      }
+    },
+    "9006": {
+      "Hull": {
+        "Twin lascannons": [
+          2048
+        ],
+        "Demolisher Cannon": [
+          2020
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Multi-laser": [
+          2074
+        ]
+      }
+    },
+    "9007": {
+      "Sponsons": {
+        "Quad lascannons": [
+          1057
+        ],
+        "Laser destroyers": [
+          1058
+        ]
+      },
+      "Hull": {
+        "Heavy bolter": [
+          1027
+        ],
+        "Lascannon": [
+          2012
+        ]
+      },
+      "Pintle": {
+        "None": null,
+        "Multi-melta": [
+          1002
+        ],
+        "Heavy bolter": [
+          1075
+        ]
+      }
+    },
+    "9008": {
+      "Pintle": {
+        "None": null,
+        "Multi-melta": [
+          1002
+        ]
+      }
+    },
+    "70540": {
+      "Pintle": {
+        "Multi-melta": [
+          1002
+        ]
+      }
+    },
+    "70751": {
+      "Main": {
+        "Quad-launcher": [
+          1009
+        ]
+      }
+    },
+    "70752": {
+      "Main": {
+        "Mole mortar": [
+          2007
+        ]
+      }
+    }
+  },
+  "unitSelectMap": {
+    "1002": {
+      "specialist": {
+        "Apothecary": null
+      }
+    },
+    "2014": {
+      "Chassis": {
+        "Marauder Bomber": 2014,
+        "Marauder Pathfinder": 2015,
+        "Marauder Colossus": 2016,
+        "Marauder Destroyer": 2017
+      }
+    },
+    "7018": {
+      "Chassis": {
+        "Knight Errant": 4000,
+        "Knight Gallant": 4000
+      }
+    },
+    "7021": {
+      "Chassis": {
+        "Knight Lancer": 4000
+      }
+    },
+    "7044": {
+      "specialist": {
+        "Apothecary": null
+      }
+    },
+    "7061": {
+      "specialist": {
+        "Apothecary": null
+      }
+    },
+    "8102": {
+      "Chassis": {
+        "Knight Errant": 4000,
+        "Knight Warden": 4000,
+        "Knight Crusader": 4000,
+        "Knight Paladin": 4000,
+        "Knight Gallant": 4000
+      }
+    },
+    "8103": {
+      "Chassis": {
+        "Knight Acheron": 4000,
+        "Knight Castigator": 4000,
+        "Knight Lancer": 4000
+      }
+    },
+    "8105": {
+      "Chassis": {
+        "Knight Styrix": 4000,
+        "Knight Magaera": 4000
+      }
+    }
+  }
+}

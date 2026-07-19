@@ -1,5 +1,6 @@
 import { listState } from "@/app/lists/state"
 import { totalListPoints } from "../../utils"
+import { listHasUnselectedLoadouts } from "../detachment/utils"
 import SimpleWarning from "./SimpleWarning"
 
 const ListWarnings = () => {
@@ -18,6 +19,7 @@ const ListWarnings = () => {
 				<SimpleWarning>Main faction must be at least 70% of list</SimpleWarning>
 			)}
 			{allegianceArray.length ? <SimpleWarning>Detachments with wrong allegiance</SimpleWarning> : null}
+			{listHasUnselectedLoadouts(list) ? <SimpleWarning>Detachments have unselected loadouts</SimpleWarning> : null}
 		</div>
 	)
 }

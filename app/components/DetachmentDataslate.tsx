@@ -11,9 +11,34 @@ import { FaExternalLinkAlt } from "react-icons/fa"
 interface properties {
 	detachment: DETACHMENT
 	no_related?: boolean
+	// When provided, the weapon stats table is filtered to these weapon ids
+	// (used by the card list to hide unselected loadout options).
+	visibleWeaponIds?: number[]
+	// Variant/specialist selections (e.g. "Chassis: Knight Errant") shown as notes.
+	notes?: string[]
+	// Hide the generic "X or Y" options prose (card list uses the filtered table instead).
+	hideLoadoutText?: boolean
+	// Hide the generic "can purchase the following upgrades" list (already selected in the list).
+	hideUpgrades?: boolean
+	// Disambiguation label (e.g. "A"/"B") when the same detachment appears with different choices.
+	label?: string
+	// When provided, only these related ("Additional") unit ids are shown (those actually taken).
+	visibleRelatedUnitIds?: number[]
 }
 
-const DetachmentDataslate = ({ detachment, no_related }: properties) => {
+const DetachmentDataslate = ({
+	detachment,
+	no_related,
+	visibleWeaponIds,
+	notes,
+	hideLoadoutText,
+	hideUpgrades,
+	label,
+	visibleRelatedUnitIds,
+}: properties) => {
+	const relatedShown = visibleRelatedUnitIds
+		? detachment.related_unit.filter((id) => visibleRelatedUnitIds.includes(id))
+		: detachment.related_unit
 	const mainUnit = unitData.filter((unit) => detachment.main_unit.includes(unit.id))
 	if (!mainUnit.length) {
 		notFound()
@@ -42,14 +67,20 @@ const DetachmentDataslate = ({ detachment, no_related }: properties) => {
 	})
 
 	const mainUnitWeaponsArray = Array.from(new Set(mainUnit.map((unit) => unit.weapons).flat()))
+	const shownWeapons = visibleWeaponIds
+		? mainUnitWeaponsArray.filter((id) => visibleWeaponIds.includes(id))
+		: mainUnitWeaponsArray
 
-	const weaponRows = getUnitWeaponRows(mainUnitWeaponsArray)
+	const weaponRows = getUnitWeaponRows(shownWeapons)
 
 	return (
 		<article className="max-w-screen-xl p-1 sm:p-4 bg-dataslate text-sm sm:text-base break-inside-avoid clip-path-halfagon-lg">
 			{/* TITLE */}
 			<div className="flex justify-between items-center gap-2 sm:border-2 border-black bg-primary-950 text-primary-50 py-1 px-3 mb-2">
-				<h2 className="text-xl sm:text-2xl font-graduate font-bold">{detachment.name}</h2>
+				<h2 className="text-xl sm:text-2xl font-graduate font-bold">
+					{detachment.name}
+					{label ? ` [${label}]` : ""}
+				</h2>
 				<h3 className="text-lg sm:text-xl font-graduate">{detachment.base_cost} Points</h3>
 			</div>
 
@@ -59,6 +90,17 @@ const DetachmentDataslate = ({ detachment, no_related }: properties) => {
 				</p>
 				<p>Detachment size: {detachment.base_size}</p>
 			</div>
+
+			{/* VARIANT / SPECIALIST NOTES */}
+			{notes?.length ? (
+				<div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black bg-tertiary-100">
+					{notes.map((note) => (
+						<p key={note} className="text-primary-950 px-2 py-1 font-graduate">
+							{note}
+						</p>
+					))}
+				</div>
+			) : null}
 
 			{/* UNIT BASIC STATS */}
 			<table className="w-full border-t-2 border-b-2 sm:border-2 border-black mt-2">
@@ -75,7 +117,7 @@ const DetachmentDataslate = ({ detachment, no_related }: properties) => {
 				<tbody className="text-secondary-900">{mainUnitBasicStats}</tbody>
 			</table>
 			{/* DETACHMENT WEAPONS INFO */}
-			{detachment.dataslate_loadout.length ? (
+			{detachment.dataslate_loadout.length && !hideLoadoutText ? (
 				<div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black">
 					<h3 className="bg-primary-950 text-primary-50 px-2 py-1 font-bold">Weapons</h3>
 					{detachment.dataslate_loadout.map((loadout, index) => (
@@ -128,7 +170,7 @@ const DetachmentDataslate = ({ detachment, no_related }: properties) => {
 			) : null}
 
 			{/* DATASHEET INFO */}
-			{detachment.datasheet_info.length ? (
+			{detachment.datasheet_info.length && !hideUpgrades ? (
 				<div className="mt-2 border-t-2 border-b-2 sm:border-2 border-black">
 					<h3 className="bg-primary-950 text-primary-50 px-2 py-1 font-bold">Upgrades</h3>
 					{detachment.datasheet_info.map((info, index) => (
@@ -162,11 +204,11 @@ const DetachmentDataslate = ({ detachment, no_related }: properties) => {
 					</div>
 				</div>
 			) : null}
-			{detachment.related_unit.length && !no_related ? (
+			{relatedShown.length && !no_related ? (
 				<div className="mt-2 sm:border-2 border-black">
 					<h3 className="bg-primary-950 text-primary-50 px-2 py-1 mb-2 font-bold">Additional units</h3>
 					<div className="flex flex-col gap-4">
-						{detachment.related_unit.map((unitNo) => {
+						{relatedShown.map((unitNo) => {
 							const foundUnit = unitData.find((unit) => unit.id === unitNo)
 							if (foundUnit) {
 								return <UnitDataslate key={foundUnit.name + unitNo} unit={foundUnit} />

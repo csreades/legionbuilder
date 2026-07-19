@@ -7,9 +7,10 @@ import { detachmentData } from "@/app/data/detachment_data"
 interface properties {
 	list: List
 	detachment: ListDetachment
+	label?: string
 }
 
-const Detachment = ({ list, detachment }: properties) => {
+const Detachment = ({ list, detachment, label }: properties) => {
 	const { name, slot_id, id } = detachment
 	const { dataslate, visible, setVisible, setDataslate } = dataslateSideWidget()
 	const upgrades = findUpgradeBySlotId(list, slot_id)?.upgrades
@@ -37,6 +38,7 @@ const Detachment = ({ list, detachment }: properties) => {
 					</span>
 					<span className="text-primary-500 hover:text-primary-300 active:text-tertiary-400 font-graduate">
 						{name}
+						{label ? ` [${label}]` : ""}
 					</span>
 					{` (${currentDetachmentSize(list, slot_id)}), ${totalDetachmentPoints(list, slot_id)}pts`}
 				</h5>

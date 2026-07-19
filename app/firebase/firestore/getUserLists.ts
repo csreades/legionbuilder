@@ -1,8 +1,13 @@
 import { DB_ENTRY } from "@type/types"
 import { db } from "@/app/firebase/config"
 import { collection, query, where, onSnapshot } from "firebase/firestore"
+import { LOCAL_MODE, localGetUserLists } from "@/app/localMode"
 
 export const getUserLists = (setLists: (lists: DB_ENTRY[]) => void, userUid: string) => {
+	if (LOCAL_MODE) {
+		setLists(localGetUserLists())
+		return () => {}
+	}
 	const q = query(collection(db, process.env.NEXT_PUBLIC_FIREBASE_LIST_DB!), where("owner", "==", userUid))
 	const userLists = onSnapshot(q, (querySnapshot) => {
 		const data: DB_ENTRY[] = []
