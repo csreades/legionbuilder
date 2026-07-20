@@ -116,6 +116,33 @@ export const takenRelatedUnitIds = (list: List, detachment: ListDetachment): num
 	return data.related_unit.filter((id) => refs.has(id))
 }
 
+// Per-unit-type model counts + void-shield count, for units that have the Void
+// Shields (X) special rule. Same shape as casualtyUnits.
+export const voidShieldUnits = (
+	list: List,
+	detachment: ListDetachment
+): { name: string; number: number; shields: number }[] => {
+	const data = detachmentData.find((d) => d.id === detachment.id)
+	if (!data) return []
+	const shieldsOf = (unit: (typeof unitData)[number] | undefined) =>
+		Number(unit?.special_rules?.find((r) => String(r.name).toLowerCase().includes("void shield"))?.value) || 0
+	const baseUnit = unitData.find((u) => u.id === data.main_unit[0])
+	const upgrades = list.upgrades.find((u) => u.slot_id === detachment.slot_id)?.upgrades || []
+	const raw = [
+		baseUnit && shieldsOf(baseUnit)
+			? { name: baseUnit.name, number: detachment.size, shields: shieldsOf(baseUnit) }
+			: null,
+		...upgrades.map((up) => {
+			const ui = unitData.find((u) => u.id === up.unit_ref)
+			return ui && shieldsOf(ui) ? { name: ui.name, number: up.size, shields: shieldsOf(ui) } : null
+		}),
+	].filter(Boolean) as { name: string; number: number; shields: number }[]
+	return Array.from(new Set(raw.map((u) => u.name))).map((name) => {
+		const items = raw.filter((u) => u.name === name)
+		return { name, number: items.reduce((a, u) => a + u.number, 0), shields: items[0].shields }
+	})
+}
+
 // A card's identity: same detachment + same weapon choices + variant notes + taken
 // related units. Detachment size / model count is deliberately excluded so size-only
 // differences collapse into one card.

@@ -1,11 +1,11 @@
 import React from "react"
-import { StyleSheet, Text, View } from "@react-pdf/renderer"
+import { StyleSheet, Text, View, Svg, Line, Rect } from "@react-pdf/renderer"
 import { List, ListDetachment } from "@type/listTypes"
 import { detachmentData } from "@data/detachment_data"
 import { unitData } from "@data/unit_data"
 import { weapons as weaponData } from "@data/weapon_data"
 import { currentDetachmentSize, totalDetachmentPoints } from "@lists/builder/components/detachment/utils"
-import { weaponRowState, variantNotes } from "@lists/cards/resolveWeapons"
+import { weaponRowState, variantNotes, voidShieldUnits } from "@lists/cards/resolveWeapons"
 import { cardPdfStyles } from "./cardPdfStyles"
 
 const styles = StyleSheet.create(cardPdfStyles)
@@ -51,6 +51,7 @@ const PdfUnitCard = ({ list, detachment, label, includeUnequipped }: properties)
 			return ui ? { name: ui.name, number: up.size, wounds: ui.wounds || 1 } : null
 		}),
 	].filter(Boolean) as { name: string; number: number; wounds: number }[]
+	const shieldUnits = voidShieldUnits(list, detachment)
 	const casualtyUnits = Array.from(new Set(rawUnits.map((u) => u.name))).map((name) => {
 		const items = rawUnits.filter((u) => u.name === name)
 		return { name, number: items.reduce((acc, u) => acc + u.number, 0), wounds: items[0].wounds }
@@ -193,6 +194,33 @@ const PdfUnitCard = ({ list, detachment, label, includeUnequipped }: properties)
 					</View>
 				))}
 			</View>
+
+			{shieldUnits.length ? (
+				<View style={styles.casualties}>
+					<Text style={styles.casualtyLabel}>Void Shields</Text>
+					{shieldUnits.map((unit) => (
+						<View style={styles.casualtyUnit} key={unit.name}>
+							{shieldUnits.length > 1 || unit.number > 1 ? (
+								<Text style={styles.casualtyUnitName}>
+									{unit.number} {unit.name} · {unit.shields} each
+								</Text>
+							) : null}
+							<View style={styles.boxRow}>
+								{new Array(unit.number).fill(0).map((_, m) => (
+									<View style={styles.modelBox} key={m}>
+										{new Array(unit.shields).fill(0).map((__, s) => (
+											<Svg key={s} width={7} height={7} style={styles.woundBox}>
+												<Rect x={0} y={0} width={7} height={7} fill="white" stroke="#0b3d2c" strokeWidth={0.5} />
+												<Line x1={0} y1={7} x2={7} y2={0} stroke="#0b3d2c" strokeWidth={0.5} />
+											</Svg>
+										))}
+									</View>
+								))}
+							</View>
+						</View>
+					))}
+				</View>
+			) : null}
 		</View>
 	)
 }
