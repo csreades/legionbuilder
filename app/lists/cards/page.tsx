@@ -7,7 +7,7 @@ import { BreadCrumbs, Crumb } from "@components/BreadCrumbs"
 import DetachmentDataslate from "@components/DetachmentDataslate"
 import { detachmentData } from "@data/detachment_data"
 import { unitData } from "@data/unit_data"
-import { totalListPoints } from "@lists/builder/utils"
+import { totalListPoints, totalFormationPoints } from "@lists/builder/utils"
 import dynamic from "next/dynamic"
 import { FaFileDownload } from "@react-icons/all-files/fa/FaFileDownload"
 import PdfCardList from "./pdf/PdfCardList"
@@ -25,6 +25,7 @@ const page = () => {
 	const [includeUnequipped, setIncludeUnequipped] = useState(false)
 	const [showDupes, setShowDupes] = useState(false)
 	const [sortByName, setSortByName] = useState(false)
+	const [groupByFormation, setGroupByFormation] = useState(false)
 	const [fullscreen, setFullscreen] = useState(false)
 
 	if (!list || !list.formations.length) {
@@ -43,7 +44,7 @@ const page = () => {
 					const data = detachmentData.find((entry) => entry.id === det.id)
 					const hasUnit = data?.main_unit.some((id) => unitData.some((unit) => unit.id === id))
 					if (!data || !hasUnit) return null
-					return { slotId: det.slot_id, det, data, sig: cardSignature(list, det) }
+					return { slotId: det.slot_id, formationId: formation.id, det, data, sig: cardSignature(list, det) }
 				})
 				.filter((inst): inst is NonNullable<typeof inst> => Boolean(inst))
 		)
@@ -63,16 +64,22 @@ const page = () => {
 	const labelBySlot: Record<string, string> = {}
 	instances.forEach((inst) => (labelBySlot[inst.slotId] = labelBySig[inst.sig]))
 
-	// Cards: deduped by signature (unless showing duplicates), sorted by name or points.
-	const seen = new Set<string>()
-	const cards = (showDupes ? instances : instances.filter((inst) => !seen.has(inst.sig) && seen.add(inst.sig))).sort(
-		(a, b) =>
-			sortByName
-				? a.data.name.localeCompare(b.data.name)
-				: b.data.base_cost - a.data.base_cost || a.data.name.localeCompare(b.data.name)
-	)
+	type Inst = (typeof instances)[number]
 
-	const cardNodes = cards.map((inst) => {
+	// Dedup by signature (unless showing duplicates) and sort by name or points.
+	const dedupSort = (items: Inst[]) => {
+		const seen = new Set<string>()
+		return items
+			.filter((inst) => showDupes || (!seen.has(inst.sig) && seen.add(inst.sig)))
+			.sort((a, b) =>
+				sortByName
+					? a.data.name.localeCompare(b.data.name)
+					: b.data.base_cost - a.data.base_cost || a.data.name.localeCompare(b.data.name)
+			)
+	}
+
+	// One card. `scope` is the instance set searched for casualty-tracker siblings.
+	const cardNode = (inst: Inst, scope: Inst[]) => {
 		const rows = weaponRowState(list, inst.det, includeUnequipped)
 		return (
 			<div key={inst.slotId} className="break-inside-avoid mb-4">
@@ -89,7 +96,7 @@ const page = () => {
 						showDupes ? (
 							<CasualtyTracker list={list} detachment={inst.det} />
 						) : (
-							instances
+							scope
 								.filter((i) => i.sig === inst.sig)
 								.map((i, idx, arr) => (
 									<CasualtyTracker
@@ -104,7 +111,9 @@ const page = () => {
 				/>
 			</div>
 		)
-	})
+	}
+
+	const gridClass = `columns-1 md:columns-2 xl:columns-3 ${fullscreen ? "2xl:columns-4" : ""} gap-4`
 
 	const toggle = (checked: boolean, onChange: (v: boolean) => void, text: string) => (
 		<label className="flex items-center gap-1 cursor-pointer">
@@ -118,13 +127,29 @@ const page = () => {
 			{toggle(includeUnequipped, setIncludeUnequipped, "Include unequipped")}
 			{toggle(showDupes, setShowDupes, "Show duplicates")}
 			{toggle(sortByName, setSortByName, "Sort by name")}
+			{toggle(groupByFormation, setGroupByFormation, "Group by formation")}
 		</div>
 	)
 
-	const cardGrid = (
-		<section className={`columns-1 md:columns-2 xl:columns-3 ${fullscreen ? "2xl:columns-4" : ""} gap-4`}>
-			{cardNodes}
-		</section>
+	const cardGrid = groupByFormation ? (
+		<div className="flex flex-col gap-6">
+			{formations.map((formation) => {
+				const formInstances = instances.filter((i) => i.formationId === formation.id)
+				const items = dedupSort(formInstances)
+				if (!items.length) return null
+				return (
+					<div key={formation.id}>
+						<h3 className="font-graduate text-lg text-primary-100 border-b border-primary-600 pb-1 mb-2">
+							{formation.nickname ? `${formation.nickname} — ` : ""}
+							{formation.name} · {totalFormationPoints(list, formation)}pts
+						</h3>
+						<section className={gridClass}>{items.map((inst) => cardNode(inst, formInstances))}</section>
+					</div>
+				)
+			})}
+		</div>
+	) : (
+		<section className={gridClass}>{dedupSort(instances).map((inst) => cardNode(inst, instances))}</section>
 	)
 
 	if (fullscreen && typeof document !== "undefined") {
