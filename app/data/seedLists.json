@@ -1923,5 +1923,1315 @@
         "loadouts": []
       }
     ]
+  },
+  {
+    "gamemode": "standard",
+    "points": 2000,
+    "name": "Ultramarines 2",
+    "id": "F8ayeu2n5CYy7CqZARaYL",
+    "user": "dev",
+    "faction": "Legiones Astartes",
+    "allegiance": "Loyalist",
+    "formations": [
+      {
+        "id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "Legion Demi-company",
+        "nickname": "",
+        "data_id": 1000,
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": "Ultramarines",
+        "detachment_groups": [
+          {
+            "id": "yFOqgZZWI_2gDJepEU5pqindex0",
+            "type": "compulsory",
+            "detachment_slots": [
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex0HQ0",
+                "type": "HQ",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex0Support1",
+                "type": "Support",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex0Core2",
+                "type": "Core",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex0Core3",
+                "type": "Core",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              }
+            ],
+            "text": ""
+          },
+          {
+            "id": "yFOqgZZWI_2gDJepEU5pqindex1",
+            "type": "optional",
+            "detachment_slots": [
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex1Bastion0",
+                "type": "Bastion",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex1Core1",
+                "type": "Core",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex1Transport2",
+                "type": "Transport",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex1Transport3",
+                "type": "Transport",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex1Support4",
+                "type": "Support",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex1Support5",
+                "type": "Support",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex1Vanguard6",
+                "type": "Vanguard",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex1Dedicated7",
+                "type": "Dedicated",
+                "faction": "Legiones Astartes",
+                "restricted": true,
+                "options": [
+                  9000
+                ],
+                "description": "Dedicated transport Rhinos",
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              }
+            ],
+            "text": ""
+          },
+          {
+            "id": "yFOqgZZWI_2gDJepEU5pqindex2",
+            "type": "choice",
+            "detachment_slots": [
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex2Light Armour0",
+                "type": "Light Armour",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex2Air Support1",
+                "type": "Air Support",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              }
+            ],
+            "text": "Up to one of the following"
+          },
+          {
+            "id": "yFOqgZZWI_2gDJepEU5pqindex3",
+            "type": "choice",
+            "detachment_slots": [
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex3Artillery0",
+                "type": "Artillery",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex3Battle Tank1",
+                "type": "Battle Tank",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              },
+              {
+                "id": "yFOqgZZWI_2gDJepEU5pqindex3Heavy Armour2",
+                "type": "Heavy Armour",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "yFOqgZZWI_2gDJepEU5pq"
+              }
+            ],
+            "text": "Up to one of the following"
+          }
+        ]
+      },
+      {
+        "id": "5X8vqonczUV9OACd8X1VW",
+        "name": "Legion Armoured Company",
+        "nickname": "",
+        "data_id": 1002,
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": "Ultramarines",
+        "detachment_groups": [
+          {
+            "id": "5X8vqonczUV9OACd8X1VWindex0",
+            "type": "compulsory",
+            "detachment_slots": [
+              {
+                "id": "5X8vqonczUV9OACd8X1VWindex0HQ0",
+                "type": "HQ",
+                "faction": "Legiones Astartes",
+                "restricted": true,
+                "options": [
+                  1032,
+                  1033,
+                  1034
+                ],
+                "formation_id": "5X8vqonczUV9OACd8X1VW"
+              },
+              {
+                "id": "5X8vqonczUV9OACd8X1VWindex0Battle Tank1",
+                "type": "Battle Tank",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "5X8vqonczUV9OACd8X1VW"
+              },
+              {
+                "id": "5X8vqonczUV9OACd8X1VWindex0Battle Tank2",
+                "type": "Battle Tank",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "5X8vqonczUV9OACd8X1VW"
+              },
+              {
+                "id": "5X8vqonczUV9OACd8X1VWindex0Heavy Armour3",
+                "type": "Heavy Armour",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "5X8vqonczUV9OACd8X1VW"
+              }
+            ],
+            "text": ""
+          },
+          {
+            "id": "5X8vqonczUV9OACd8X1VWindex1",
+            "type": "optional",
+            "detachment_slots": [
+              {
+                "id": "5X8vqonczUV9OACd8X1VWindex1Light Armour0",
+                "type": "Light Armour",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "5X8vqonczUV9OACd8X1VW"
+              },
+              {
+                "id": "5X8vqonczUV9OACd8X1VWindex1Battle Tank1",
+                "type": "Battle Tank",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "5X8vqonczUV9OACd8X1VW"
+              },
+              {
+                "id": "5X8vqonczUV9OACd8X1VWindex1Battle Tank2",
+                "type": "Battle Tank",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "5X8vqonczUV9OACd8X1VW"
+              },
+              {
+                "id": "5X8vqonczUV9OACd8X1VWindex1Heavy Armour3",
+                "type": "Heavy Armour",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "5X8vqonczUV9OACd8X1VW"
+              }
+            ],
+            "text": ""
+          },
+          {
+            "id": "5X8vqonczUV9OACd8X1VWindex2",
+            "type": "choice",
+            "detachment_slots": [
+              {
+                "id": "5X8vqonczUV9OACd8X1VWindex2Air Support0",
+                "type": "Air Support",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "5X8vqonczUV9OACd8X1VW"
+              },
+              {
+                "id": "5X8vqonczUV9OACd8X1VWindex2Heavy Armour1",
+                "type": "Heavy Armour",
+                "faction": "Legiones Astartes",
+                "restricted": false,
+                "options": [],
+                "formation_id": "5X8vqonczUV9OACd8X1VW"
+              }
+            ],
+            "text": "Up to one of the following"
+          }
+        ]
+      }
+    ],
+    "detachments": [
+      {
+        "id": 1000,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0HQ0",
+        "slot_type": "HQ",
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "Legion Command Squad",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 25,
+        "size": 1,
+        "max_size": 1
+      },
+      {
+        "id": 1006,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0Support1",
+        "slot_type": "Support",
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "Legion Terminator Detachment",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 50,
+        "size": 4,
+        "max_size": 8
+      },
+      {
+        "id": 1002,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0Core2",
+        "slot_type": "Core",
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "Legion Tactical Detachment",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 35,
+        "size": 4,
+        "max_size": 12
+      },
+      {
+        "id": 1002,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0Core3",
+        "slot_type": "Core",
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "Legion Tactical Detachment",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 35,
+        "size": 4,
+        "max_size": 12
+      },
+      {
+        "id": 0,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Bastion0",
+        "slot_type": "Bastion",
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Core1",
+        "slot_type": null,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Transport2",
+        "slot_type": null,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Transport3",
+        "slot_type": "Transport",
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 1005,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Support4",
+        "slot_type": null,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "Legion Assault Detachment",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 30,
+        "size": 4,
+        "max_size": 8
+      },
+      {
+        "id": 1009,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Support5",
+        "slot_type": "Support",
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "Legion Contemptor Dreadnought Talon",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 70,
+        "size": 4,
+        "max_size": 10
+      },
+      {
+        "id": 1022,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Vanguard6",
+        "slot_type": null,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "Legion Javelin Squadron",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 35,
+        "size": 2,
+        "max_size": 6
+      },
+      {
+        "id": 9000,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Dedicated7",
+        "slot_type": "Dedicated",
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "Demi-company Rhinos",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 10,
+        "size": 1,
+        "max_size": 31
+      },
+      {
+        "id": 0,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex2Light Armour0",
+        "slot_type": null,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 1018,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex2Air Support1",
+        "slot_type": null,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "Legion Thunderhawk Gunship",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 150,
+        "size": 1,
+        "max_size": 4
+      },
+      {
+        "id": 0,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex3Artillery0",
+        "slot_type": null,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex3Battle Tank1",
+        "slot_type": null,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 1037,
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex3Heavy Armour2",
+        "slot_type": null,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "name": "Legion Mastodon Squadron",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 130,
+        "size": 1,
+        "max_size": 4
+      },
+      {
+        "id": 1032,
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0HQ0",
+        "slot_type": "HQ",
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "name": "Legion Kratos Commander",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 100,
+        "size": 1,
+        "max_size": 1
+      },
+      {
+        "id": 1012,
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0Battle Tank1",
+        "slot_type": "Battle Tank",
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "name": "Legion Predator Squadron",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 115,
+        "size": 3,
+        "max_size": 9
+      },
+      {
+        "id": 1029,
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0Battle Tank2",
+        "slot_type": "Battle Tank",
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "name": "Legion Sicaran Arcus Squadron",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 95,
+        "size": 2,
+        "max_size": 6
+      },
+      {
+        "id": 1014,
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0Heavy Armour3",
+        "slot_type": "Heavy Armour",
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "name": "Legion Kratos Squadron",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 140,
+        "size": 2,
+        "max_size": 6
+      },
+      {
+        "id": 1030,
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Light Armour0",
+        "slot_type": "Light Armour",
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "name": "Legion Sabre Squadron",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 120,
+        "size": 4,
+        "max_size": 8
+      },
+      {
+        "id": 1012,
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Battle Tank1",
+        "slot_type": "Battle Tank",
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "name": "Legion Predator Squadron",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 115,
+        "size": 3,
+        "max_size": 9
+      },
+      {
+        "id": 1029,
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Battle Tank2",
+        "slot_type": "Battle Tank",
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "name": "Legion Sicaran Arcus Squadron",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 95,
+        "size": 2,
+        "max_size": 6
+      },
+      {
+        "id": 1050,
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Heavy Armour3",
+        "slot_type": "Heavy Armour",
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "name": "Legion Fellblade Squadron",
+        "faction": "Legiones Astartes",
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 120,
+        "size": 1,
+        "max_size": 4
+      },
+      {
+        "id": 0,
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex2Air Support0",
+        "slot_type": "Air Support",
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      },
+      {
+        "id": 0,
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex2Heavy Armour1",
+        "slot_type": null,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "name": "",
+        "faction": null,
+        "allegiance": null,
+        "subfaction": null,
+        "cost": 0,
+        "size": 0,
+        "max_size": 0
+      }
+    ],
+    "upgrades": [
+      {
+        "id": 1000,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0HQ0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Bastion0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Transport3",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex3Artillery0",
+        "upgrades": []
+      },
+      {
+        "id": 1002,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0Core3",
+        "upgrades": [
+          {
+            "name": "Additional Plasma Support",
+            "unit_ref": 1005,
+            "number": 2,
+            "cost": 15,
+            "size": 2,
+            "break_strength": 1
+          },
+          {
+            "name": "Additional Missile Support",
+            "unit_ref": 1006,
+            "number": 2,
+            "cost": 20,
+            "size": 2,
+            "break_strength": 1
+          }
+        ]
+      },
+      {
+        "id": 1018,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex2Air Support1",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex3Battle Tank1",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex2Light Armour0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Core1",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Transport2",
+        "upgrades": []
+      },
+      {
+        "id": 1005,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Support4",
+        "upgrades": [
+          {
+            "name": "Additional Assault Marines",
+            "unit_ref": 1004,
+            "number": 4,
+            "cost": 24,
+            "size": 4
+          }
+        ]
+      },
+      {
+        "id": 1022,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Vanguard6",
+        "upgrades": [
+          {
+            "name": "Additional Javelin",
+            "unit_ref": 1022,
+            "number": 4,
+            "cost": 60,
+            "size": 4
+          }
+        ]
+      },
+      {
+        "id": 1009,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Support5",
+        "upgrades": [
+          {
+            "name": "Additional Contemptor",
+            "unit_ref": 1009,
+            "number": 2,
+            "cost": 30,
+            "size": 2
+          }
+        ]
+      },
+      {
+        "id": 1032,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0HQ0",
+        "upgrades": []
+      },
+      {
+        "id": 1014,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0Heavy Armour3",
+        "upgrades": []
+      },
+      {
+        "id": 1030,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Light Armour0",
+        "upgrades": []
+      },
+      {
+        "id": 1012,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Battle Tank1",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex2Air Support0",
+        "upgrades": []
+      },
+      {
+        "id": 0,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex2Heavy Armour1",
+        "upgrades": []
+      },
+      {
+        "id": 1050,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Heavy Armour3",
+        "upgrades": []
+      },
+      {
+        "id": 1037,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex3Heavy Armour2",
+        "upgrades": []
+      },
+      {
+        "id": 1002,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0Core2",
+        "upgrades": [
+          {
+            "name": "Additional Missile Support",
+            "unit_ref": 1006,
+            "number": 2,
+            "cost": 20,
+            "size": 2,
+            "break_strength": 1
+          },
+          {
+            "name": "Additional Plasma Support",
+            "unit_ref": 1005,
+            "number": 2,
+            "cost": 15,
+            "size": 2,
+            "break_strength": 1
+          }
+        ]
+      },
+      {
+        "id": 1006,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0Support1",
+        "upgrades": [
+          {
+            "name": "Additional Terminators",
+            "unit_ref": 1003,
+            "number": 2,
+            "cost": 20,
+            "size": 2
+          }
+        ]
+      },
+      {
+        "id": 1029,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0Battle Tank2",
+        "upgrades": [
+          {
+            "name": "Additional Sicaran",
+            "unit_ref": 1030,
+            "number": 1,
+            "cost": 45,
+            "size": 1
+          }
+        ]
+      },
+      {
+        "id": 1029,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Battle Tank2",
+        "upgrades": [
+          {
+            "name": "Additional Sicaran",
+            "unit_ref": 1030,
+            "number": 1,
+            "cost": 45,
+            "size": 1
+          }
+        ]
+      },
+      {
+        "id": 1012,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0Battle Tank1",
+        "upgrades": []
+      },
+      {
+        "id": 9000,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Dedicated7",
+        "upgrades": [
+          {
+            "name": "Additional Rhino",
+            "unit_ref": 1001,
+            "number": 8,
+            "cost": 80,
+            "size": 8,
+            "break_strength": 1
+          }
+        ]
+      }
+    ],
+    "loadouts": [
+      {
+        "id": 1000,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0HQ0",
+        "loadouts": []
+      },
+      {
+        "id": 1006,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0Support1",
+        "loadouts": []
+      },
+      {
+        "id": 1002,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0Core2",
+        "loadouts": [
+          {
+            "id": "Apothecaryspecialist",
+            "number": 2,
+            "weapons": [
+              {
+                "location": "specialist",
+                "weapon": "Apothecary",
+                "cost": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1002,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex0Core3",
+        "loadouts": [
+          {
+            "id": "Apothecaryspecialist",
+            "number": 2,
+            "weapons": [
+              {
+                "location": "specialist",
+                "weapon": "Apothecary",
+                "cost": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Bastion0",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Core1",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Transport2",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Transport3",
+        "loadouts": []
+      },
+      {
+        "id": 1005,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Support4",
+        "loadouts": []
+      },
+      {
+        "id": 1009,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Support5",
+        "loadouts": [
+          {
+            "id": "Twin-linkedlascannonsArm",
+            "number": 6,
+            "weapons": [
+              {
+                "location": "Arm",
+                "weapon": "Twin-linked lascannons",
+                "cost": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1022,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Vanguard6",
+        "loadouts": [
+          {
+            "id": "LascannonsSponsons",
+            "number": 6,
+            "weapons": [
+              {
+                "location": "Sponsons",
+                "weapon": "Lascannons",
+                "cost": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9000,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex1Dedicated7",
+        "loadouts": [
+          {
+            "id": "HavoclauncherPintleNoneHull",
+            "number": 9,
+            "weapons": [
+              {
+                "location": "Pintle",
+                "weapon": "Havoc launcher",
+                "cost": 5
+              },
+              {
+                "location": "Hull",
+                "weapon": "None",
+                "cost": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex2Light Armour0",
+        "loadouts": []
+      },
+      {
+        "id": 1018,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex2Air Support1",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex3Artillery0",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex3Battle Tank1",
+        "loadouts": []
+      },
+      {
+        "id": 1037,
+        "formation_id": "yFOqgZZWI_2gDJepEU5pq",
+        "slot_id": "yFOqgZZWI_2gDJepEU5pqindex3Heavy Armour2",
+        "loadouts": [
+          {
+            "id": "LascannonsSponsons",
+            "number": 1,
+            "weapons": [
+              {
+                "location": "Sponsons",
+                "weapon": "Lascannons",
+                "cost": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1032,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0HQ0",
+        "loadouts": [
+          {
+            "id": "AutocannonsHullHeavybolterPintleKratosbattlecannonTurretLascannonsSponson",
+            "number": 1,
+            "weapons": [
+              {
+                "location": "Turret",
+                "weapon": "Kratos battlecannon",
+                "cost": 0
+              },
+              {
+                "location": "Sponson",
+                "weapon": "Lascannons",
+                "cost": 0
+              },
+              {
+                "location": "Hull",
+                "weapon": "Autocannons",
+                "cost": 0
+              },
+              {
+                "location": "Pintle",
+                "weapon": "Heavy bolter",
+                "cost": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1012,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0Battle Tank1",
+        "loadouts": [
+          {
+            "id": "HeavybolterPintleLascannonsSponsonsPredatorcannonTurret",
+            "number": 3,
+            "weapons": [
+              {
+                "location": "Turret",
+                "weapon": "Predator cannon",
+                "cost": 0
+              },
+              {
+                "location": "Sponsons",
+                "weapon": "Lascannons",
+                "cost": 0
+              },
+              {
+                "location": "Pintle",
+                "weapon": "Heavy bolter",
+                "cost": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1029,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0Battle Tank2",
+        "loadouts": [
+          {
+            "id": "LascannonsSponsons",
+            "number": 3,
+            "weapons": [
+              {
+                "location": "Sponsons",
+                "weapon": "Lascannons",
+                "cost": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1014,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex0Heavy Armour3",
+        "loadouts": [
+          {
+            "id": "HeavybolterPintleHeavyboltersHullHeavyboltersSponsonKratosbattlecannonTurret",
+            "number": 2,
+            "weapons": [
+              {
+                "location": "Turret",
+                "weapon": "Kratos battlecannon",
+                "cost": 0
+              },
+              {
+                "location": "Sponson",
+                "weapon": "Heavy bolters",
+                "cost": 0
+              },
+              {
+                "location": "Hull",
+                "weapon": "Heavy bolters",
+                "cost": 0
+              },
+              {
+                "location": "Pintle",
+                "weapon": "Heavy bolter",
+                "cost": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1030,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Light Armour0",
+        "loadouts": [
+          {
+            "id": "HeavyboltershullNeutronblasterMain",
+            "number": 4,
+            "weapons": [
+              {
+                "location": "Main",
+                "weapon": "Neutron blaster",
+                "cost": 0
+              },
+              {
+                "location": "hull",
+                "weapon": "Heavy bolters",
+                "cost": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1012,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Battle Tank1",
+        "loadouts": [
+          {
+            "id": "HeavybolterPintleLascannonsSponsonsPredatorcannonTurret",
+            "number": 3,
+            "weapons": [
+              {
+                "location": "Turret",
+                "weapon": "Predator cannon",
+                "cost": 0
+              },
+              {
+                "location": "Sponsons",
+                "weapon": "Lascannons",
+                "cost": 0
+              },
+              {
+                "location": "Pintle",
+                "weapon": "Heavy bolter",
+                "cost": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1029,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Battle Tank2",
+        "loadouts": [
+          {
+            "id": "LascannonsSponsons",
+            "number": 3,
+            "weapons": [
+              {
+                "location": "Sponsons",
+                "weapon": "Lascannons",
+                "cost": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1050,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex1Heavy Armour3",
+        "loadouts": [
+          {
+            "id": "HeavybolterPintleQuadlascannonsSponsons",
+            "number": 1,
+            "weapons": [
+              {
+                "location": "Sponsons",
+                "weapon": "Quad lascannons",
+                "cost": 0
+              },
+              {
+                "location": "Pintle",
+                "weapon": "Heavy bolter",
+                "cost": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 0,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex2Air Support0",
+        "loadouts": []
+      },
+      {
+        "id": 0,
+        "formation_id": "5X8vqonczUV9OACd8X1VW",
+        "slot_id": "5X8vqonczUV9OACd8X1VWindex2Heavy Armour1",
+        "loadouts": []
+      }
+    ]
   }
 ]
