@@ -29,7 +29,7 @@ const formationBreak = (list: List, formation: List["formations"][number]) => {
 	return { strength, breakPoint: Math.ceil(strength / 2) }
 }
 
-const PdfCardList = ({ list }: { list: List }) => {
+const PdfCardList = ({ list, includeUnequipped }: { list: List; includeUnequipped?: boolean }) => {
 	const formations = list.formations.filter((formation) => formation.name)
 
 	return (
@@ -74,7 +74,7 @@ const PdfCardList = ({ list }: { list: List }) => {
 						<View style={styles.grid}>
 							{detachments.map((det) => (
 								<View style={styles.cardWrap} key={det.slot_id}>
-									<PdfUnitCard list={list} detachment={det} />
+									<PdfUnitCard list={list} detachment={det} includeUnequipped={includeUnequipped} />
 								</View>
 							))}
 						</View>

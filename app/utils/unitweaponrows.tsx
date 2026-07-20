@@ -1,13 +1,15 @@
 import { weapons } from "../data/weapon_data";
 import WeaponTraitBox from "@components/WeaponTraitBox";
 
-export const getUnitWeaponRows = (unit: number[]) => {
+export const getUnitWeaponRows = (unit: number[], greyIds?: Set<number>) => {
   return unit.map((weapon) => {
     const weaponEntry = weapons.find((entry) => entry.id === weapon);
     if (weaponEntry) {
       return (
         <tr
-          className="even:bg-secondary-300 odd:bg-secondary-100"
+          className={`even:bg-secondary-300 odd:bg-secondary-100${
+            greyIds?.has(weapon) ? " text-gray-400 italic" : ""
+          }`}
           key={weaponEntry.name}
         >
           <td className="px-2">

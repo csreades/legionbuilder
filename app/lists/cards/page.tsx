@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { listState } from "@lists/state"
 import { BreadCrumbs, Crumb } from "@components/BreadCrumbs"
 import DetachmentDataslate from "@components/DetachmentDataslate"
@@ -10,7 +11,7 @@ import { totalListPoints } from "@lists/builder/utils"
 import dynamic from "next/dynamic"
 import { FaFileDownload } from "@react-icons/all-files/fa/FaFileDownload"
 import PdfCardList from "./pdf/PdfCardList"
-import { visibleWeaponIds, variantNotes, cardSignature, takenRelatedUnitIds } from "./resolveWeapons"
+import { variantNotes, cardSignature, takenRelatedUnitIds, weaponRowState } from "./resolveWeapons"
 
 const PDFDownloadLink = dynamic(() => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink), {
 	ssr: false,
@@ -19,6 +20,7 @@ const PDFDownloadLink = dynamic(() => import("@react-pdf/renderer").then((mod) =
 
 const page = () => {
 	const { list } = listState()
+	const [includeUnequipped, setIncludeUnequipped] = useState(false)
 
 	if (!list || !list.formations.length) {
 		return <h2 className="text-primary-50 p-4">No list found</h2>
@@ -78,10 +80,18 @@ const page = () => {
 				<h3 className="font-graduate">
 					{list.allegiance} {list.faction}
 				</h3>
-				<button className="flex items-center mt-2 text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate">
+				<label className="flex items-center gap-2 mt-2 font-graduate cursor-pointer">
+					<input
+						type="checkbox"
+						checked={includeUnequipped}
+						onChange={(e) => setIncludeUnequipped(e.target.checked)}
+					/>
+					Include unequipped (show all weapons, unequipped greyed)
+				</label>
+				<button className="flex items-center text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate">
 					<PDFDownloadLink
-						document={<PdfCardList list={list} />}
-						fileName={`${list.name}-cards`}
+						document={<PdfCardList list={list} includeUnequipped={includeUnequipped} />}
+						fileName={`${list.name}-cards${includeUnequipped ? "-full" : ""}`}
 						className="flex items-center">
 						<FaFileDownload className="mr-1 text-xl" />
 						Cards pdf
@@ -98,18 +108,22 @@ const page = () => {
 
 			{/* Unique reference cards, weapons filtered to selections, ordered by points */}
 			<section className="flex flex-col gap-4">
-				{cards.map((inst) => (
-					<DetachmentDataslate
-						key={inst.sig}
-						detachment={inst.data}
-						visibleWeaponIds={visibleWeaponIds(list, inst.det)}
-						notes={variantNotes(list, inst.det)}
-						label={labelBySig[inst.sig]}
-						visibleRelatedUnitIds={takenRelatedUnitIds(list, inst.det)}
-						hideLoadoutText
-						hideUpgrades
-					/>
-				))}
+				{cards.map((inst) => {
+					const rows = weaponRowState(list, inst.det, includeUnequipped)
+					return (
+						<DetachmentDataslate
+							key={inst.sig}
+							detachment={inst.data}
+							visibleWeaponIds={rows.map((r) => r.id)}
+							greyWeaponIds={rows.filter((r) => r.grey).map((r) => r.id)}
+							notes={variantNotes(list, inst.det)}
+							label={labelBySig[inst.sig]}
+							visibleRelatedUnitIds={takenRelatedUnitIds(list, inst.det)}
+							hideLoadoutText
+							hideUpgrades
+						/>
+					)
+				})}
 			</section>
 		</div>
 	)

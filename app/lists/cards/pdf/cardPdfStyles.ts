@@ -82,6 +82,8 @@ export const cardPdfStyles: Styles = {
 	cell: { paddingVertical: 1.5, paddingHorizontal: 3 },
 	cellCenter: { paddingVertical: 1.5, paddingHorizontal: 2, textAlign: "center" },
 
+	greyText: { color: "#9aa39d" },
+
 	rules: { backgroundColor: RULE, paddingVertical: 2, paddingHorizontal: 5 },
 	notes: { backgroundColor: RULE, paddingVertical: 2, paddingHorizontal: 5, fontFamily: "Helvetica-Bold" },
 

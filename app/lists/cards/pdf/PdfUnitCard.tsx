@@ -5,7 +5,7 @@ import { detachmentData } from "@data/detachment_data"
 import { unitData } from "@data/unit_data"
 import { weapons as weaponData } from "@data/weapon_data"
 import { currentDetachmentSize, totalDetachmentPoints } from "@lists/builder/components/detachment/utils"
-import { visibleWeaponIds, variantNotes } from "@lists/cards/resolveWeapons"
+import { weaponRowState, variantNotes } from "@lists/cards/resolveWeapons"
 import { cardPdfStyles } from "./cardPdfStyles"
 
 const styles = StyleSheet.create(cardPdfStyles)
@@ -20,9 +20,10 @@ interface properties {
 	list: List
 	detachment: ListDetachment
 	label?: string
+	includeUnequipped?: boolean
 }
 
-const PdfUnitCard = ({ list, detachment, label }: properties) => {
+const PdfUnitCard = ({ list, detachment, label, includeUnequipped }: properties) => {
 	const data = detachmentData.find((entry) => entry.id === detachment.id)
 	if (!data) return null
 	const mainUnits = unitData.filter((unit) => data.main_unit.includes(unit.id))
@@ -32,11 +33,9 @@ const PdfUnitCard = ({ list, detachment, label }: properties) => {
 	const points = totalDetachmentPoints(list, detachment.slot_id)
 	const notes = variantNotes(list, detachment)
 
-	const shownIds = visibleWeaponIds(list, detachment)
-	const shownWeaponIds = Array.from(new Set(mainUnits.flatMap((u) => u.weapons))).filter((id) =>
-		shownIds.includes(id)
-	)
-	const cardWeapons = shownWeaponIds.map((id) => weaponData.find((w) => w.id === id)).filter(Boolean) as any[]
+	const cardWeapons = weaponRowState(list, detachment, !!includeUnequipped)
+		.map((r) => ({ weapon: weaponData.find((w) => w.id === r.id) as any, grey: r.grey }))
+		.filter((r) => r.weapon)
 
 	const unitType = mainUnits[0].unit_type
 
@@ -119,41 +118,44 @@ const PdfUnitCard = ({ list, detachment, label }: properties) => {
 						<Text style={[styles.cellCenter, { width: W.col }]}>AP</Text>
 						<Text style={[styles.cell, { width: W.traits }]}>Traits</Text>
 					</View>
-					{cardWeapons.map((weapon, i) => (
-						<View style={i % 2 ? styles.tRowAlt : styles.tRow} key={weapon.id}>
-							<Text style={[styles.cell, { width: W.weapon }]}>{weapon.name}</Text>
-							<Text style={[styles.cellCenter, { width: W.col }]}>
-								{weapon.profiles.map((p: any, k: number) => (
-									<Text key={k}>{line(p.range)}{"\n"}</Text>
-								))}
-							</Text>
-							<Text style={[styles.cellCenter, { width: W.col }]}>
-								{weapon.profiles.map((p: any, k: number) => (
-									<Text key={k}>{line(p.dice)}{"\n"}</Text>
-								))}
-							</Text>
-							<Text style={[styles.cellCenter, { width: W.col }]}>
-								{weapon.profiles.map((p: any, k: number) => (
-									<Text key={k}>{p.to_hit ? `${p.to_hit}+` : "-"}{"\n"}</Text>
-								))}
-							</Text>
-							<Text style={[styles.cellCenter, { width: W.col }]}>
-								{weapon.profiles.map((p: any, k: number) => (
-									<Text key={k}>
-										{typeof p.ap === "number" ? (p.ap ? `-${p.ap}` : p.ap) : p.ap}
-										{"\n"}
-									</Text>
-								))}
-							</Text>
-							<Text style={[styles.cell, { width: W.traits }]}>
-								{weapon.profiles
-									.map((p: any) =>
-										p.traits.map((t: any) => `${t.name}${t.value ? ` (${t.value})` : ""}`).join(", ")
-									)
-									.join(" / ")}
-							</Text>
-						</View>
-					))}
+					{cardWeapons.map(({ weapon, grey }, i) => {
+						const g = grey ? styles.greyText : {}
+						return (
+							<View style={i % 2 ? styles.tRowAlt : styles.tRow} key={weapon.id}>
+								<Text style={[styles.cell, { width: W.weapon }, g]}>{weapon.name}</Text>
+								<Text style={[styles.cellCenter, { width: W.col }, g]}>
+									{weapon.profiles.map((p: any, k: number) => (
+										<Text key={k}>{line(p.range)}{"\n"}</Text>
+									))}
+								</Text>
+								<Text style={[styles.cellCenter, { width: W.col }, g]}>
+									{weapon.profiles.map((p: any, k: number) => (
+										<Text key={k}>{line(p.dice)}{"\n"}</Text>
+									))}
+								</Text>
+								<Text style={[styles.cellCenter, { width: W.col }, g]}>
+									{weapon.profiles.map((p: any, k: number) => (
+										<Text key={k}>{p.to_hit ? `${p.to_hit}+` : "-"}{"\n"}</Text>
+									))}
+								</Text>
+								<Text style={[styles.cellCenter, { width: W.col }, g]}>
+									{weapon.profiles.map((p: any, k: number) => (
+										<Text key={k}>
+											{typeof p.ap === "number" ? (p.ap ? `-${p.ap}` : p.ap) : p.ap}
+											{"\n"}
+										</Text>
+									))}
+								</Text>
+								<Text style={[styles.cell, { width: W.traits }, g]}>
+									{weapon.profiles
+										.map((p: any) =>
+											p.traits.map((t: any) => `${t.name}${t.value ? ` (${t.value})` : ""}`).join(", ")
+										)
+										.join(" / ")}
+								</Text>
+							</View>
+						)
+					})}
 				</>
 			) : null}
 

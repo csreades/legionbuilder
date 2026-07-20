@@ -24,6 +24,8 @@ interface properties {
 	label?: string
 	// When provided, only these related ("Additional") unit ids are shown (those actually taken).
 	visibleRelatedUnitIds?: number[]
+	// Weapon ids to render greyed (unequipped options, "include unequipped" mode).
+	greyWeaponIds?: number[]
 }
 
 const DetachmentDataslate = ({
@@ -35,6 +37,7 @@ const DetachmentDataslate = ({
 	hideUpgrades,
 	label,
 	visibleRelatedUnitIds,
+	greyWeaponIds,
 }: properties) => {
 	const relatedShown = visibleRelatedUnitIds
 		? detachment.related_unit.filter((id) => visibleRelatedUnitIds.includes(id))
@@ -71,7 +74,7 @@ const DetachmentDataslate = ({
 		? mainUnitWeaponsArray.filter((id) => visibleWeaponIds.includes(id))
 		: mainUnitWeaponsArray
 
-	const weaponRows = getUnitWeaponRows(shownWeapons)
+	const weaponRows = getUnitWeaponRows(shownWeapons, greyWeaponIds ? new Set(greyWeaponIds) : undefined)
 
 	return (
 		<article className="max-w-screen-xl p-1 sm:p-4 bg-dataslate text-sm sm:text-base break-inside-avoid clip-path-halfagon-lg">

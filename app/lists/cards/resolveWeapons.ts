@@ -54,7 +54,10 @@ export const visibleWeaponIds = (list: List, detachment: ListDetachment): number
 	for (const loc in byLoc) {
 		const selectedNames = selectedByLoc[loc] || []
 		if (!selectedNames.length) {
-			byLoc[loc].forEach((id) => shown.add(id)) // unresolved -> fail open
+			// An optional location (one that offers a "None") defaults to None when
+			// nothing is chosen — show nothing. Only mandatory locations fail open.
+			const optional = locMap[loc] && Object.values(locMap[loc]).some((v) => v === null)
+			if (!optional) byLoc[loc].forEach((id) => shown.add(id))
 			continue
 		}
 		let failOpen = false
@@ -104,6 +107,20 @@ export const cardSignature = (list: List, detachment: ListDetachment): string =>
 		.sort((a, b) => a - b)
 		.join(",")
 	return `${detachment.id}:${ids}:${notes}:${related}`
+}
+
+// Weapons to render on a card, in datasheet order, each flagged equipped/grey.
+// includeUnequipped=false: only equipped weapons. includeUnequipped=true: every
+// unit weapon, with unselected options marked grey rather than hidden.
+export const weaponRowState = (
+	list: List,
+	detachment: ListDetachment,
+	includeUnequipped: boolean
+): { id: number; grey: boolean }[] => {
+	const all = allUnitWeaponIds(detachment.id)
+	const equipped = new Set(visibleWeaponIds(list, detachment))
+	if (!includeUnequipped) return all.filter((id) => equipped.has(id)).map((id) => ({ id, grey: false }))
+	return all.map((id) => ({ id, grey: !equipped.has(id) }))
 }
 
 // Variant/specialist selections (Chassis/specialist locations) shown as notes.
