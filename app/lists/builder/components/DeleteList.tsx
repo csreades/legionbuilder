@@ -4,12 +4,17 @@ import { deleteList } from "@/app/firebase/firestore/deleteList"
 import { ImBin } from "@react-icons/all-files/im/ImBin"
 import useAuthState from "@/app/Auth"
 import { toast } from "react-toastify"
+import { isProtectedList } from "@lists/protectedLists"
 
 const DeleteList = ({ list }: { list: List }) => {
 	const [confirmDelete, setConfirmDelete] = useState(false)
 	const userUid = useAuthState((state) => state.uid)
 
 	const handleDelete = async () => {
+		if (isProtectedList(list.id)) {
+			toast.warning("This list is read-only")
+			return
+		}
 		if (userUid === list.user) {
 			deleteList(list.id)
 			toast.warning("deleting list")

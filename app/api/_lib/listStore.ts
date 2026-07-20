@@ -2,6 +2,7 @@ import { promises as fs } from "fs"
 import path from "path"
 import { List } from "@type/listTypes"
 import seedLists from "@data/seedLists.json"
+import { isProtectedList } from "@lists/protectedLists"
 
 // Server-side list store for dev mode: a single JSON file on the server so all
 // clients share the same lists (no third-party database). Seeded once from the
@@ -38,14 +39,18 @@ export const listAll = async (): Promise<Entry[]> => Object.values(await read())
 export const getOne = async (id: string): Promise<List | null> => (await read())[id]?.list ?? null
 
 export const saveOne = async (list: List) => {
+	if (isProtectedList(list.id)) return { uploaded: false, message: "This list is read-only" }
 	const store = await read()
 	store[list.id] = { list: { ...list, user: DEV_UID }, created: store[list.id]?.created ?? Date.now() }
 	await write(store)
 	return { uploaded: true, message: "List saved to server" }
 }
 
-export const deleteOne = async (id: string) => {
+// Returns false if the list is protected (and therefore not deleted).
+export const deleteOne = async (id: string): Promise<boolean> => {
+	if (isProtectedList(id)) return false
 	const store = await read()
 	delete store[id]
 	await write(store)
+	return true
 }
