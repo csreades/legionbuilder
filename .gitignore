@@ -38,3 +38,6 @@ next-env.d.ts
 
 # thoughts
 /thoughts
+
+# local runtime data (dev-mode server store, gh state)
+.local/

@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import { onAuthStateChanged, getAuth, User } from "firebase/auth"
 import useAuthState from "@/app/Auth"
-import { LOCAL_MODE, LOCAL_UID, seedLocalLists } from "@/app/localMode"
+import { LOCAL_MODE, LOCAL_UID } from "@/app/localMode"
 import firebase_app from "../config"
 
 // In local mode we never touch Firebase Auth.
@@ -19,8 +19,8 @@ const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
 
 	useEffect(() => {
 		if (LOCAL_MODE) {
-			// Single local user, auto logged in — no Firebase involved.
-			seedLocalLists()
+			// Single dev user, auto logged in — no Firebase involved. Lists are
+			// seeded and persisted server-side (see app/api/lists).
 			saveSession(LOCAL_UID)
 			return
 		}

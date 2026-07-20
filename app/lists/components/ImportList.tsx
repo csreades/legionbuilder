@@ -3,7 +3,8 @@
 import { useState } from "react"
 import { toast } from "react-toastify"
 import { userListsState } from "@lists/state"
-import { LOCAL_MODE, localGetUserLists, localSaveList, parseImportedList } from "@/app/localMode"
+import { LOCAL_MODE, parseImportedList } from "@/app/localMode"
+import { fetchUserLists, saveListToServer } from "@lists/serverStore"
 
 // Local-mode only: paste a list's JSON (a raw List object, or a Firestore document
 // with a stringified `list` field) to store it locally under the local user.
@@ -14,11 +15,11 @@ const ImportList = () => {
 
 	if (!LOCAL_MODE) return null
 
-	const handleImport = () => {
+	const handleImport = async () => {
 		try {
 			const list = parseImportedList(text)
-			localSaveList(list)
-			setUserLists(localGetUserLists())
+			await saveListToServer(list)
+			setUserLists(await fetchUserLists())
 			setText("")
 			setOpen(false)
 			toast.success(`Imported "${list.name}"`)
