@@ -11,6 +11,7 @@ import { totalListPoints } from "@lists/builder/utils"
 import dynamic from "next/dynamic"
 import { FaFileDownload } from "@react-icons/all-files/fa/FaFileDownload"
 import PdfCardList from "./pdf/PdfCardList"
+import CasualtyTracker from "./CasualtyTracker"
 import { variantNotes, cardSignature, takenRelatedUnitIds, weaponRowState } from "./resolveWeapons"
 
 const PDFDownloadLink = dynamic(() => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink), {
@@ -121,6 +122,16 @@ const page = () => {
 							visibleRelatedUnitIds={takenRelatedUnitIds(list, inst.det)}
 							hideLoadoutText
 							hideUpgrades
+							footer={instances
+								.filter((i) => i.sig === inst.sig)
+								.map((i, idx, arr) => (
+									<CasualtyTracker
+										key={i.slotId}
+										list={list}
+										detachment={i.det}
+										label={arr.length > 1 ? `#${idx + 1}` : undefined}
+									/>
+								))}
 						/>
 					)
 				})}

@@ -3,6 +3,29 @@ import { unitData } from "@data/unit_data"
 import { List, ListDetachment } from "@type/listTypes"
 import mapData from "@data/loadoutWeaponMap.generated.json"
 
+// Per-unit-type model counts + wounds for a detachment (base unit + upgrade-added
+// units, merged by name). Used for casualty boxes on the card and PDF.
+export const casualtyUnits = (
+	list: List,
+	detachment: ListDetachment
+): { name: string; number: number; wounds: number }[] => {
+	const data = detachmentData.find((d) => d.id === detachment.id)
+	if (!data) return []
+	const baseUnit = unitData.find((u) => u.id === data.main_unit[0])
+	const upgrades = list.upgrades.find((u) => u.slot_id === detachment.slot_id)?.upgrades || []
+	const raw = [
+		baseUnit ? { name: baseUnit.name, number: detachment.size, wounds: baseUnit.wounds || 1 } : null,
+		...upgrades.map((up) => {
+			const ui = unitData.find((u) => u.id === up.unit_ref)
+			return ui ? { name: ui.name, number: up.size, wounds: ui.wounds || 1 } : null
+		}),
+	].filter(Boolean) as { name: string; number: number; wounds: number }[]
+	return Array.from(new Set(raw.map((u) => u.name))).map((name) => {
+		const items = raw.filter((u) => u.name === name)
+		return { name, number: items.reduce((a, u) => a + u.number, 0), wounds: items[0].wounds }
+	})
+}
+
 // The generated loadout -> weapon-id map. `[]` means "pending review" (fail-open),
 // `null` means an intentional "None"/no-weapon opt-out.
 const weaponMap = mapData.weaponMap as Record<string, Record<string, Record<string, number[] | null>>>

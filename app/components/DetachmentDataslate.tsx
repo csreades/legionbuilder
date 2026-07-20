@@ -26,6 +26,8 @@ interface properties {
 	visibleRelatedUnitIds?: number[]
 	// Weapon ids to render greyed (unequipped options, "include unequipped" mode).
 	greyWeaponIds?: number[]
+	// Optional content rendered at the bottom of the card (e.g. interactive casualties).
+	footer?: React.ReactNode
 }
 
 const DetachmentDataslate = ({
@@ -38,6 +40,7 @@ const DetachmentDataslate = ({
 	label,
 	visibleRelatedUnitIds,
 	greyWeaponIds,
+	footer,
 }: properties) => {
 	const relatedShown = visibleRelatedUnitIds
 		? detachment.related_unit.filter((id) => visibleRelatedUnitIds.includes(id))
@@ -221,6 +224,7 @@ const DetachmentDataslate = ({
 					</div>
 				</div>
 			) : null}
+			{footer}
 		</article>
 	)
 }
