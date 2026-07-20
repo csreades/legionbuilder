@@ -40,6 +40,23 @@ const PdfUnitCard = ({ list, detachment, label }: properties) => {
 
 	const unitType = mainUnits[0].unit_type
 
+	// Casualty tracking: model counts + wounds per unit type (base unit + upgrade-added
+	// units), merged by name — same shape the damage-box view uses.
+	const baseUnit = unitData.find((u) => u.id === data.main_unit[0])
+	const upgradeList = list.upgrades.find((u) => u.slot_id === detachment.slot_id)?.upgrades || []
+	const rawUnits = [
+		// main unit count is the detachment's own size (upgrades add their own rows below)
+		baseUnit ? { name: baseUnit.name, number: detachment.size, wounds: baseUnit.wounds || 1 } : null,
+		...upgradeList.map((up) => {
+			const ui = unitData.find((u) => u.id === up.unit_ref)
+			return ui ? { name: ui.name, number: up.size, wounds: ui.wounds || 1 } : null
+		}),
+	].filter(Boolean) as { name: string; number: number; wounds: number }[]
+	const casualtyUnits = Array.from(new Set(rawUnits.map((u) => u.name))).map((name) => {
+		const items = rawUnits.filter((u) => u.name === name)
+		return { name, number: items.reduce((acc, u) => acc + u.number, 0), wounds: items[0].wounds }
+	})
+
 	return (
 		<View style={styles.card} wrap={false}>
 			{/* Header */}
@@ -152,14 +169,27 @@ const PdfUnitCard = ({ list, detachment, label }: properties) => {
 				</>
 			) : null}
 
-			{/* Casualty tick boxes — one per model */}
+			{/* Casualties — one outer box per model, split into wound-sized inner boxes */}
 			<View style={styles.casualties}>
 				<Text style={styles.casualtyLabel}>Casualties</Text>
-				<View style={styles.boxRow}>
-					{new Array(size).fill(0).map((_, i) => (
-						<View key={i} style={styles.tickBox} />
-					))}
-				</View>
+				{casualtyUnits.map((unit) => (
+					<View style={styles.casualtyUnit} key={unit.name}>
+						{casualtyUnits.length > 1 ? (
+							<Text style={styles.casualtyUnitName}>
+								{unit.number} {unit.name}
+							</Text>
+						) : null}
+						<View style={styles.boxRow}>
+							{new Array(unit.number).fill(0).map((_, m) => (
+								<View style={styles.modelBox} key={m}>
+									{new Array(unit.wounds).fill(0).map((__, w) => (
+										<View style={styles.woundBox} key={w} />
+									))}
+								</View>
+							))}
+						</View>
+					</View>
+				))}
 			</View>
 		</View>
 	)

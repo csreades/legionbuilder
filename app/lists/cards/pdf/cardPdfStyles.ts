@@ -85,12 +85,21 @@ export const cardPdfStyles: Styles = {
 	rules: { backgroundColor: RULE, paddingVertical: 2, paddingHorizontal: 5 },
 	notes: { backgroundColor: RULE, paddingVertical: 2, paddingHorizontal: 5, fontFamily: "Helvetica-Bold" },
 
-	// Casualty tick boxes
+	// Casualty tick boxes: one outer box per model, split into wound-sized inner boxes
 	casualties: { paddingVertical: 3, paddingHorizontal: 5 },
-	casualtyLabel: { fontFamily: "Helvetica-Bold", marginBottom: 2 },
-	boxRow: { flexDirection: "row", flexWrap: "wrap", gap: 2 },
-	tickBox: { width: 7, height: 7, border: `0.75pt solid ${DARK}`, borderRadius: 1 },
-	unitGroup: { flexDirection: "row", marginRight: 3, gap: 1 },
+	casualtyLabel: { fontFamily: "Helvetica-Bold", marginBottom: 1 },
+	casualtyUnit: { marginBottom: 1 },
+	casualtyUnitName: { fontFamily: "Helvetica-Bold", marginBottom: 1 },
+	boxRow: { flexDirection: "row", flexWrap: "wrap" },
+	modelBox: {
+		flexDirection: "row",
+		border: `0.75pt solid ${DARK}`,
+		borderRadius: 1.5,
+		padding: 1,
+		marginRight: 2,
+		marginBottom: 2,
+	},
+	woundBox: { width: 7, height: 7, border: `0.5pt solid ${DARK}`, borderRadius: 0.5, marginRight: 1 },
 }
 
 export const CARD_COLORS = { DARK, MID, LIGHT, ALT, CREAM, INK }
