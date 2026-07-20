@@ -1,6 +1,7 @@
 "use client"
 
 import { List, ListDetachment, ListFormation } from "@type/listTypes"
+import { formationData } from "@data/formation_data"
 import {
 	findDetachmentSlot,
 	findFormationDetachmentBreakSlotIds,
@@ -10,8 +11,6 @@ import {
 } from "@lists/builder/utils"
 import { currentDetachmentSize, totalDetachmentPoints } from "@lists/builder/components/detachment/utils"
 import { sum } from "@app/utils/math"
-
-const LINE = "bg-primary-500"
 
 const breakInfo = (list: List, formation: ListFormation) => {
 	const ids = findFormationDetachmentBreakSlotIds(formation)
@@ -29,23 +28,24 @@ const breakInfo = (list: List, formation: ListFormation) => {
 	return { strength, breakPoint: Math.ceil(strength / 2) }
 }
 
-const DetachmentNode = ({ list, detachment, label }: { list: List; detachment: ListDetachment; label?: string }) => {
+// One detachment slot, rendered as a labelled box like a force-org symbol.
+const DetachmentBox = ({ list, detachment, label }: { list: List; detachment: ListDetachment; label?: string }) => {
 	const role = detachment.slot_type || findDetachmentSlot(list, detachment).type
 	const loadouts = findLoadoutBySlotId(list, detachment.slot_id)?.loadouts || []
 	const upgrades = findUpgradeBySlotId(list, detachment.slot_id)?.upgrades || []
 
 	return (
-		<div className="relative w-52 max-w-full bg-backgrounds-900 border border-primary-700 rounded-md shadow-md">
-			<div className="bg-primary-950 text-primary-50 text-[10px] uppercase tracking-widest font-graduate px-2 py-0.5 border-b border-primary-700">
+		<div className="w-44 bg-backgrounds-900 border border-primary-700 rounded-md overflow-hidden shadow">
+			<div className="bg-primary-950 text-primary-100 text-[10px] uppercase tracking-widest font-graduate px-2 py-1 text-center border-b border-primary-700">
 				{role}
 			</div>
 			<div className="px-2 py-1">
-				<div className="font-graduate text-primary-300 text-sm leading-tight">
+				<div className="font-graduate text-primary-300 text-xs leading-tight">
 					{detachment.name}
 					{label ? ` [${label}]` : ""}
 				</div>
-				<div className="text-[11px] text-secondary-300">
-					{currentDetachmentSize(list, detachment.slot_id)} models · {totalDetachmentPoints(list, detachment.slot_id)}pts
+				<div className="text-[10px] text-secondary-300">
+					{currentDetachmentSize(list, detachment.slot_id)} · {totalDetachmentPoints(list, detachment.slot_id)}pts
 				</div>
 				{upgrades.map((u, i) => (
 					<div key={`u${i}`} className="text-[10px] text-secondary-400 truncate">
@@ -62,13 +62,17 @@ const DetachmentNode = ({ list, detachment, label }: { list: List; detachment: L
 	)
 }
 
+const bandTitle = (type: string) =>
+	/choice/i.test(type) ? "One of the following" : `${type} Detachments`
+
 const OrgChart = ({ list, labels }: { list: List; labels?: Record<string, string> }) => {
 	const formations = list.formations.filter((f) => f.name)
 
 	return (
-		<div className="w-full flex flex-col gap-10 overflow-x-auto pb-2">
+		<div className="w-full flex flex-col gap-6">
 			{formations.map((formation) => {
 				const { strength, breakPoint } = breakInfo(list, formation)
+				const data = formationData.find((f) => f.id === formation.data_id)
 				const groups = formation.detachment_groups
 					.map((group) => ({
 						group,
@@ -79,10 +83,13 @@ const OrgChart = ({ list, labels }: { list: List; labels?: Record<string, string
 					.filter((g) => g.detachments.length)
 
 				return (
-					<div key={formation.id} className="flex flex-col items-center min-w-max mx-auto">
-						{/* Formation node */}
-						<div className="bg-primary-950 border-2 border-primary-500 rounded-lg px-4 py-2 text-center shadow-lg">
-							<div className="font-graduate text-primary-50 uppercase tracking-wide">
+					<div key={formation.id} className="border-2 border-primary-600 rounded-lg bg-secondary-900/60 overflow-hidden">
+						{/* Formation header */}
+						<div className="bg-primary-950 text-center py-2 px-3 border-b-2 border-primary-600">
+							<div className="text-[11px] uppercase tracking-widest text-secondary-300 font-graduate">
+								{list.allegiance} {list.faction} Formation
+							</div>
+							<div className="font-graduate text-lg text-primary-50 uppercase tracking-wide">
 								{formation.nickname ? `${formation.nickname} — ` : ""}
 								{formation.name}
 							</div>
@@ -91,31 +98,32 @@ const OrgChart = ({ list, labels }: { list: List; labels?: Record<string, string
 							</div>
 						</div>
 
-						{/* trunk */}
-						<div className={`w-0.5 h-5 ${LINE}`} />
-
-						{/* branch bus + role groups */}
-						<div className={`flex items-start gap-8 border-t-2 border-primary-500 pt-5`}>
+						{/* Category bands, stacked like the rulebook */}
+						<div className="flex flex-col gap-3 p-3">
 							{groups.map(({ group, detachments }, gi) => (
-								<div key={gi} className="relative flex flex-col items-center">
-									{/* riser from bus to group chip */}
-									<div className={`absolute -top-5 left-1/2 -translate-x-1/2 w-0.5 h-5 ${LINE}`} />
-									<div className="bg-primary-900 border border-primary-500 rounded px-3 py-0.5 font-graduate uppercase text-xs tracking-widest text-primary-100">
-										{group.type}
+								<div key={gi} className="border border-primary-800 rounded-md">
+									<div className="text-center font-graduate uppercase tracking-widest text-sm text-primary-200 bg-primary-900/50 py-1 border-b border-primary-800">
+										{bandTitle(group.type)}
 									</div>
-									<div className={`w-0.5 h-4 ${LINE}`} />
-									{/* stacked detachment nodes with a spine */}
-									<div className="relative flex flex-col gap-3 pt-0">
-										{detachments.map((det, di) => (
-											<div key={det.slot_id} className="relative flex items-center">
-												{di > 0 ? <div className={`absolute left-1/2 -top-3 -translate-x-1/2 w-0.5 h-3 ${LINE}`} /> : null}
-												<DetachmentNode list={list} detachment={det} label={labels?.[det.slot_id]} />
-											</div>
+									<div className="flex flex-wrap gap-3 justify-center p-3">
+										{detachments.map((det) => (
+											<DetachmentBox
+												key={det.slot_id}
+												list={list}
+												detachment={det}
+												label={labels?.[det.slot_id]}
+											/>
 										))}
 									</div>
 								</div>
 							))}
 						</div>
+
+						{data?.rules.length ? (
+							<div className="px-3 pb-3 text-[11px] text-secondary-300 italic">
+								{data.rules.map((r) => (r.name ? `${r.name}: ${r.text}` : r.text)).join("  ")}
+							</div>
+						) : null}
 					</div>
 				)
 			})}

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { createPortal } from "react-dom"
 import { listState } from "@lists/state"
 import { BreadCrumbs, Crumb } from "@components/BreadCrumbs"
 import DetachmentDataslate from "@components/DetachmentDataslate"
@@ -22,6 +23,9 @@ const PDFDownloadLink = dynamic(() => import("@react-pdf/renderer").then((mod) =
 const page = () => {
 	const { list } = listState()
 	const [includeUnequipped, setIncludeUnequipped] = useState(false)
+	const [showDupes, setShowDupes] = useState(false)
+	const [sortByName, setSortByName] = useState(false)
+	const [fullscreen, setFullscreen] = useState(false)
 
 	if (!list || !list.formations.length) {
 		return <h2 className="text-primary-50 p-4">No list found</h2>
@@ -45,8 +49,7 @@ const page = () => {
 		)
 	)
 
-	// Distinct signatures per detachment id -> assign [A]/[B]… only when a detachment
-	// appears with more than one distinct set of weapon choices.
+	// [A]/[B] labels for detachments that appear with more than one set of choices.
 	const sigOrderByDet: Record<number, string[]> = {}
 	instances.forEach((inst) => {
 		const arr = (sigOrderByDet[inst.det.id] ||= [])
@@ -60,11 +63,88 @@ const page = () => {
 	const labelBySlot: Record<string, string> = {}
 	instances.forEach((inst) => (labelBySlot[inst.slotId] = labelBySig[inst.sig]))
 
-	// One card per distinct signature; order by points cost (desc) then name (A–Z).
+	// Cards: deduped by signature (unless showing duplicates), sorted by name or points.
 	const seen = new Set<string>()
-	const cards = instances
-		.filter((inst) => !seen.has(inst.sig) && seen.add(inst.sig))
-		.sort((a, b) => b.data.base_cost - a.data.base_cost || a.data.name.localeCompare(b.data.name))
+	const cards = (showDupes ? instances : instances.filter((inst) => !seen.has(inst.sig) && seen.add(inst.sig))).sort(
+		(a, b) =>
+			sortByName
+				? a.data.name.localeCompare(b.data.name)
+				: b.data.base_cost - a.data.base_cost || a.data.name.localeCompare(b.data.name)
+	)
+
+	const cardNodes = cards.map((inst) => {
+		const rows = weaponRowState(list, inst.det, includeUnequipped)
+		return (
+			<div key={inst.slotId} className="break-inside-avoid mb-4">
+				<DetachmentDataslate
+					detachment={inst.data}
+					visibleWeaponIds={rows.map((r) => r.id)}
+					greyWeaponIds={rows.filter((r) => r.grey).map((r) => r.id)}
+					notes={variantNotes(list, inst.det)}
+					label={labelBySig[inst.sig]}
+					visibleRelatedUnitIds={takenRelatedUnitIds(list, inst.det)}
+					hideLoadoutText
+					hideUpgrades
+					footer={
+						showDupes ? (
+							<CasualtyTracker list={list} detachment={inst.det} />
+						) : (
+							instances
+								.filter((i) => i.sig === inst.sig)
+								.map((i, idx, arr) => (
+									<CasualtyTracker
+										key={i.slotId}
+										list={list}
+										detachment={i.det}
+										label={arr.length > 1 ? `#${idx + 1}` : undefined}
+									/>
+								))
+						)
+					}
+				/>
+			</div>
+		)
+	})
+
+	const toggle = (checked: boolean, onChange: (v: boolean) => void, text: string) => (
+		<label className="flex items-center gap-1 cursor-pointer">
+			<input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} />
+			{text}
+		</label>
+	)
+
+	const toggles = (
+		<div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-graduate text-sm">
+			{toggle(includeUnequipped, setIncludeUnequipped, "Include unequipped")}
+			{toggle(showDupes, setShowDupes, "Show duplicates")}
+			{toggle(sortByName, setSortByName, "Sort by name")}
+		</div>
+	)
+
+	const cardGrid = (
+		<section className={`columns-1 md:columns-2 xl:columns-3 ${fullscreen ? "2xl:columns-4" : ""} gap-4`}>
+			{cardNodes}
+		</section>
+	)
+
+	if (fullscreen && typeof document !== "undefined") {
+		// Portal to <body> so the overlay sits above the sticky nav.
+		return createPortal(
+			<div className="fixed inset-0 z-[100] bg-secondary-900 text-primary-50 overflow-auto p-4">
+				<div className="sticky top-0 z-10 bg-secondary-900 flex flex-wrap items-center gap-4 pb-3 mb-3 border-b border-primary-700">
+					<button
+						onClick={() => setFullscreen(false)}
+						className="clip-path-halfagon-md py-1 px-3 bg-backgrounds-900 hover:text-primary-400 font-graduate">
+						Exit fullscreen
+					</button>
+					<span className="font-graduate font-bold">{list.name}</span>
+					{toggles}
+				</div>
+				{cardGrid}
+			</div>,
+			document.body
+		)
+	}
 
 	return (
 		<div className="w-full flex flex-col gap-4 text-primary-50">
@@ -81,61 +161,31 @@ const page = () => {
 				<h3 className="font-graduate">
 					{list.allegiance} {list.faction}
 				</h3>
-				<label className="flex items-center gap-2 mt-2 font-graduate cursor-pointer">
-					<input
-						type="checkbox"
-						checked={includeUnequipped}
-						onChange={(e) => setIncludeUnequipped(e.target.checked)}
-					/>
-					Include unequipped (show all weapons, unequipped greyed)
-				</label>
-				<button className="flex items-center text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate">
-					<PDFDownloadLink
-						document={<PdfCardList list={list} includeUnequipped={includeUnequipped} />}
-						fileName={`${list.name}-cards${includeUnequipped ? "-full" : ""}`}
-						className="flex items-center">
-						<FaFileDownload className="mr-1 text-xl" />
-						Cards pdf
-					</PDFDownloadLink>
-				</button>
+				<div className="mt-2 flex flex-wrap items-center gap-4">
+					{toggles}
+					<button
+						onClick={() => setFullscreen(true)}
+						className="clip-path-halfagon-md py-1 px-3 bg-backgrounds-900 hover:text-primary-400 font-graduate">
+						Fullscreen
+					</button>
+					<button className="flex items-center text-primary-500 hover:text-primary-400 active:text-tertiary-400 font-graduate">
+						<PDFDownloadLink
+							document={<PdfCardList list={list} includeUnequipped={includeUnequipped} />}
+							fileName={`${list.name}-cards${includeUnequipped ? "-full" : ""}`}
+							className="flex items-center">
+							<FaFileDownload className="mr-1 text-xl" />
+							Cards pdf
+						</PDFDownloadLink>
+					</button>
+				</div>
 			</div>
 
-			{/* Force org chart (formation → role groups → detachment nodes) */}
+			{/* Force org chart (formation → category bands → detachment boxes) */}
 			<section>
 				<OrgChart list={list} labels={labelBySlot} />
 			</section>
 
-			{/* Unique reference cards, weapons filtered to selections, ordered by points.
-			    Masonry-style columns for dense packing like the PDF. */}
-			<section className="columns-1 md:columns-2 xl:columns-3 gap-4">
-				{cards.map((inst) => {
-					const rows = weaponRowState(list, inst.det, includeUnequipped)
-					return (
-						<div key={inst.sig} className="break-inside-avoid mb-4">
-						<DetachmentDataslate
-							detachment={inst.data}
-							visibleWeaponIds={rows.map((r) => r.id)}
-							greyWeaponIds={rows.filter((r) => r.grey).map((r) => r.id)}
-							notes={variantNotes(list, inst.det)}
-							label={labelBySig[inst.sig]}
-							visibleRelatedUnitIds={takenRelatedUnitIds(list, inst.det)}
-							hideLoadoutText
-							hideUpgrades
-							footer={instances
-								.filter((i) => i.sig === inst.sig)
-								.map((i, idx, arr) => (
-									<CasualtyTracker
-										key={i.slotId}
-										list={list}
-										detachment={i.det}
-										label={arr.length > 1 ? `#${idx + 1}` : undefined}
-									/>
-								))}
-						/>
-						</div>
-					)
-				})}
-			</section>
+			{cardGrid}
 		</div>
 	)
 }
