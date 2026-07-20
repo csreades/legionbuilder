@@ -107,13 +107,14 @@ const page = () => {
 				))}
 			</section>
 
-			{/* Unique reference cards, weapons filtered to selections, ordered by points */}
-			<section className="flex flex-col gap-4">
+			{/* Unique reference cards, weapons filtered to selections, ordered by points.
+			    Masonry-style columns for dense packing like the PDF. */}
+			<section className="columns-1 md:columns-2 xl:columns-3 gap-4">
 				{cards.map((inst) => {
 					const rows = weaponRowState(list, inst.det, includeUnequipped)
 					return (
+						<div key={inst.sig} className="break-inside-avoid mb-4">
 						<DetachmentDataslate
-							key={inst.sig}
 							detachment={inst.data}
 							visibleWeaponIds={rows.map((r) => r.id)}
 							greyWeaponIds={rows.filter((r) => r.grey).map((r) => r.id)}
@@ -133,6 +134,7 @@ const page = () => {
 									/>
 								))}
 						/>
+						</div>
 					)
 				})}
 			</section>

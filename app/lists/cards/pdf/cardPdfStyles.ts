@@ -33,9 +33,11 @@ export const cardPdfStyles: Styles = {
 	formationStrength: { fontSize: 9, fontFamily: "Helvetica-Bold" },
 	formationRule: { fontSize: 6.5, marginTop: 3, color: CREAM },
 
-	// Card grid (3 across)
-	grid: { flexDirection: "row", flexWrap: "wrap" },
-	cardWrap: { width: "33.333%", padding: 3 },
+	// Card layout: 3 columns that flow down and paginate cleanly (avoids the big
+	// gaps flex-wrap leaves when a tall row won't fit at the bottom of a page).
+	columns: { flexDirection: "row" },
+	column: { width: "33.333%" },
+	cardWrap: { padding: 3 },
 	card: {
 		border: `1pt solid ${DARK}`,
 		borderRadius: 5,

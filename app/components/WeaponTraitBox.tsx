@@ -6,13 +6,23 @@ interface properties {
 	disabled?: boolean
 }
 
+const traitSlug = (name: string) =>
+	name
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, "-")
+		.replace(/^-+|-+$/g, "")
+
 const WeaponTraitBox = ({ trait, disabled }: properties) => {
 	const description = weaponTraitsData.find((weapon) => weapon.name.toLowerCase() === trait.name.toLowerCase())
+	const href = `https://epicheresy.ru/li2023/legions_imperialis_rules/weapon_traits/#${traitSlug(trait.name)}`
 
 	return (
 		<span className="relative group/trait">
-			<span
-				className={`${disabled ? "" : "cursor-help hover:text-primary-700"} capitalize `}>{`${trait.name}${trait.value ? ` (${trait.value})` : ""}`}</span>
+			<a
+				href={href}
+				target="_blank"
+				rel="noreferrer"
+				className={`${disabled ? "" : "cursor-pointer hover:text-primary-700 underline decoration-dotted underline-offset-2"} capitalize `}>{`${trait.name}${trait.value ? ` (${trait.value})` : ""}`}</a>
 			{description?.tooltip ? (
 				<div
 					className={`absolute hidden ${disabled ? "" : "group-hover/trait:block"} z-20 -bottom-2 right-0 translate-y-full text-center w-[200px] sm:w-[300px]`}>

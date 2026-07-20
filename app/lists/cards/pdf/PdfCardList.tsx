@@ -71,10 +71,20 @@ const PdfCardList = ({ list, includeUnequipped }: { list: List; includeUnequippe
 							) : null}
 						</View>
 
-						<View style={styles.grid}>
-							{detachments.map((det) => (
-								<View style={styles.cardWrap} key={det.slot_id}>
-									<PdfUnitCard list={list} detachment={det} includeUnequipped={includeUnequipped} />
+						<View style={styles.columns}>
+							{[0, 1, 2].map((ci) => (
+								<View style={styles.column} key={ci}>
+									{detachments
+										.filter((_, i) => i % 3 === ci)
+										.map((det) => (
+											<View style={styles.cardWrap} key={det.slot_id}>
+												<PdfUnitCard
+													list={list}
+													detachment={det}
+													includeUnequipped={includeUnequipped}
+												/>
+											</View>
+										))}
 								</View>
 							))}
 						</View>
