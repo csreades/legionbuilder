@@ -90,6 +90,8 @@ export const cardPdfStyles: Styles = {
 	notes: { backgroundColor: RULE, paddingVertical: 2, paddingHorizontal: 5, fontFamily: "Helvetica-Bold" },
 
 	// Casualty tick boxes: one outer box per model, split into wound-sized inner boxes
+	trackerRow: { flexDirection: "row" },
+	trackerCol: { flex: 1 },
 	casualties: { paddingVertical: 3, paddingHorizontal: 5 },
 	casualtyLabel: { fontFamily: "Helvetica-Bold", marginBottom: 1 },
 	casualtyUnit: { marginBottom: 1 },

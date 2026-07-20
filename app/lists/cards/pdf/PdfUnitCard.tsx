@@ -172,8 +172,9 @@ const PdfUnitCard = ({ list, detachment, label, includeUnequipped }: properties)
 				</>
 			) : null}
 
-			{/* Casualties — one outer box per model, split into wound-sized inner boxes */}
-			<View style={styles.casualties}>
+			{/* Casualties + Void Shields, side by side to save card height */}
+			<View style={styles.trackerRow}>
+				<View style={[styles.casualties, styles.trackerCol]}>
 				<Text style={styles.casualtyLabel}>Casualties</Text>
 				{casualtyUnits.map((unit) => (
 					<View style={styles.casualtyUnit} key={unit.name}>
@@ -196,7 +197,7 @@ const PdfUnitCard = ({ list, detachment, label, includeUnequipped }: properties)
 			</View>
 
 			{shieldUnits.length ? (
-				<View style={styles.casualties}>
+				<View style={[styles.casualties, styles.trackerCol]}>
 					<Text style={styles.casualtyLabel}>Void Shields</Text>
 					{shieldUnits.map((unit) => (
 						<View style={styles.casualtyUnit} key={unit.name}>
@@ -221,6 +222,7 @@ const PdfUnitCard = ({ list, detachment, label, includeUnequipped }: properties)
 					))}
 				</View>
 			) : null}
+			</View>
 		</View>
 	)
 }
