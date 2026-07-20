@@ -4,7 +4,6 @@ import { useState } from "react"
 import { listState } from "@lists/state"
 import { BreadCrumbs, Crumb } from "@components/BreadCrumbs"
 import DetachmentDataslate from "@components/DetachmentDataslate"
-import Formation from "@lists/view/components/Formation"
 import { detachmentData } from "@data/detachment_data"
 import { unitData } from "@data/unit_data"
 import { totalListPoints } from "@lists/builder/utils"
@@ -12,6 +11,7 @@ import dynamic from "next/dynamic"
 import { FaFileDownload } from "@react-icons/all-files/fa/FaFileDownload"
 import PdfCardList from "./pdf/PdfCardList"
 import CasualtyTracker from "./CasualtyTracker"
+import OrgChart from "./OrgChart"
 import { variantNotes, cardSignature, takenRelatedUnitIds, weaponRowState } from "./resolveWeapons"
 
 const PDFDownloadLink = dynamic(() => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink), {
@@ -100,11 +100,9 @@ const page = () => {
 				</button>
 			</div>
 
-			{/* Flagged list tree (selected loadouts per detachment, with [A]/[B] labels) */}
+			{/* Force org chart (formation → role groups → detachment nodes) */}
 			<section>
-				{formations.map((formation) => (
-					<Formation key={formation.id} list={list} formation={formation} labels={labelBySlot} />
-				))}
+				<OrgChart list={list} labels={labelBySlot} />
 			</section>
 
 			{/* Unique reference cards, weapons filtered to selections, ordered by points.
