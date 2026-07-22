@@ -1702,6 +1702,7 @@ export const legends: DETACHMENT[] = [
 	{
 		id: 7067,
 		name: "Legate Commander Detachment",
+		points_limit: 1500,
 		faction: FACTION.solar,
 		subfaction: null,
 		allegiance: null,
@@ -1826,6 +1827,7 @@ export const legends: DETACHMENT[] = [
 	{
 		id: 7072,
 		name: "Legate Commander Detachment",
+		points_limit: 1500,
 		faction: FACTION.solar,
 		subfaction: null,
 		allegiance: null,
@@ -2445,6 +2447,7 @@ export const legends: DETACHMENT[] = [
 	{
 		id: 7091,
 		name: "Legate Commander Detachment",
+		points_limit: 1500,
 		faction: FACTION.solar,
 		subfaction: null,
 		allegiance: null,

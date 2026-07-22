@@ -189,6 +189,7 @@ export interface DETACHMENT {
 	base_size: number
 	max_size: number
 	break_strength?: number
+	points_limit?: number // army may include one of these per this many points (e.g. Legate: 1500)
 	main_unit: number[]
 	related_unit: number[]
 	dataslate_loadout: DATASLATE_LOADOUT[]

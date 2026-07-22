@@ -6,6 +6,7 @@ export const solar: DETACHMENT[] = [
 	{
 		id: 2000,
 		name: "Legate Commander Detachment",
+		points_limit: 1500,
 		faction: FACTION.solar,
 		subfaction: null,
 		allegiance: null,
