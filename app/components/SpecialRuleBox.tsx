@@ -8,9 +8,17 @@ const ruleSlug = (rule: SPECIAL_RULE) =>
 		.replace(/[^a-z0-9]+/g, "-")
 		.replace(/^-+|-+$/g, "") + (rule.value !== undefined && rule.value !== null ? "-x" : "")
 
+// Faction/army rules that live on a specific page rather than the general special
+// rules list (keyed by lowercase rule name).
+const RULE_URL_OVERRIDES: Record<string, string> = {
+	"chain of command": "https://epicheresy.ru/li2023/factions/solar_auxilia/#chain-of-command",
+}
+
 const SpecialRuleBox = ({ rule }: { rule: SPECIAL_RULE }) => {
 	const description = specialRulesData.find((ruleEntry) => ruleEntry.name.toLowerCase() === rule.name.toLowerCase())
-	const href = `https://epicheresy.ru/li2023/legions_imperialis_rules/special_rules/#${ruleSlug(rule)}`
+	const href =
+		RULE_URL_OVERRIDES[rule.name.toLowerCase()] ??
+		`https://epicheresy.ru/li2023/legions_imperialis_rules/special_rules/#${ruleSlug(rule)}`
 	return (
 		<a
 			href={href}
