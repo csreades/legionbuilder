@@ -41,3 +41,6 @@ next-env.d.ts
 
 # local runtime data (dev-mode server store, gh state)
 .local/
+
+# gh CLI config (holds an OAuth token) — never commit
+.config/
