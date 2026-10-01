@@ -1118,6 +1118,12 @@
         ],
         "Reaver chainfist": [
           4049
+        ],
+        "Reaver graviton obliterator": [
+          4095
+        ],
+        "Reaver volkite annihilator": [
+          4096
         ]
       },
       "Arm 2": {
@@ -1138,6 +1144,12 @@
         ],
         "Reaver chainfist": [
           4049
+        ],
+        "Reaver graviton obliterator": [
+          4095
+        ],
+        "Reaver volkite annihilator": [
+          4096
         ]
       },
       "Carapace": {
@@ -1177,6 +1189,12 @@
         ],
         "Reaver melta cannon": [
           4047
+        ],
+        "Reaver graviton obliterator": [
+          4095
+        ],
+        "Reaver volkite annihilator": [
+          4096
         ]
       },
       "Arm 2": {
@@ -1191,6 +1209,12 @@
         ],
         "Reaver melta cannon": [
           4047
+        ],
+        "Reaver graviton obliterator": [
+          4095
+        ],
+        "Reaver volkite annihilator": [
+          4096
         ]
       },
       "Carapace": {

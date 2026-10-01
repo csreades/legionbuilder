@@ -206,7 +206,7 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		caf: 12,
 		morale: null,
 		wounds: 6,
-		weapons: [4044, 4045, 4046, 4047, 4048, 4049, 4050, 4051, 4052, 4053, 4054, 4055, 4056],
+		weapons: [4044, 4045, 4046, 4047, 4048, 4049, 4050, 4051, 4052, 4053, 4054, 4055, 4056, 4095, 4096],
 		special_rules: [{ name: SpecialRule.voidShields, value: 4 }],
 	},
 	{
@@ -222,7 +222,7 @@ export const strategicAssets: UNIT_DATASHEET[] = [
 		caf: 12,
 		morale: null,
 		wounds: 6,
-		weapons: [4044, 4045, 4046, 4047, 4057, 4058, 4059, 4060],
+		weapons: [4044, 4045, 4046, 4047, 4057, 4058, 4059, 4060, 4095, 4096],
 		special_rules: [{ name: SpecialRule.voidShields, value: 6 }],
 	},
 	{

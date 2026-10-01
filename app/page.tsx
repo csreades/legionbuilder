@@ -1,3 +1,5 @@
+import { SITE_LINKS } from "@/app/siteLinks"
+import { LOCAL_MODE } from "@/app/localMode"
 import Main from "./components/Main"
 import Link from "next/link"
 import { FaGithub, FaDiscord } from "react-icons/fa6"
@@ -24,43 +26,57 @@ export default function Home() {
 				<div>
 					LegionBuilder has an official{" "}
 					<Link
-						href={"https://buymeacoffee.com/legionbuilder"}
+						href={SITE_LINKS.buyMeACoffee}
 						className="text-primary-500 hover:text-tertiary-700 hover:underline active:text-tertiary-700 focus:text-tertiary-700 mt-2">
 						buymeacoffee
 					</Link>{" "}
 					account!
 				</div>
-				<p>As usual feel free to contact me on Discord if you have any issues or suggestions. Thanks!</p>
+				{SITE_LINKS.discord ? (
+					<p>As usual feel free to contact me on Discord if you have any issues or suggestions. Thanks!</p>
+				) : null}
 			</div>
 
 			<FrontpageUpdates />
 
 			<div className="mx-4 self-start">
 				<h2 className="text-lg font-graduate text-tertiary-700 mt-4">Suggestions or feedback?</h2>
+				{SITE_LINKS.discord ? (
+					<Link
+						href={SITE_LINKS.discord}
+						target="_blank"
+						className="hover:underline text-xl flex items-center gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700 mt-2">
+						Join our Discord! <FaDiscord />
+					</Link>
+				) : null}
+				{/* The contact form needs a real email (Resend) key, which local mode doesn't have. */}
+				{LOCAL_MODE ? null : (
+					<Link
+						href="contact"
+						className="hover:underline text-xl flex items-end gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700 mt-2">
+						Contact me <TfiEmail />
+					</Link>
+				)}
 				<Link
-					href="https://discord.gg/kEXsZdThSe"
-					target="_blank"
-					className="hover:underline text-xl flex items-center gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700 mt-2">
-					Join our Discord! <FaDiscord />
-				</Link>
-				<Link
-					href="contact"
-					className="hover:underline text-xl flex items-end gap-1 hover:text-tertiary-700 active:text-tertiary-700 focus:text-tertiary-700 mt-2">
-					Contact me <TfiEmail />
-				</Link>
-				<Link
-					href="https://github.com/JWTC2200/legionbuilder"
+					href={SITE_LINKS.github}
 					className="mb-2 text-xl flex items-center gap-1	hover:text-tertiary-700 hover:underline active:text-tertiary-700 focus:text-tertiary-700 mt-2">
 					Github <FaGithub />
 				</Link>
 				<Link
-					href={"https://buymeacoffee.com/legionbuilder"}
+					href={SITE_LINKS.buyMeACoffee}
 					className="mb-2 text-xl flex items-center gap-1 hover:text-tertiary-700 hover:underline active:text-tertiary-700 focus:text-tertiary-700 mt-2">
 					Buymeacoffee <FaCoffee />
 				</Link>
 			</div>
 			<hr className="border rounded-full bg-stone-900 m-4 w-full" />
 			<footer className="mx-4">
+				<p>
+					Based on{" "}
+					<Link href={SITE_LINKS.upstream} className="hover:underline hover:text-tertiary-700">
+						Legion Builder by JWTC2200
+					</Link>
+					.
+				</p>
 				<p>This website is unofficial and in no way endorsed by Games Workshop.</p>
 				<p>
 					Any use of terms from Games Workshop are used without permission. No challenge to their status
