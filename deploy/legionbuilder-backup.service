@@ -1,0 +1,7 @@
+[Unit]
+Description=Back up the Legion Builder database
+
+[Service]
+Type=oneshot
+WorkingDirectory=/root/repos/legionbuilder
+ExecStart=/usr/bin/node --no-warnings /root/repos/legionbuilder/scripts/backup-db.js

@@ -1,0 +1,16 @@
+[Unit]
+Description=Legion Builder (Next.js production server)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/repos/legionbuilder
+Environment=NODE_ENV=production
+ExecStart=/root/repos/legionbuilder/node_modules/.bin/next start -H 0.0.0.0 -p 3000
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

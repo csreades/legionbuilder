@@ -43,6 +43,9 @@ Set `NEXT_PUBLIC_LOCAL_MODE=true` in `.env.local` to run with no third‑party s
 - Lists are stored in **SQLite** (`.local/legionbuilder.db`, via Node's built‑in
   `node:sqlite` — no database server). Back it up by copying the file.
 - Import any list by pasting its JSON.
+- **Backups:** `scripts/backup-db.js` writes a consistent nightly snapshot to
+  `/var/backups/legionbuilder/` (14 kept). To restore: stop the server, copy a snapshot over
+  `.local/legionbuilder.db` (delete any `-wal`/`-shm` files beside it), start the server.
 
 ### Installable app (PWA)
 Served over HTTPS, the site installs as an app ("Add to Home Screen" / "Install"), with an
@@ -57,8 +60,9 @@ npm run build
 npx next start -H 0.0.0.0 -p 3000      # serve the production build on the LAN
 ```
 
-Rebuild (`npm run build`) after code changes, then restart the server. On Linux, a systemd
-service can run `next start` on boot.
+Rebuild (`npm run build`) after code changes, then restart the server. The systemd units in
+`deploy/` run the app on boot and the nightly backup (copy to `/etc/systemd/system/`, then
+`systemctl enable --now legionbuilder.service legionbuilder-backup.timer`).
 
 ## Credits
 

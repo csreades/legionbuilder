@@ -44,6 +44,7 @@ export const getDb = (): DB => {
 			updated INTEGER NOT NULL
 		);
 		CREATE INDEX IF NOT EXISTS lists_owner ON lists(owner);
+		CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
 	`)
 	migrate(conn)
 	db = conn
@@ -51,8 +52,12 @@ export const getDb = (): DB => {
 }
 
 // One-time import: the old JSON store if present, otherwise the bundled defaults.
+// Recorded in `meta` so it never re-runs — even if every list is later deleted.
 const migrate = (conn: DB) => {
-	if ((conn.prepare("SELECT COUNT(*) AS n FROM lists").get() as Row).n > 0) return
+	if (conn.prepare("SELECT 1 FROM meta WHERE key = 'migrated'").get()) return
+	const markDone = () => conn.prepare("INSERT OR REPLACE INTO meta (key, value) VALUES ('migrated', ?)").run(String(Date.now()))
+	// Databases created before this flag existed have already been populated.
+	if ((conn.prepare("SELECT COUNT(*) AS n FROM lists").get() as Row).n > 0) return markDone()
 	let entries: { list: any; created: number }[] = []
 	if (existsSync(LEGACY_JSON)) {
 		try {
@@ -65,4 +70,5 @@ const migrate = (conn: DB) => {
 		const owned = { ...list, user: LEGACY_OWNER }
 		insert.run(list.id, LEGACY_OWNER, JSON.stringify(owned), created || Date.now(), Date.now())
 	}
+	markDone()
 }
