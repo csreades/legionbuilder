@@ -6,6 +6,7 @@ import { List } from "@type/listTypes"
 
 export const fetchUserLists = async (): Promise<DB_ENTRY[]> => {
 	const res = await fetch("/api/lists", { cache: "no-store" })
+	if (!res.ok) return []
 	const entries: { list: List; created: number }[] = await res.json()
 	return entries.map((e) => ({
 		list: e.list,

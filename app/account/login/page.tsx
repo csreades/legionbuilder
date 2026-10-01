@@ -1,5 +1,8 @@
 "use client"
 
+import { LOCAL_MODE } from "@/app/localMode"
+import LocalAuthForm from "@/app/account/LocalAuthForm"
+
 import { useState } from "react"
 import Link from "next/link"
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
@@ -101,4 +104,6 @@ const page = () => {
 	)
 }
 
-export default page
+const LocalPage = () => <LocalAuthForm mode="login" />
+
+export default LOCAL_MODE ? LocalPage : page

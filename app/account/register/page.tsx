@@ -1,5 +1,8 @@
 "use client"
 
+import { LOCAL_MODE } from "@/app/localMode"
+import LocalAuthForm from "@/app/account/LocalAuthForm"
+
 import { useState } from "react"
 import Main from "@/app/components/Main"
 import signUp from "@/app/firebase/auth/signup"
@@ -86,4 +89,6 @@ const page = () => {
 	)
 }
 
-export default page
+const LocalPage = () => <LocalAuthForm mode="register" />
+
+export default LOCAL_MODE ? LocalPage : page

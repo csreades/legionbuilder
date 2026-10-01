@@ -1,6 +1,6 @@
 import { createJSONStorage } from "zustand/middleware"
 import createPersistedStore from "@/app/utils/persistedStore"
-import { LOCAL_MODE, LOCAL_UID } from "@/app/localMode"
+import { LOCAL_MODE } from "@/app/localMode"
 
 interface AuthState {
 	uid: string | null
@@ -11,11 +11,10 @@ interface AuthState {
 
 const useAuthState = createPersistedStore(
 	(set: any): AuthState => ({
-		// In local mode a single "local" user is authenticated from the start.
-		uid: LOCAL_MODE ? LOCAL_UID : null,
+		uid: null,
 		saveSession: (uid: string) => set({ uid, authenticated: true }),
 		reset: () => set({ uid: null, authenticated: false }),
-		authenticated: LOCAL_MODE,
+		authenticated: false,
 	}),
 	{
 		name: "auth",

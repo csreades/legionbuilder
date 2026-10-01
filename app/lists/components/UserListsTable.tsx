@@ -3,13 +3,11 @@ import { userListsState, listState, listModelState } from "@/app/lists/state"
 import Link from "next/link"
 import { FaEye } from "@react-icons/all-files/fa/FaEye"
 import { FaListAlt } from "@react-icons/all-files/fa/FaListAlt"
-import { FaLock } from "@react-icons/all-files/fa/FaLock"
 import { totalListPoints } from "../builder/utils"
 import DuplicateList from "../builder/components/DuplicateList"
 import DeleteList from "../builder/components/DeleteList"
 import ListClipLink from "../builder/components/ListClipLink"
 import { List } from "@type/listTypes"
-import { isProtectedList } from "@lists/protectedLists"
 
 const UserListsTable = () => {
 	const { userLists } = userListsState()
@@ -51,13 +49,7 @@ const UserListsTable = () => {
 									<FaEye />
 								</Link>
 								<ListClipLink list={list} />
-								{isProtectedList(list.id) ? (
-									<span title="Read-only list" className="text-stone-500 text-lg">
-										<FaLock />
-									</span>
-								) : (
-									<DeleteList list={list} />
-								)}
+								<DeleteList list={list} />
 							</div>
 						</div>
 

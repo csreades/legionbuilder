@@ -1,56 +1,32 @@
-import { promises as fs } from "fs"
-import path from "path"
 import { List } from "@type/listTypes"
-import seedLists from "@data/seedLists.json"
-import { isProtectedList } from "@lists/protectedLists"
+import { getDb } from "./db"
 
-// Server-side list store for dev mode: a single JSON file on the server so all
-// clients share the same lists (no third-party database). Seeded once from the
-// bundled seed list.
-const FILE = path.join(process.cwd(), ".local", "lists.json")
-const DEV_UID = "dev"
+// Lists live in SQLite, each owned by the account that saved it.
+const parse = (row: Record<string, any>): List => ({ ...JSON.parse(row.json), user: row.owner })
 
-interface Entry {
-	list: List
-	created: number
+export const listsFor = (owner: string) =>
+	getDb()
+		.prepare("SELECT owner, json, created FROM lists WHERE owner = ? ORDER BY updated DESC")
+		.all(owner)
+		.map((row) => ({ list: parse(row), created: row.created as number }))
+
+export const getOne = (id: string): List | null => {
+	const row = getDb().prepare("SELECT owner, json FROM lists WHERE id = ?").get(id)
+	return row ? parse(row) : null
 }
 
-const write = async (store: Record<string, Entry>) => {
-	await fs.mkdir(path.dirname(FILE), { recursive: true })
-	await fs.writeFile(FILE, JSON.stringify(store, null, 2))
+// Create or update; only the owner may overwrite an existing list.
+export const saveOne = (list: List, owner: string) => {
+	const db = getDb()
+	const existing = db.prepare("SELECT owner FROM lists WHERE id = ?").get(list.id)
+	if (existing && existing.owner !== owner) return { uploaded: false, message: "You can only edit your own lists" }
+	const json = JSON.stringify({ ...list, user: owner })
+	const now = Date.now()
+	if (existing) db.prepare("UPDATE lists SET json = ?, updated = ? WHERE id = ?").run(json, now, list.id)
+	else db.prepare("INSERT INTO lists (id, owner, json, created, updated) VALUES (?, ?, ?, ?, ?)").run(list.id, owner, json, now, now)
+	return { uploaded: true, message: "List saved" }
 }
 
-// Read the store, seeding from the bundled list on first run.
-const read = async (): Promise<Record<string, Entry>> => {
-	try {
-		return JSON.parse(await fs.readFile(FILE, "utf8"))
-	} catch {
-		const store: Record<string, Entry> = {}
-		for (const list of seedLists as unknown as List[]) {
-			store[list.id] = { list: { ...list, user: DEV_UID }, created: Date.now() }
-		}
-		await write(store)
-		return store
-	}
-}
-
-export const listAll = async (): Promise<Entry[]> => Object.values(await read())
-
-export const getOne = async (id: string): Promise<List | null> => (await read())[id]?.list ?? null
-
-export const saveOne = async (list: List) => {
-	if (isProtectedList(list.id)) return { uploaded: false, message: "This list is read-only" }
-	const store = await read()
-	store[list.id] = { list: { ...list, user: DEV_UID }, created: store[list.id]?.created ?? Date.now() }
-	await write(store)
-	return { uploaded: true, message: "List saved to server" }
-}
-
-// Returns false if the list is protected (and therefore not deleted).
-export const deleteOne = async (id: string): Promise<boolean> => {
-	if (isProtectedList(id)) return false
-	const store = await read()
-	delete store[id]
-	await write(store)
-	return true
-}
+// Returns false if the list doesn't exist or belongs to someone else.
+export const deleteOne = (id: string, owner: string) =>
+	getDb().prepare("DELETE FROM lists WHERE id = ? AND owner = ?").run(id, owner).changes > 0

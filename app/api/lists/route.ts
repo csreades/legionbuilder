@@ -1,16 +1,20 @@
 import { NextRequest, NextResponse } from "next/server"
-import { listAll, saveOne } from "../_lib/listStore"
+import { listsFor, saveOne } from "../_lib/listStore"
+import { sessionUser, unauthorised } from "../_lib/auth"
 
 export const dynamic = "force-dynamic"
 export const runtime = "nodejs"
 
-// All shared lists (anyone landing on the page sees these).
-export async function GET() {
-	const entries = await listAll()
-	return NextResponse.json(entries.map((e) => ({ list: e.list, created: e.created })))
+// Only the signed-in user's own lists.
+export async function GET(req: NextRequest) {
+	const user = sessionUser(req)
+	if (!user) return unauthorised()
+	return NextResponse.json(listsFor(user))
 }
 
 export async function POST(req: NextRequest) {
-	const list = await req.json()
-	return NextResponse.json(await saveOne(list))
+	const user = sessionUser(req)
+	if (!user) return unauthorised()
+	const result = saveOne(await req.json(), user)
+	return NextResponse.json(result, { status: result.uploaded ? 200 : 403 })
 }

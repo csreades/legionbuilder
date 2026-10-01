@@ -35,11 +35,19 @@ paper.
 Soft warnings for **mandatory loadout choices not yet made** and **per‑points detachment
 caps** (e.g. the Solar Auxilia *Legate Commander* — one per 1,500 points).
 
-### Local / dev mode (no Firebase)
-Set `NEXT_PUBLIC_LOCAL_MODE=true` in `.env.local` to run with no third‑party database:
-auto‑login as a single `dev` user, lists stored server‑side in a JSON file and **shared**
-across everyone on the network. Bundled default lists are **read‑only** (visitors can view
-or duplicate, not change). Import any list by pasting its JSON.
+### Accounts & storage (no Firebase)
+Set `NEXT_PUBLIC_LOCAL_MODE=true` in `.env.local` to run with no third‑party services:
+- **Username + password accounts** on the app's own server (scrypt‑hashed passwords,
+  httpOnly session cookie). Each user sees **only their own lists**; only the owner can
+  edit or delete a list, though a share link still opens it for any signed‑in user.
+- Lists are stored in **SQLite** (`.local/legionbuilder.db`, via Node's built‑in
+  `node:sqlite` — no database server). Back it up by copying the file.
+- Import any list by pasting its JSON.
+
+### Installable app (PWA)
+Served over HTTPS, the site installs as an app ("Add to Home Screen" / "Install"), with an
+offline‑capable shell: the app, reference data and your last‑viewed lists keep working with
+poor signal. No notifications.
 
 ## Running it
 

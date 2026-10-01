@@ -1,5 +1,7 @@
 "use client"
 
+import { LOCAL_MODE } from "@/app/localMode"
+
 import { useState } from "react"
 import Main from "@/app/components/Main"
 import { BreadCrumbs, Crumb } from "@/app/components/BreadCrumbs"
@@ -68,4 +70,10 @@ const page = () => {
 	)
 }
 
-export default page
+const LocalReset = () => (
+	<Main className="flex flex-col items-center p-4">
+		<p className="font-graduate text-center">Passwords on this server are reset by the site admin — ask them for a new one.</p>
+	</Main>
+)
+
+export default LOCAL_MODE ? LocalReset : page

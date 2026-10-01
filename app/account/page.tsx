@@ -1,5 +1,8 @@
 "use client"
 
+import { LOCAL_MODE } from "@/app/localMode"
+import LocalProfile from "@/app/account/LocalProfile"
+
 import { useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { deleteUserAccount } from "../firebase/firestore/deleteUser"
@@ -34,4 +37,4 @@ const page = () => {
 	)
 }
 
-export default page
+export default LOCAL_MODE ? LocalProfile : page

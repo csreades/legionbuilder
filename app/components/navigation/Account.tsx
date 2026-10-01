@@ -4,6 +4,8 @@ import { useState } from "react";
 import NavLink from "./NavLink";
 import NavItem from "./NavItem";
 import useAuthState from "@/app/Auth";
+import { LOCAL_MODE } from "@/app/localMode";
+import { localLogout } from "@/app/account/LocalProfile";
 
 export default function () {
   const reset = useAuthState((state) => state.reset);
@@ -12,7 +14,8 @@ export default function () {
     visible ? setVisible(false) : setVisible(true);
 
   const logout = async () => {
-    await signOut(getAuth());
+    if (LOCAL_MODE) await localLogout();
+    else await signOut(getAuth());
     reset();
   };
 

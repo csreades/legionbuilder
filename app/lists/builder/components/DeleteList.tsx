@@ -4,20 +4,20 @@ import { deleteList } from "@/app/firebase/firestore/deleteList"
 import { ImBin } from "@react-icons/all-files/im/ImBin"
 import useAuthState from "@/app/Auth"
 import { toast } from "react-toastify"
-import { isProtectedList } from "@lists/protectedLists"
+import { userListsState } from "@lists/state"
+import { LOCAL_MODE } from "@/app/localMode"
+import { fetchUserLists } from "@lists/serverStore"
 
 const DeleteList = ({ list }: { list: List }) => {
 	const [confirmDelete, setConfirmDelete] = useState(false)
 	const userUid = useAuthState((state) => state.uid)
+	const { setUserLists } = userListsState()
 
 	const handleDelete = async () => {
-		if (isProtectedList(list.id)) {
-			toast.warning("This list is read-only")
-			return
-		}
 		if (userUid === list.user) {
-			deleteList(list.id)
-			toast.warning("deleting list")
+			await deleteList(list.id)
+			toast.warning("List deleted")
+			if (LOCAL_MODE) setUserLists(await fetchUserLists())
 		} else {
 			toast.warning("You do not have permission to delete this list")
 		}
